@@ -1,56 +1,74 @@
 # College Statistics Data Model
 
-The project uses stable IDs and normalized JSON files so independent datasets can be updated without rewriting the frontend.
+The live site uses a small set of normalized JSON files joined in the browser by stable IDs.
 
-## Core entities
+## Live files
 
 ### `universities.json`
-One record per institution. Primary key: `university_id`.
+One record per institution, keyed by `university_id`.
 
-Fields: `university_id`, `name`, `short_name`, `state`, `city`, `country`, `type`, `website`, `enrollment`, `established`, `logo`.
+U.S. Scorecard institutions use IDs like:
+
+```text
+us-ipeds-166027
+```
+
+The IPEDS UNITID is also retained as an external identifier.
 
 ### `majors.json`
-One record per canonical major/program subject. Primary key: `major_id`.
+One record per shared 4-digit CIP field of study, keyed by `major_id`.
 
-Fields: `major_id`, `name`, `category`, `cip_code`, `stem`, `description`.
+Example:
+
+```text
+cip4-1107
+```
 
 ### `university-major.json`
-Many-to-many relationship between universities and majors.
+Connects a university to a bachelor's field of study.
 
-Fields: `university_id`, `major_id`, `degree_level`, `available`.
-
-## Fact datasets
+Current live scope is `credential_level: 3` / Bachelor's Degree only.
 
 ### `salaries.json`
-University-major outcome facts by year/source: `median_salary`, `early_salary`, `mid_salary`.
+Despite the historical filename, this file currently stores College Scorecard earnings indicators by university + major:
 
-### `employment.json`
-University-major outcome facts by year/source: `employment_rate`, `unemployment_rate`, `graduate_school_rate`.
+- `earnings_1yr`
+- `earnings_4yr`
+- `earnings_5yr` when available
+
+The frontend currently displays 1-year and 4-year values. Missing values remain `null`.
 
 ### `tuition.json`
-Institution-level tuition facts by year/source. Supports future residency and currency dimensions.
+One institution-level display value per university. The live site uses in-state tuition when available.
 
 ### `admissions.json`
-Institution-level admissions facts by year/source: acceptance rate, test scores, GPA, and deadline.
-
-### `rankings.json`
-Institution rankings by provider and year. A provider is a dimension, not a hard-coded frontend assumption, so multiple ranking sources can coexist.
+Institution-level admissions data. The live site currently uses acceptance rate.
 
 ### `metadata.json`
-Schema version, current dataset year, supported countries, generation date, and dataset status.
+Small dataset-level description: status, source, scope, generation date, and notes.
 
-## Join strategy
+### `employment.json` and `rankings.json`
+Currently empty and not displayed. They remain as lightweight extension points but should not drive frontend features until a simple, reliable source is chosen.
 
-The browser loads datasets independently. `js/api.js` joins them at runtime using `university_id` and `major_id`. Future ETL jobs can generate exactly the same files from external sources.
+## Runtime join
 
-## Historical data
+`js/api.js` loads the JSON files and joins them using `university_id` and `major_id`.
 
-Do not overwrite past observations when adding annual data. Add records with a new `year` and retain `source`. UI modules can later select latest values or render trends.
+The UI then groups matching program records by university.
 
-## Scale rules
+## Derived university summary
 
-- IDs must be stable and never depend on display names.
-- Missing values should be `null`, never guessed.
-- Every externally sourced fact should include `source` and `year`.
-- Country-specific fields should be optional or isolated instead of changing core IDs.
-- Prefer canonical identifiers when available, such as IPEDS UnitID and CIP codes, while preserving internal IDs for joins.
+The university-card value **Median across bachelor's programs** is calculated in the browser from the available program-level `earnings_1yr` values for that university. It is a convenience summary, not an official university-wide Scorecard metric.
+
+## Rules
+
+Keep the model practical:
+
+- use stable IDs;
+- keep missing values as `null`;
+- do not guess unavailable statistics;
+- keep institution facts separate from program facts;
+- preserve source information;
+- add new fields/files only when the website actually needs them.
+
+The staging snapshots in `data/imported/` may contain more detail than the live files. That is intentional: staging is for traceability, while `data/` should stay browser-friendly and simple.
