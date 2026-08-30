@@ -1,0 +1,63 @@
+name: College Scorecard Seed Import
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/college-scorecard-seed.yml
+      - projects/college-statistics/config/scorecard_seed_universities.json
+      - projects/college-statistics/scripts/scorecard_import.py
+      - projects/college-statistics/scripts/validate_import.py
+
+permissions:
+  contents: write
+
+concurrency:
+  group: college-scorecard-seed-main
+  cancel-in-progress: false
+
+jobs:
+  import-and-validate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/college-statistics
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Choose snapshot date
+        id: snapshot
+        shell: bash
+        run: echo "date=$(date -u +%F)" >> "$GITHUB_OUTPUT"
+
+      - name: Import College Scorecard seed data
+        env:
+          COLLEGE_SCORECARD_API_KEY: ${{ secrets.COLLEGE_SCORECARD_API_KEY || 'DEMO_KEY' }}
+        run: python3 scripts/scorecard_import.py --snapshot "${{ steps.snapshot.outputs.date }}"
+
+      - name: Validate imported snapshot
+        run: python3 scripts/validate_import.py "data/imported/college-scorecard/${{ steps.snapshot.outputs.date }}"
+
+      - name: Commit validated staging snapshot
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "data/imported/college-scorecard/${{ steps.snapshot.outputs.date }}"
+          if git diff --cached --quiet; then
+            echo "No staging changes to commit."
+            exit 0
+          fi
+          git commit -m "Import College Scorecard seed data ${{ steps.snapshot.outputs.date }}"
+          git push origin HEAD:main
