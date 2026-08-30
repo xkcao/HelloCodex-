@@ -2,7 +2,8 @@
 """Fetch a small College Scorecard seed set and normalize it into staging JSON.
 
 This script intentionally writes to data/imported rather than the live data files.
-It uses only the Python standard library and requires COLLEGE_SCORECARD_API_KEY.
+It uses only the Python standard library. For the small seed import it defaults to
+api.data.gov's public DEMO_KEY; set COLLEGE_SCORECARD_API_KEY for larger/repeated runs.
 """
 
 from __future__ import annotations
@@ -20,6 +21,7 @@ BASE_URL = "https://api.data.gov/ed/collegescorecard/v1/schools.json"
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SEED = ROOT / "config" / "scorecard_seed_universities.json"
 DEFAULT_OUTPUT_ROOT = ROOT / "data" / "imported" / "college-scorecard"
+DEMO_KEY = "DEMO_KEY"
 
 FIELDS = [
     "id",
@@ -148,12 +150,21 @@ def main() -> int:
     parser.add_argument("--seed", type=Path, default=DEFAULT_SEED)
     parser.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
     parser.add_argument("--snapshot", default=dt.datetime.now(dt.timezone.utc).date().isoformat())
+    parser.add_argument(
+        "--api-key",
+        default=None,
+        help="Override the API key. Otherwise uses COLLEGE_SCORECARD_API_KEY, then DEMO_KEY.",
+    )
     args = parser.parse_args()
 
-    api_key = os.getenv("COLLEGE_SCORECARD_API_KEY")
-    if not api_key:
-        print("Missing COLLEGE_SCORECARD_API_KEY environment variable.", file=sys.stderr)
-        return 2
+    api_key = args.api_key or os.getenv("COLLEGE_SCORECARD_API_KEY") or DEMO_KEY
+    using_demo_key = api_key == DEMO_KEY
+    if using_demo_key:
+        print(
+            "Using api.data.gov DEMO_KEY for this seed import. "
+            "It has low rate limits; set COLLEGE_SCORECARD_API_KEY before scaling up.",
+            file=sys.stderr,
+        )
 
     seeds = load_json(args.seed)
     raw_records = []
@@ -185,6 +196,7 @@ def main() -> int:
         "unitids": [str(seed["unitid"]) for seed in seeds],
         "generated_files": ["universities.json", "tuition.json", "admissions.json", "raw.json"],
         "promotion_status": "staging-only",
+        "api_key_mode": "demo" if using_demo_key else "personal",
         "notes": "Scorecard latest fields can represent different underlying cohort years. The importer leaves year null rather than guessing; resolve cohort years from the official data dictionary before promoting records to live data.",
     })
 
