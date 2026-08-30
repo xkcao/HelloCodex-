@@ -69,7 +69,11 @@ def fetch_school(unitid: str, api_key: str) -> dict:
     return results[0]
 
 
-def nested(record: dict, dotted_key: str):
+def field_value(record: dict, dotted_key: str):
+    """Read Scorecard fields whether returned as dotted keys or nested objects."""
+    if dotted_key in record:
+        return record[dotted_key]
+
     current = record
     for part in dotted_key.split("."):
         if not isinstance(current, dict) or part not in current:
@@ -96,17 +100,17 @@ def normalize(records: list[dict]) -> tuple[list[dict], list[dict], list[dict]]:
     for record in records:
         unitid = str(record["id"])
         uid = university_id(unitid)
-        ownership = nested(record, "school.ownership")
+        ownership = field_value(record, "school.ownership")
         universities.append({
             "university_id": uid,
-            "name": nested(record, "school.name"),
+            "name": field_value(record, "school.name"),
             "short_name": None,
-            "state": nested(record, "school.state"),
-            "city": nested(record, "school.city"),
+            "state": field_value(record, "school.state"),
+            "city": field_value(record, "school.city"),
             "country": "US",
             "type": OWNERSHIP.get(ownership, "Unknown"),
-            "website": nested(record, "school.school_url"),
-            "enrollment": nested(record, "latest.student.size"),
+            "website": field_value(record, "school.school_url"),
+            "enrollment": field_value(record, "latest.student.size"),
             "established": None,
             "logo": None,
             "external_ids": {"ipeds_unitid": unitid},
@@ -117,7 +121,7 @@ def normalize(records: list[dict]) -> tuple[list[dict], list[dict], list[dict]]:
             ("in_state", "latest.cost.tuition.in_state"),
             ("out_of_state", "latest.cost.tuition.out_of_state"),
         ):
-            value = nested(record, key)
+            value = field_value(record, key)
             if value is not None:
                 tuition.append({
                     "university_id": uid,
@@ -132,9 +136,9 @@ def normalize(records: list[dict]) -> tuple[list[dict], list[dict], list[dict]]:
 
         admissions.append({
             "university_id": uid,
-            "acceptance_rate": percent(nested(record, "latest.admissions.admission_rate.overall")),
-            "sat_midpoint": nested(record, "latest.admissions.sat_scores.average.overall"),
-            "act_midpoint": nested(record, "latest.admissions.act_scores.midpoint.cumulative"),
+            "acceptance_rate": percent(field_value(record, "latest.admissions.admission_rate.overall")),
+            "sat_midpoint": field_value(record, "latest.admissions.sat_scores.average.overall"),
+            "act_midpoint": field_value(record, "latest.admissions.act_scores.midpoint.cumulative"),
             "gpa_average": None,
             "application_deadline": None,
             "source": "College Scorecard",
