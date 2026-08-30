@@ -1,12 +1,12 @@
 {
-  "schema_version": "1.1.1",
-  "status": "Real federal pilot data",
+  "schema_version": "1.2.0",
+  "status": "Real federal data",
   "current_year": 2026,
   "countries": [
     "US"
   ],
   "generated_at": "2026-08-30",
   "source": "College Scorecard",
-  "scope": "10-university bachelor's-degree pilot",
-  "notes": "Earnings are approximate indicators from College Scorecard. The main displayed earnings figure is one-year median earnings when available. Tuition shown on the site is in-state tuition when available. Missing values are left blank."
+  "scope": "10-university bachelor's-degree coverage set",
+  "notes": "Earnings are approximate indicators from College Scorecard. The displayed university earnings summary is derived from available bachelor's-program values. Tuition shown is in-state tuition when available. Missing values are left blank. The university set is a coverage set, not a displayed ranking."
 }
