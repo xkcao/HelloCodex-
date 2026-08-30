@@ -16,12 +16,28 @@ A static GitHub Pages project designed as a scalable, data-first college and maj
 - `js/compare.js` — reserved comparison boundary
 - `js/utils.js` — shared formatting/statistical helpers
 - `data/` — normalized, independently replaceable datasets
+- `config/` — seed/configuration files for repeatable imports
+- `scripts/` — source ingestion and validation scripts
 - `assets/` — project-local logos/icons
-- `docs/` — data model, sources, and roadmap
+- `docs/` — data model, sources, ingestion, and roadmap
 
 ## Data status
 
-All current records are fictional placeholders. They demonstrate the schema and preserve the existing prototype experience; they are not real university statistics.
+The live dashboard still uses fictional placeholder records. They demonstrate the schema and preserve the current prototype experience; they are not real university statistics.
+
+A first real-data staging pipeline now exists for U.S. Department of Education College Scorecard institution data. It intentionally writes to `data/imported/` rather than replacing the live files until the imported records and related major/outcome joins are validated.
+
+## First ingestion pipeline
+
+The seed pipeline covers 10 U.S. universities identified by IPEDS UNITID and normalizes institution identity, tuition, and admissions fields.
+
+```bash
+export COLLEGE_SCORECARD_API_KEY="your-key-here"
+python3 scripts/scorecard_import.py
+python3 scripts/validate_import.py data/imported/college-scorecard/YYYY-MM-DD
+```
+
+Do not commit API keys. See `docs/INGESTION.md` for the staging and promotion rules.
 
 ## Design principles
 
@@ -32,8 +48,9 @@ All current records are fictional placeholders. They demonstrate the schema and 
 5. Missing production data should be `null`, never guessed.
 6. The browser-facing schema should remain stable even when future ETL/source pipelines change.
 7. Historical records should be appended by year rather than overwritten.
+8. Source data should be imported reproducibly and validated before promotion to live JSON.
 
-See `docs/DATA_MODEL.md`, `docs/DATA_SOURCES.md`, and `docs/ROADMAP.md` before adding production data.
+See `docs/DATA_MODEL.md`, `docs/DATA_SOURCES.md`, `docs/INGESTION.md`, and `docs/ROADMAP.md` before adding production data.
 
 ## Local development
 
