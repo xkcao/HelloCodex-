@@ -1,0 +1,3949 @@
+{
+  "program_count": 2791,
+  "normalized_non_null_counts": {},
+  "program_counts_by_university": {
+    "University of California-Berkeley": 274,
+    "University of California-Los Angeles": 254,
+    "University of Illinois Urbana-Champaign": 318,
+    "Harvard University": 311,
+    "Massachusetts Institute of Technology": 112,
+    "University of Michigan-Ann Arbor": 363,
+    "Carnegie Mellon University": 222,
+    "The University of Texas at Austin": 343,
+    "University of Washington-Seattle Campus": 408,
+    "Stanford University": 186
+  },
+  "credential_counts": {
+    "{'level': 5, 'title': \"Master's Degree\"}": 914,
+    "{'level': 6, 'title': 'Doctoral Degree'}": 702,
+    "{'level': 3, 'title': \"Bachelor's Degree\"}": 834,
+    "{'level': 7, 'title': 'First Professional Degree'}": 55,
+    "{'level': 4, 'title': 'Post-baccalaureate Certificate'}": 33,
+    "{'level': 8, 'title': 'Graduate/Professional Certificate'}": 180,
+    "{'level': 1, 'title': 'Undergraduate Certificate or Diploma'}": 49,
+    "{'level': 2, 'title': \"Associate's Degree\"}": 1,
+    "{'level': 99, 'title': 'Non-Credential Program (Preparatory Coursework/Teacher Certification)'}": 23
+  },
+  "interesting_source_fields": {
+    "counts": {
+      "rows_containing_key": 2791,
+      "non_null_rows": 2791,
+      "examples": [
+        {
+          "ipeds_awards1": 0,
+          "ipeds_awards2": 0
+        },
+        {
+          "ipeds_awards1": 0,
+          "ipeds_awards2": 0
+        },
+        {
+          "ipeds_awards1": 4,
+          "ipeds_awards2": 2
+        }
+      ]
+    },
+    "credential": {
+      "rows_containing_key": 2791,
+      "non_null_rows": 2791,
+      "examples": [
+        {
+          "level": 5,
+          "title": "Master's Degree"
+        },
+        {
+          "level": 6,
+          "title": "Doctoral Degree"
+        },
+        {
+          "level": 5,
+          "title": "Master's Degree"
+        }
+      ]
+    },
+    "debt": {
+      "rows_containing_key": 2791,
+      "non_null_rows": 2791,
+      "examples": [
+        {
+          "parent_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          },
+          "staff_grad_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          }
+        },
+        {
+          "parent_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          },
+          "staff_grad_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          }
+        },
+        {
+          "parent_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          },
+          "staff_grad_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          }
+        }
+      ]
+    },
+    "earnings": {
+      "rows_containing_key": 2791,
+      "non_null_rows": 2791,
+      "examples": [
+        {
+          "1_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "4_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_p25_earnings_national": 66050,
+            "overall_p75_earnings_national": 123197,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null,
+              "overall_count_national": 304
+            },
+            "overall_median_earnings_national": 90332,
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "5_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "highest": {
+            "3_yr": {
+              "male_median_earnings": null,
+              "pell_median_earnings": null,
+              "nonmale_median_earnings": null,
+              "nonpell_median_earnings": null,
+              "not_enrolled": {
+                "male_count": null,
+                "pell_count": null,
+                "nonmale_count": null,
+                "nonpell_count": null,
+                "overall_count": null
+              },
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "1_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": 0
+              }
+            },
+            "2_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            }
+          }
+        },
+        {
+          "1_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": 0
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "4_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_p25_earnings_national": 110475,
+            "overall_p75_earnings_national": 168873,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null,
+              "overall_count_national": 48
+            },
+            "overall_median_earnings_national": 122650,
+            "not_working_not_enrolled": {
+              "overall_count": 0
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "5_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": 0
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "highest": {
+            "3_yr": {
+              "male_median_earnings": null,
+              "pell_median_earnings": null,
+              "nonmale_median_earnings": null,
+              "nonpell_median_earnings": null,
+              "not_enrolled": {
+                "male_count": null,
+                "pell_count": null,
+                "nonmale_count": null,
+                "nonpell_count": null,
+                "overall_count": null
+              },
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "1_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": 0
+              }
+            },
+            "2_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            }
+          }
+        },
+        {
+          "1_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": 0
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "4_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_p25_earnings_national": 51150,
+            "overall_p75_earnings_national": 99123,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null,
+              "overall_count_national": 464
+            },
+            "overall_median_earnings_national": 70814,
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "5_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "highest": {
+            "3_yr": {
+              "male_median_earnings": null,
+              "pell_median_earnings": null,
+              "nonmale_median_earnings": null,
+              "nonpell_median_earnings": null,
+              "not_enrolled": {
+                "male_count": null,
+                "pell_count": null,
+                "nonmale_count": null,
+                "nonpell_count": null,
+                "overall_count": null
+              },
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "1_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": 0
+              }
+            },
+            "2_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            }
+          }
+        }
+      ]
+    },
+    "title": {
+      "rows_containing_key": 2791,
+      "non_null_rows": 2791,
+      "examples": [
+        "Agricultural Business and Management.",
+        "Agricultural Business and Management.",
+        "Plant Sciences."
+      ]
+    }
+  },
+  "all_source_field_names": [
+    "code",
+    "counts",
+    "credential",
+    "debt",
+    "distance",
+    "earnings",
+    "ope6_id",
+    "repayment",
+    "school",
+    "title",
+    "unit_id"
+  ],
+  "sample_program_by_university": {
+    "University of California-Berkeley": {
+      "program_id": "us-ipeds-110635-cip4-0101-cred-{'level': 5, 'title': \"Master's Degree\"}",
+      "cip4_code": "0101",
+      "title": "Agricultural Business and Management.",
+      "credential_level": {
+        "level": 5,
+        "title": "Master's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null,
+      "source_payload": {
+        "code": "0101",
+        "title": "Agricultural Business and Management.",
+        "ope6_id": "001312",
+        "unit_id": 110635,
+        "distance": 1,
+        "school": {
+          "name": "University of California-Berkeley",
+          "type": "Public",
+          "main_campus": 1
+        },
+        "credential": {
+          "level": 5,
+          "title": "Master's Degree"
+        },
+        "counts": {
+          "ipeds_awards1": 0,
+          "ipeds_awards2": 0
+        },
+        "repayment": {
+          "1_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "2_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "3_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "4_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          }
+        },
+        "earnings": {
+          "1_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "4_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_p25_earnings_national": 66050,
+            "overall_p75_earnings_national": 123197,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null,
+              "overall_count_national": 304
+            },
+            "overall_median_earnings_national": 90332,
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "5_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "highest": {
+            "3_yr": {
+              "male_median_earnings": null,
+              "pell_median_earnings": null,
+              "nonmale_median_earnings": null,
+              "nonpell_median_earnings": null,
+              "not_enrolled": {
+                "male_count": null,
+                "pell_count": null,
+                "nonmale_count": null,
+                "nonpell_count": null,
+                "overall_count": null
+              },
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "1_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": 0
+              }
+            },
+            "2_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            }
+          }
+        },
+        "debt": {
+          "parent_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          },
+          "staff_grad_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "University of California-Los Angeles": {
+      "program_id": "us-ipeds-110662-cip4-0301-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "cip4_code": "0301",
+      "title": "Natural Resources Conservation and Research.",
+      "credential_level": {
+        "level": 3,
+        "title": "Bachelor's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null,
+      "source_payload": {
+        "code": "0301",
+        "title": "Natural Resources Conservation and Research.",
+        "ope6_id": "001315",
+        "unit_id": 110662,
+        "distance": 1,
+        "school": {
+          "name": "University of California-Los Angeles",
+          "type": "Public",
+          "main_campus": 1
+        },
+        "credential": {
+          "level": 3,
+          "title": "Bachelor's Degree"
+        },
+        "counts": {
+          "ipeds_awards1": 107,
+          "ipeds_awards2": 108
+        },
+        "repayment": {
+          "1_yr_bb_fed_comp": {
+            "count": 50,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": "0.40 - 0.59",
+            "makingprogress": "0.20 - 0.39"
+          },
+          "2_yr_bb_fed_comp": {
+            "count": 56,
+            "default": "<=0.20",
+            "deferment": "<=0.20",
+            "discharge": "<=0.20",
+            "fullypaid": "0.40 - 0.59",
+            "delinquent": "<=0.20",
+            "noprogress": "<=0.20",
+            "forbearance": "<=0.20",
+            "makingprogress": "0.20 - 0.39"
+          },
+          "3_yr_bb_fed_comp": {
+            "count": 55,
+            "default": "<=0.20",
+            "deferment": "<=0.20",
+            "discharge": "<=0.20",
+            "fullypaid": "0.20 - 0.39",
+            "delinquent": "<=0.20",
+            "noprogress": "<=0.20",
+            "forbearance": "<=0.20",
+            "makingprogress": "0.20 - 0.39"
+          },
+          "4_yr_bb_fed_comp": {
+            "count": 55,
+            "default": "<=0.20",
+            "deferment": "<=0.20",
+            "discharge": "<=0.20",
+            "fullypaid": "0.40 - 0.59",
+            "delinquent": "<=0.20",
+            "noprogress": "<=0.20",
+            "forbearance": "<=0.20",
+            "makingprogress": "0.20 - 0.39"
+          }
+        },
+        "earnings": {
+          "1_yr": {
+            "male_median_earnings": 30346,
+            "pell_median_earnings": 24029,
+            "nonmale_median_earnings": 31520,
+            "nonpell_median_earnings": 36734,
+            "overall_median_earnings": 31944,
+            "overall_count_more_than_HS_Grad": 35,
+            "working_not_enrolled": {
+              "male_count": 16,
+              "pell_count": 38,
+              "nonmale_count": 49,
+              "nonpell_count": 26,
+              "overall_count": 65
+            },
+            "not_working_not_enrolled": {
+              "overall_count": 2
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": 59
+          },
+          "4_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": 69069,
+            "nonmale_median_earnings": 73048,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": 75927,
+            "overall_p25_earnings_national": 39435,
+            "overall_p75_earnings_national": 72794,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": 28,
+              "nonmale_count": 31,
+              "nonpell_count": null,
+              "overall_count": 50,
+              "overall_count_national": 15907
+            },
+            "overall_median_earnings_national": 55012,
+            "not_working_not_enrolled": {
+              "overall_count": 1
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": 36
+          },
+          "5_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": 80860,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": 79284,
+            "overall_median_earnings": 80496,
+            "overall_count_more_than_HS_Grad": 47,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": 31,
+              "nonmale_count": null,
+              "nonpell_count": 16,
+              "overall_count": 48
+            },
+            "not_working_not_enrolled": {
+              "overall_count": 1
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": 44
+          },
+          "highest": {
+            "3_yr": {
+              "male_median_earnings": null,
+              "pell_median_earnings": 55209,
+              "nonmale_median_earnings": 55144,
+              "nonpell_median_earnings": null,
+              "not_enrolled": {
+                "male_count": null,
+                "pell_count": 26,
+                "nonmale_count": 33,
+                "nonpell_count": null,
+                "overall_count": 41
+              },
+              "overall_median_earnings": 53583,
+              "overall_count_over_poverty_line": 31,
+              "working_not_enrolled": {
+                "overall_count": 36
+              }
+            },
+            "1_yr": {
+              "overall_median_earnings": 36898,
+              "overall_count_over_poverty_line": 46,
+              "working_not_enrolled": {
+                "overall_count": 52
+              },
+              "not_working_not_enrolled": {
+                "overall_count": 2
+              }
+            },
+            "2_yr": {
+              "overall_median_earnings": 41565,
+              "overall_count_over_poverty_line": 42,
+              "working_not_enrolled": {
+                "overall_count": 47
+              },
+              "not_working_not_enrolled": {
+                "overall_count": 1
+              }
+            }
+          }
+        },
+        "debt": {
+          "parent_plus": {
+            "all": {
+              "all_inst": {
+                "count": 24,
+                "median": 39463,
+                "average": null,
+                "median_payment": 469
+              },
+              "eval_inst": {
+                "count": 24,
+                "median": 39463,
+                "average": null,
+                "median_payment": 469
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          },
+          "staff_grad_plus": {
+            "all": {
+              "all_inst": {
+                "count": 67,
+                "median": 18000,
+                "average": 16149,
+                "median_payment": 191
+              },
+              "eval_inst": {
+                "count": 66,
+                "median": 17806,
+                "average": 16132,
+                "median_payment": 189
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": 17,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": 17,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": 39,
+                "median": 15000,
+                "average": null
+              },
+              "eval_inst": {
+                "count": 39,
+                "median": 15000,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": 50,
+                "median": null,
+                "average": 15834
+              },
+              "eval_inst": {
+                "count": 49,
+                "median": null,
+                "average": 15988
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": 28,
+                "median": 19500,
+                "average": 19191
+              },
+              "eval_inst": {
+                "count": 27,
+                "median": 19500,
+                "average": 19597
+              }
+            }
+          }
+        }
+      }
+    },
+    "University of Illinois Urbana-Champaign": {
+      "program_id": "us-ipeds-145637-cip4-0100-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "cip4_code": "0100",
+      "title": "Agriculture, General.",
+      "credential_level": {
+        "level": 3,
+        "title": "Bachelor's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null,
+      "source_payload": {
+        "code": "0100",
+        "title": "Agriculture, General.",
+        "ope6_id": "001775",
+        "unit_id": 145637,
+        "distance": 1,
+        "school": {
+          "name": "University of Illinois Urbana-Champaign",
+          "type": "Public",
+          "main_campus": 1
+        },
+        "credential": {
+          "level": 3,
+          "title": "Bachelor's Degree"
+        },
+        "counts": {
+          "ipeds_awards1": 0,
+          "ipeds_awards2": 2
+        },
+        "repayment": {
+          "1_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "2_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "3_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "4_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          }
+        },
+        "earnings": {
+          "1_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "4_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_p25_earnings_national": null,
+            "overall_p75_earnings_national": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null,
+              "overall_count_national": null
+            },
+            "overall_median_earnings_national": null,
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "5_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "highest": {
+            "3_yr": {
+              "male_median_earnings": null,
+              "pell_median_earnings": null,
+              "nonmale_median_earnings": null,
+              "nonpell_median_earnings": null,
+              "not_enrolled": {
+                "male_count": null,
+                "pell_count": null,
+                "nonmale_count": null,
+                "nonpell_count": null,
+                "overall_count": null
+              },
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "1_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "2_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            }
+          }
+        },
+        "debt": {
+          "parent_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          },
+          "staff_grad_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "Harvard University": {
+      "program_id": "us-ipeds-166027-cip4-0107-cred-{'level': 8, 'title': 'Graduate/Professional Certificate'}",
+      "cip4_code": "0107",
+      "title": "International Agriculture.",
+      "credential_level": {
+        "level": 8,
+        "title": "Graduate/Professional Certificate"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null,
+      "source_payload": {
+        "code": "0107",
+        "title": "International Agriculture.",
+        "ope6_id": "002155",
+        "unit_id": 166027,
+        "distance": 3,
+        "school": {
+          "name": "Harvard University",
+          "type": "Private, nonprofit",
+          "main_campus": 1
+        },
+        "credential": {
+          "level": 8,
+          "title": "Graduate/Professional Certificate"
+        },
+        "counts": {
+          "ipeds_awards1": 12,
+          "ipeds_awards2": 22
+        },
+        "repayment": {
+          "1_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "2_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "3_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "4_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          }
+        },
+        "earnings": {
+          "1_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "4_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_p25_earnings_national": null,
+            "overall_p75_earnings_national": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null,
+              "overall_count_national": null
+            },
+            "overall_median_earnings_national": null,
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "5_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "highest": {
+            "3_yr": {
+              "male_median_earnings": null,
+              "pell_median_earnings": null,
+              "nonmale_median_earnings": null,
+              "nonpell_median_earnings": null,
+              "not_enrolled": {
+                "male_count": null,
+                "pell_count": null,
+                "nonmale_count": null,
+                "nonpell_count": null,
+                "overall_count": null
+              },
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "1_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "2_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            }
+          }
+        },
+        "debt": {
+          "parent_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          },
+          "staff_grad_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "Massachusetts Institute of Technology": {
+      "program_id": "us-ipeds-166683-cip4-0402-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "cip4_code": "0402",
+      "title": "Architecture.",
+      "credential_level": {
+        "level": 3,
+        "title": "Bachelor's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null,
+      "source_payload": {
+        "code": "0402",
+        "title": "Architecture.",
+        "ope6_id": "002178",
+        "unit_id": 166683,
+        "distance": 1,
+        "school": {
+          "name": "Massachusetts Institute of Technology",
+          "type": "Private, nonprofit",
+          "main_campus": 1
+        },
+        "credential": {
+          "level": 3,
+          "title": "Bachelor's Degree"
+        },
+        "counts": {
+          "ipeds_awards1": 15,
+          "ipeds_awards2": 10
+        },
+        "repayment": {
+          "1_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "2_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "3_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "4_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          }
+        },
+        "earnings": {
+          "1_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": 1
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "4_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_p25_earnings_national": 54236,
+            "overall_p75_earnings_national": 78634,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null,
+              "overall_count_national": 4504
+            },
+            "overall_median_earnings_national": 66914,
+            "not_working_not_enrolled": {
+              "overall_count": 0
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "5_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": 0
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "highest": {
+            "3_yr": {
+              "male_median_earnings": null,
+              "pell_median_earnings": null,
+              "nonmale_median_earnings": null,
+              "nonpell_median_earnings": null,
+              "not_enrolled": {
+                "male_count": null,
+                "pell_count": null,
+                "nonmale_count": null,
+                "nonpell_count": null,
+                "overall_count": null
+              },
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "1_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": 0
+              }
+            },
+            "2_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            }
+          }
+        },
+        "debt": {
+          "parent_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          },
+          "staff_grad_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "University of Michigan-Ann Arbor": {
+      "program_id": "us-ipeds-170976-cip4-0301-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "cip4_code": "0301",
+      "title": "Natural Resources Conservation and Research.",
+      "credential_level": {
+        "level": 3,
+        "title": "Bachelor's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null,
+      "source_payload": {
+        "code": "0301",
+        "title": "Natural Resources Conservation and Research.",
+        "ope6_id": "002325",
+        "unit_id": 170976,
+        "distance": 1,
+        "school": {
+          "name": "University of Michigan-Ann Arbor",
+          "type": "Public",
+          "main_campus": 1
+        },
+        "credential": {
+          "level": 3,
+          "title": "Bachelor's Degree"
+        },
+        "counts": {
+          "ipeds_awards1": 123,
+          "ipeds_awards2": 134
+        },
+        "repayment": {
+          "1_yr_bb_fed_comp": {
+            "count": 96,
+            "default": "<=0.20",
+            "deferment": "<=0.20",
+            "discharge": "<=0.20",
+            "fullypaid": "<=0.20",
+            "delinquent": "<=0.20",
+            "noprogress": "<=0.20",
+            "forbearance": "0.40 - 0.59",
+            "makingprogress": "0.20 - 0.39"
+          },
+          "2_yr_bb_fed_comp": {
+            "count": 79,
+            "default": "<=0.20",
+            "deferment": "<=0.20",
+            "discharge": "<=0.20",
+            "fullypaid": "0.20 - 0.39",
+            "delinquent": "<=0.20",
+            "noprogress": "<=0.20",
+            "forbearance": "<=0.20",
+            "makingprogress": "0.40 - 0.59"
+          },
+          "3_yr_bb_fed_comp": {
+            "count": 93,
+            "default": "<=0.20",
+            "deferment": "<=0.20",
+            "discharge": "<=0.20",
+            "fullypaid": "0.20 - 0.39",
+            "delinquent": "<=0.20",
+            "noprogress": "<=0.20",
+            "forbearance": "<=0.20",
+            "makingprogress": "0.20 - 0.39"
+          },
+          "4_yr_bb_fed_comp": {
+            "count": 93,
+            "default": "<=0.20",
+            "deferment": "<=0.20",
+            "discharge": "<=0.20",
+            "fullypaid": "0.20 - 0.39",
+            "delinquent": "<=0.20",
+            "noprogress": "<=0.20",
+            "forbearance": "0.20 - 0.39",
+            "makingprogress": "<=0.20"
+          }
+        },
+        "earnings": {
+          "1_yr": {
+            "male_median_earnings": 31689,
+            "pell_median_earnings": 27331,
+            "nonmale_median_earnings": 28989,
+            "nonpell_median_earnings": 30357,
+            "overall_median_earnings": 29264,
+            "overall_count_more_than_HS_Grad": 67,
+            "working_not_enrolled": {
+              "male_count": 39,
+              "pell_count": 51,
+              "nonmale_count": 102,
+              "nonpell_count": 88,
+              "overall_count": 141
+            },
+            "not_working_not_enrolled": {
+              "overall_count": 8
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": 78
+          },
+          "4_yr": {
+            "male_median_earnings": 50412,
+            "pell_median_earnings": 52968,
+            "nonmale_median_earnings": 53032,
+            "nonpell_median_earnings": 52400,
+            "overall_median_earnings": 65714,
+            "overall_p25_earnings_national": 39435,
+            "overall_p75_earnings_national": 72794,
+            "overall_count_more_than_HS_Grad": 65,
+            "working_not_enrolled": {
+              "male_count": 26,
+              "pell_count": 34,
+              "nonmale_count": 60,
+              "nonpell_count": 51,
+              "overall_count": 114,
+              "overall_count_national": 15907
+            },
+            "overall_median_earnings_national": 55012,
+            "not_working_not_enrolled": {
+              "overall_count": 7
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": 41
+          },
+          "5_yr": {
+            "male_median_earnings": 48877,
+            "pell_median_earnings": 60878,
+            "nonmale_median_earnings": 61840,
+            "nonpell_median_earnings": 54137,
+            "overall_median_earnings": 59553,
+            "overall_count_more_than_HS_Grad": 73,
+            "working_not_enrolled": {
+              "male_count": 28,
+              "pell_count": 32,
+              "nonmale_count": 55,
+              "nonpell_count": 50,
+              "overall_count": 82
+            },
+            "not_working_not_enrolled": {
+              "overall_count": 7
+            },
+            "overall_count_awarded_higher_credential": 19,
+            "overall_count_working_in_institution_state": 41
+          },
+          "highest": {
+            "3_yr": {
+              "male_median_earnings": 41988,
+              "pell_median_earnings": 41024,
+              "nonmale_median_earnings": 43575,
+              "nonpell_median_earnings": 44667,
+              "not_enrolled": {
+                "male_count": 25,
+                "pell_count": 36,
+                "nonmale_count": 63,
+                "nonpell_count": 52,
+                "overall_count": 88
+              },
+              "overall_median_earnings": 43591,
+              "overall_count_over_poverty_line": 64,
+              "working_not_enrolled": {
+                "overall_count": 76
+              }
+            },
+            "1_yr": {
+              "overall_median_earnings": 23494,
+              "overall_count_over_poverty_line": 59,
+              "working_not_enrolled": {
+                "overall_count": 96
+              },
+              "not_working_not_enrolled": {
+                "overall_count": 7
+              }
+            },
+            "2_yr": {
+              "overall_median_earnings": 23869,
+              "overall_count_over_poverty_line": 63,
+              "working_not_enrolled": {
+                "overall_count": 88
+              },
+              "not_working_not_enrolled": {
+                "overall_count": 6
+              }
+            }
+          }
+        },
+        "debt": {
+          "parent_plus": {
+            "all": {
+              "all_inst": {
+                "count": 21,
+                "median": 18913,
+                "average": 29953,
+                "median_payment": 225
+              },
+              "eval_inst": {
+                "count": 20,
+                "median": 17980,
+                "average": 30295,
+                "median_payment": 214
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          },
+          "staff_grad_plus": {
+            "all": {
+              "all_inst": {
+                "count": 114,
+                "median": 16577,
+                "average": 16663,
+                "median_payment": 176
+              },
+              "eval_inst": {
+                "count": 112,
+                "median": 15500,
+                "average": 15894,
+                "median_payment": 164
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": 28,
+                "median": 18651,
+                "average": 16881
+              },
+              "eval_inst": {
+                "count": 26,
+                "median": 16771,
+                "average": 16052
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": 50,
+                "median": 15069,
+                "average": 14831
+              },
+              "eval_inst": {
+                "count": 49,
+                "median": 14844,
+                "average": 13427
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": 86,
+                "median": 16537,
+                "average": null
+              },
+              "eval_inst": {
+                "count": 86,
+                "median": 15500,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": 64,
+                "median": 20250,
+                "average": 18094
+              },
+              "eval_inst": {
+                "count": 63,
+                "median": 18500,
+                "average": 17813
+              }
+            }
+          }
+        }
+      }
+    },
+    "Carnegie Mellon University": {
+      "program_id": "us-ipeds-211440-cip4-0301-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "cip4_code": "0301",
+      "title": "Natural Resources Conservation and Research.",
+      "credential_level": {
+        "level": 3,
+        "title": "Bachelor's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null,
+      "source_payload": {
+        "code": "0301",
+        "title": "Natural Resources Conservation and Research.",
+        "ope6_id": "003242",
+        "unit_id": 211440,
+        "distance": 1,
+        "school": {
+          "name": "Carnegie Mellon University",
+          "type": "Private, nonprofit",
+          "main_campus": 1
+        },
+        "credential": {
+          "level": 3,
+          "title": "Bachelor's Degree"
+        },
+        "counts": {
+          "ipeds_awards1": 1,
+          "ipeds_awards2": 3
+        },
+        "repayment": {
+          "1_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "2_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "3_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "4_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          }
+        },
+        "earnings": {
+          "1_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "4_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_p25_earnings_national": null,
+            "overall_p75_earnings_national": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null,
+              "overall_count_national": null
+            },
+            "overall_median_earnings_national": null,
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "5_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "highest": {
+            "3_yr": {
+              "male_median_earnings": null,
+              "pell_median_earnings": null,
+              "nonmale_median_earnings": null,
+              "nonpell_median_earnings": null,
+              "not_enrolled": {
+                "male_count": null,
+                "pell_count": null,
+                "nonmale_count": null,
+                "nonpell_count": null,
+                "overall_count": null
+              },
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "1_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "2_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            }
+          }
+        },
+        "debt": {
+          "parent_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          },
+          "staff_grad_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "The University of Texas at Austin": {
+      "program_id": "us-ipeds-228778-cip4-0301-cred-{'level': 5, 'title': \"Master's Degree\"}",
+      "cip4_code": "0301",
+      "title": "Natural Resources Conservation and Research.",
+      "credential_level": {
+        "level": 5,
+        "title": "Master's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null,
+      "source_payload": {
+        "code": "0301",
+        "title": "Natural Resources Conservation and Research.",
+        "ope6_id": "003658",
+        "unit_id": 228778,
+        "distance": 1,
+        "school": {
+          "name": "The University of Texas at Austin",
+          "type": "Public",
+          "main_campus": 1
+        },
+        "credential": {
+          "level": 5,
+          "title": "Master's Degree"
+        },
+        "counts": {
+          "ipeds_awards1": 23,
+          "ipeds_awards2": 18
+        },
+        "repayment": {
+          "1_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "2_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "3_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "4_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          }
+        },
+        "earnings": {
+          "1_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": 0
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "4_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_p25_earnings_national": 55183,
+            "overall_p75_earnings_national": 98711,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null,
+              "overall_count_national": 2674
+            },
+            "overall_median_earnings_national": 74607,
+            "not_working_not_enrolled": {
+              "overall_count": 0
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "5_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": 0
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "highest": {
+            "3_yr": {
+              "male_median_earnings": null,
+              "pell_median_earnings": null,
+              "nonmale_median_earnings": null,
+              "nonpell_median_earnings": null,
+              "not_enrolled": {
+                "male_count": null,
+                "pell_count": null,
+                "nonmale_count": null,
+                "nonpell_count": null,
+                "overall_count": null
+              },
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "1_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "2_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            }
+          }
+        },
+        "debt": {
+          "parent_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          },
+          "staff_grad_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "University of Washington-Seattle Campus": {
+      "program_id": "us-ipeds-236948-cip4-0110-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "cip4_code": "0110",
+      "title": "Food Science and Technology.",
+      "credential_level": {
+        "level": 3,
+        "title": "Bachelor's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null,
+      "source_payload": {
+        "code": "0110",
+        "title": "Food Science and Technology.",
+        "ope6_id": "003798",
+        "unit_id": 236948,
+        "distance": 1,
+        "school": {
+          "name": "University of Washington-Seattle Campus",
+          "type": "Public",
+          "main_campus": 1
+        },
+        "credential": {
+          "level": 3,
+          "title": "Bachelor's Degree"
+        },
+        "counts": {
+          "ipeds_awards1": 0,
+          "ipeds_awards2": 0
+        },
+        "repayment": {
+          "1_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "2_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "3_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "4_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          }
+        },
+        "earnings": {
+          "1_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "4_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_p25_earnings_national": null,
+            "overall_p75_earnings_national": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null,
+              "overall_count_national": null
+            },
+            "overall_median_earnings_national": null,
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "5_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "highest": {
+            "3_yr": {
+              "male_median_earnings": null,
+              "pell_median_earnings": null,
+              "nonmale_median_earnings": null,
+              "nonpell_median_earnings": null,
+              "not_enrolled": {
+                "male_count": null,
+                "pell_count": null,
+                "nonmale_count": null,
+                "nonpell_count": null,
+                "overall_count": null
+              },
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "1_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "2_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            }
+          }
+        },
+        "debt": {
+          "parent_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          },
+          "staff_grad_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          }
+        }
+      }
+    },
+    "Stanford University": {
+      "program_id": "us-ipeds-243744-cip4-0181-cred-{'level': 5, 'title': \"Master's Degree\"}",
+      "cip4_code": "0181",
+      "title": "Veterinary Biomedical and Clinical Sciences.",
+      "credential_level": {
+        "level": 5,
+        "title": "Master's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null,
+      "source_payload": {
+        "code": "0181",
+        "title": "Veterinary Biomedical and Clinical Sciences.",
+        "ope6_id": "001305",
+        "unit_id": 243744,
+        "distance": 1,
+        "school": {
+          "name": "Stanford University",
+          "type": "Private, nonprofit",
+          "main_campus": 1
+        },
+        "credential": {
+          "level": 5,
+          "title": "Master's Degree"
+        },
+        "counts": {
+          "ipeds_awards1": 0,
+          "ipeds_awards2": 0
+        },
+        "repayment": {
+          "1_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "2_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "3_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          },
+          "4_yr_bb_fed_comp": {
+            "count": null,
+            "default": null,
+            "deferment": null,
+            "discharge": null,
+            "fullypaid": null,
+            "delinquent": null,
+            "noprogress": null,
+            "forbearance": null,
+            "makingprogress": null
+          }
+        },
+        "earnings": {
+          "1_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": 0
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "4_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_p25_earnings_national": 69889,
+            "overall_p75_earnings_national": 181640,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null,
+              "overall_count_national": 259
+            },
+            "overall_median_earnings_national": 119562,
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "5_yr": {
+            "male_median_earnings": null,
+            "pell_median_earnings": null,
+            "nonmale_median_earnings": null,
+            "nonpell_median_earnings": null,
+            "overall_median_earnings": null,
+            "overall_count_more_than_HS_Grad": null,
+            "working_not_enrolled": {
+              "male_count": null,
+              "pell_count": null,
+              "nonmale_count": null,
+              "nonpell_count": null,
+              "overall_count": null
+            },
+            "not_working_not_enrolled": {
+              "overall_count": null
+            },
+            "overall_count_awarded_higher_credential": null,
+            "overall_count_working_in_institution_state": null
+          },
+          "highest": {
+            "3_yr": {
+              "male_median_earnings": null,
+              "pell_median_earnings": null,
+              "nonmale_median_earnings": null,
+              "nonpell_median_earnings": null,
+              "not_enrolled": {
+                "male_count": null,
+                "pell_count": null,
+                "nonmale_count": null,
+                "nonpell_count": null,
+                "overall_count": null
+              },
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "1_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            },
+            "2_yr": {
+              "overall_median_earnings": null,
+              "overall_count_over_poverty_line": null,
+              "working_not_enrolled": {
+                "overall_count": null
+              },
+              "not_working_not_enrolled": {
+                "overall_count": null
+              }
+            }
+          }
+        },
+        "debt": {
+          "parent_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          },
+          "staff_grad_plus": {
+            "all": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null,
+                "median_payment": null
+              }
+            },
+            "male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_male": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            },
+            "not_pell": {
+              "all_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              },
+              "eval_inst": {
+                "count": null,
+                "median": null,
+                "average": null
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
