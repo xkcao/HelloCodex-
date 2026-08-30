@@ -2,7 +2,7 @@
 
 ## Current production source
 
-The live College Statistics pilot uses the U.S. Department of Education **College Scorecard**.
+The live College Statistics site uses the U.S. Department of Education **College Scorecard**.
 
 Current uses:
 
@@ -13,6 +13,14 @@ Current uses:
 - 1-year, 4-year, and 5-year median earnings where available.
 
 The frontend currently displays 1-year and 4-year program earnings.
+
+## Top-100 coverage rule
+
+The current 100-school set is a practical coverage set, not an official ranking.
+
+The selector keeps the small configured base seed, then fills remaining slots with public/private-nonprofit, bachelor's-predominant institutions with at least 3,000 undergraduate students, ordered by lowest available College Scorecard admission rate.
+
+The selection rule is deliberately simple and reproducible. It can be adjusted later if the resulting coverage is not useful.
 
 ## Interpretation
 
@@ -28,6 +36,12 @@ The site therefore:
 - treats earnings as program-level values.
 
 The university-card **Median across bachelor's programs** is calculated from available 1-year program earnings and is not a separate official Scorecard university metric.
+
+## Staging policy
+
+Preserve enough source/audit information to reproduce and debug the pipeline, but do not force very large raw files into GitHub.
+
+At Top-100 scale, the full field-of-study raw and normalized staging files exceed GitHub's per-file limit. They are generated and validated during the Action run, then discarded after browser-ready JSON and compact audit metadata are produced.
 
 ## Possible future sources
 
@@ -50,7 +64,7 @@ Both require a sufficiently consistent source/definition before they should retu
 Keep source handling simple:
 
 1. Prefer official public sources.
-2. Preserve the original source payload in staging when practical.
-3. Never invent missing values.
-4. Keep retrieval metadata so data can be refreshed or debugged later.
-5. Avoid adding complex cross-source mappings until a user-facing feature actually needs them.
+2. Never invent missing values.
+3. Keep retrieval/selection/audit metadata so data can be refreshed or debugged later.
+4. Preserve large raw payloads only when practical.
+5. Avoid complex cross-source mappings until a user-facing feature actually needs them.
