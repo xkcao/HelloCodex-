@@ -18,6 +18,7 @@
 
     <section class="filters" aria-label="Filters and search">
       <label class="search-field"><span>Search</span><input id="searchInput" type="search" placeholder="University, city, state, or major" autocomplete="off" /></label>
+      <label><span>University</span><select id="universityFilter"><option value="all">All universities</option></select></label>
       <label><span>Major</span><select id="majorFilter"><option value="all">All majors</option></select></label>
       <label><span>Max in-state tuition</span><select id="tuitionFilter"><option value="all">Any tuition</option><option value="30000">Up to $30k</option><option value="50000">Up to $50k</option><option value="70000">Up to $70k</option></select></label>
     </section>
@@ -26,7 +27,7 @@
       <article><span>Universities</span><strong id="universityCount">—</strong></article><article><span>Majors</span><strong id="majorCount">—</strong></article><article><span>Median 1-year earnings</span><strong id="medianSalary">—</strong></article><article><span>Bachelor's programs</span><strong id="programCount">—</strong></article>
     </section>
 
-    <section class="results-section"><div class="section-heading"><div><p class="eyebrow">Universities & majors</p><h2>Explore the real-data pilot</h2></div><p id="resultCount" class="result-count"></p></div><div class="table-wrap"><table><thead><tr><th>University</th><th>Major</th><th>1-year median earnings</th><th>4-year median earnings</th><th>In-state tuition</th><th>Acceptance rate</th></tr></thead><tbody id="resultsBody"></tbody></table></div><div id="emptyState" class="empty-state" hidden>No records match these filters.</div></section>
+    <section class="results-section"><div class="section-heading"><div><p class="eyebrow">Universities & majors</p><h2>Explore the real-data pilot</h2></div><p id="resultCount" class="result-count"></p></div><div class="table-wrap"><table><thead><tr><th>University</th><th>Major</th><th>1-year median earnings</th><th>4-year median earnings</th><th>In-state tuition</th><th>Acceptance rate</th></tr></thead><tbody id="resultsBody"></tbody></table></div><div id="emptyState" class="empty-state" hidden>No records match these filters.</div><div class="pagination" id="pagination"><button id="prevPage" type="button">Previous</button><span id="pageInfo">Page 1</span><button id="nextPage" type="button">Next</button></div></section>
 
     <section class="data-note"><h2>About the data</h2><p>This pilot uses public College Scorecard data for 10 U.S. universities and bachelor's programs. Earnings are approximate indicators. Tuition shown is <strong>in-state tuition</strong> when available. Missing values are left blank rather than estimated.</p></section>
   </main>
