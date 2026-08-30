@@ -90,9 +90,7 @@ jobs:
           cp "$PROGRAM_DIR/audit.json" "$SUMMARY_DIR/audit.json"
           cp "$PROGRAM_DIR/manifest.json" "$SUMMARY_DIR/manifest.json"
 
-          # The full 100-school raw/program staging files exceed GitHub's file-size
-          # limit and are not needed by the static site after validation/promotion.
-          # Keep only compact audit metadata in the repository.
+          # Full program staging is temporary at Top-100 scale; keep only compact audit metadata.
           git rm -rf --ignore-unmatch "$PROGRAM_DIR"
 
           git config user.name "github-actions[bot]"
@@ -101,8 +99,7 @@ jobs:
           git add "data/imported/college-scorecard/$SNAPSHOT"
           git add "$SUMMARY_DIR"
           git add data/universities.json data/majors.json data/university-major.json
-          git add data/salaries.json data/tuition.json data/admissions.json
-          git add data/employment.json data/rankings.json data/metadata.json
+          git add data/salaries.json data/tuition.json data/admissions.json data/metadata.json
           if git diff --cached --quiet; then
             echo "No data changes to commit."
             exit 0
