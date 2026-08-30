@@ -1,0 +1,316 @@
+{
+  "program_count": 2791,
+  "unique_program_id_count": 2791,
+  "unique_cip4_count": 273,
+  "university_count": 10,
+  "expected_university_count": 10,
+  "records_with_median_earnings": 0,
+  "records_with_median_debt": 0,
+  "records_with_annual_completions": 0,
+  "records_missing_program_id": 0,
+  "records_by_university": {
+    "us-ipeds-110635": 274,
+    "us-ipeds-110662": 254,
+    "us-ipeds-145637": 318,
+    "us-ipeds-166027": 311,
+    "us-ipeds-166683": 112,
+    "us-ipeds-170976": 363,
+    "us-ipeds-211440": 222,
+    "us-ipeds-228778": 343,
+    "us-ipeds-236948": 408,
+    "us-ipeds-243744": 186
+  },
+  "records_by_credential_level": {
+    "{'level': 1, 'title': 'Undergraduate Certificate or Diploma'}": 49,
+    "{'level': 2, 'title': \"Associate's Degree\"}": 1,
+    "{'level': 3, 'title': \"Bachelor's Degree\"}": 834,
+    "{'level': 4, 'title': 'Post-baccalaureate Certificate'}": 33,
+    "{'level': 5, 'title': \"Master's Degree\"}": 914,
+    "{'level': 6, 'title': 'Doctoral Degree'}": 702,
+    "{'level': 7, 'title': 'First Professional Degree'}": 55,
+    "{'level': 8, 'title': 'Graduate/Professional Certificate'}": 180,
+    "{'level': 99, 'title': 'Non-Credential Program (Preparatory Coursework/Teacher Certification)'}": 23
+  },
+  "sample_records": [
+    {
+      "program_id": "us-ipeds-110635-cip4-0101-cred-{'level': 5, 'title': \"Master's Degree\"}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0101",
+      "title": "Agricultural Business and Management.",
+      "credential_level": {
+        "level": 5,
+        "title": "Master's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0101-cred-{'level': 6, 'title': 'Doctoral Degree'}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0101",
+      "title": "Agricultural Business and Management.",
+      "credential_level": {
+        "level": 6,
+        "title": "Doctoral Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0111-cred-{'level': 5, 'title': \"Master's Degree\"}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0111",
+      "title": "Plant Sciences.",
+      "credential_level": {
+        "level": 5,
+        "title": "Master's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0199-cred-{'level': 5, 'title': \"Master's Degree\"}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0199",
+      "title": "Agricultural/Animal/Plant/Veterinary Science and Related Fields, Other.",
+      "credential_level": {
+        "level": 5,
+        "title": "Master's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0199-cred-{'level': 6, 'title': 'Doctoral Degree'}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0199",
+      "title": "Agricultural/Animal/Plant/Veterinary Science and Related Fields, Other.",
+      "credential_level": {
+        "level": 6,
+        "title": "Doctoral Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0301-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0301",
+      "title": "Natural Resources Conservation and Research.",
+      "credential_level": {
+        "level": 3,
+        "title": "Bachelor's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0301-cred-{'level': 5, 'title': \"Master's Degree\"}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0301",
+      "title": "Natural Resources Conservation and Research.",
+      "credential_level": {
+        "level": 5,
+        "title": "Master's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0301-cred-{'level': 6, 'title': 'Doctoral Degree'}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0301",
+      "title": "Natural Resources Conservation and Research.",
+      "credential_level": {
+        "level": 6,
+        "title": "Doctoral Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0301-cred-{'level': 7, 'title': 'First Professional Degree'}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0301",
+      "title": "Natural Resources Conservation and Research.",
+      "credential_level": {
+        "level": 7,
+        "title": "First Professional Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0302-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0302",
+      "title": "Environmental/Natural Resources Management and Policy.",
+      "credential_level": {
+        "level": 3,
+        "title": "Bachelor's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0305-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0305",
+      "title": "Forestry.",
+      "credential_level": {
+        "level": 3,
+        "title": "Bachelor's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0305-cred-{'level': 5, 'title': \"Master's Degree\"}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0305",
+      "title": "Forestry.",
+      "credential_level": {
+        "level": 5,
+        "title": "Master's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0306-cred-{'level': 6, 'title': 'Doctoral Degree'}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0306",
+      "title": "Wildlife and Wildlands Science and Management.",
+      "credential_level": {
+        "level": 6,
+        "title": "Doctoral Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0399-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0399",
+      "title": "Natural Resources and Conservation, Other.",
+      "credential_level": {
+        "level": 3,
+        "title": "Bachelor's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0399-cred-{'level': 4, 'title': 'Post-baccalaureate Certificate'}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0399",
+      "title": "Natural Resources and Conservation, Other.",
+      "credential_level": {
+        "level": 4,
+        "title": "Post-baccalaureate Certificate"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0402-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0402",
+      "title": "Architecture.",
+      "credential_level": {
+        "level": 3,
+        "title": "Bachelor's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0402-cred-{'level': 5, 'title': \"Master's Degree\"}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0402",
+      "title": "Architecture.",
+      "credential_level": {
+        "level": 5,
+        "title": "Master's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0402-cred-{'level': 6, 'title': 'Doctoral Degree'}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0402",
+      "title": "Architecture.",
+      "credential_level": {
+        "level": 6,
+        "title": "Doctoral Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0402-cred-{'level': 7, 'title': 'First Professional Degree'}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0402",
+      "title": "Architecture.",
+      "credential_level": {
+        "level": 7,
+        "title": "First Professional Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    },
+    {
+      "program_id": "us-ipeds-110635-cip4-0403-cred-{'level': 5, 'title': \"Master's Degree\"}",
+      "university_id": "us-ipeds-110635",
+      "university_name": "University of California-Berkeley",
+      "cip4_code": "0403",
+      "title": "City/Urban, Community, and Regional Planning.",
+      "credential_level": {
+        "level": 5,
+        "title": "Master's Degree"
+      },
+      "median_earnings": null,
+      "median_debt": null,
+      "annual_completions": null
+    }
+  ]
+}

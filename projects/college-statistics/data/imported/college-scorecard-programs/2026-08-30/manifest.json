@@ -1,7 +1,7 @@
 {
   "source": "College Scorecard Field of Study",
   "source_url": "https://collegescorecard.ed.gov/data/",
-  "retrieved_at": "2026-08-30T18:18:14.657513+00:00",
+  "retrieved_at": "2026-08-30T18:26:29.049565+00:00",
   "snapshot": "2026-08-30",
   "seed_count": 10,
   "program_count": 2791,
@@ -20,5 +20,10 @@
   "request_mode": "batched-unitids",
   "unit_of_analysis": "IPEDS UNITID + four-digit CIP code + credential level",
   "year_policy": "metric_year remains null until each metric is mapped to its documented cohort/reporting period; latest must not be treated as one calendar year.",
-  "promotion_status": "staging-only"
+  "promotion_status": "staging-only",
+  "generated_files": [
+    "programs.json",
+    "raw.json",
+    "audit.json"
+  ]
 }
