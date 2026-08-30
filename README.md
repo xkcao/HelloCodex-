@@ -28,7 +28,9 @@ Path: `/projects/soccer/`
 
 A university and major explorer using public U.S. Department of Education College Scorecard data.
 
-The current pilot covers 10 U.S. universities and bachelor's programs. It shows program-level 1-year and 4-year median earnings where available, plus university-level in-state tuition and acceptance rate. The university cards also show a derived median across that university's available bachelor's-program 1-year earnings.
+The current site covers a 100-institution U.S. coverage set and bachelor's programs. It shows program-level 1-year and 4-year median earnings where available, plus university-level in-state tuition and acceptance rate. University cards also show a derived median across that university's available bachelor's-program 1-year earnings.
+
+The 100-school set is a practical inclusion set rather than an official or displayed ranking.
 
 Path: `/projects/college-statistics/`
 
