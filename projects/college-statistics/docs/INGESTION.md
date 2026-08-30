@@ -1,13 +1,15 @@
 # Data Ingestion
 
-The College Statistics project uses a small GitHub Actions pipeline to refresh its College Scorecard pilot data.
+The College Statistics project uses a small GitHub Actions pipeline to refresh its College Scorecard data.
 
 ## Current flow
 
 ```text
 College Scorecard API
         ↓
-institution + field-of-study snapshots
+100-school coverage selection
+        ↓
+institution + field-of-study import
         ↓
 validation
         ↓
@@ -22,36 +24,53 @@ The workflow is defined in:
 .github/workflows/college-scorecard-seed.yml
 ```
 
-## Seed universities
+## Top-100 selection
 
-`config/scorecard_seed_universities.json` contains 10 institutions identified by IPEDS UNITID.
+`select_top100.py` builds a reproducible 100-school coverage set.
 
-They are a test set, not a ranking or permanent top-10 list.
+It keeps the small configured base seed, then fills remaining slots with College Scorecard institutions that are:
+
+- public or private nonprofit;
+- bachelor's-predominant;
+- at least 3,000 undergraduate students;
+- reporting an admission rate.
+
+Eligible schools are ordered by lowest available College Scorecard admission rate until the target count is reached.
+
+This is an inclusion rule for coverage, not an official ranking and not a rank displayed by the site.
+
+The selected list is stored under:
+
+```text
+data/imported/college-scorecard-selection/YYYY-MM-DD/
+```
 
 ## Institution import
 
-`scorecard_import.py` fetches institution-level data and writes a dated snapshot under:
+`scorecard_import.py` fetches institution-level data for the selected schools and writes a dated snapshot under:
 
 ```text
 data/imported/college-scorecard/YYYY-MM-DD/
 ```
 
-This includes raw source data plus normalized university, tuition, admissions, and manifest files.
+This includes normalized university, tuition, admissions, manifest, and a relatively small institution source response.
 
 ## Program import
 
-`scorecard_program_import.py` fetches College Scorecard field-of-study data for the same schools and writes:
+`scorecard_program_import.py` fetches College Scorecard field-of-study data for the same schools.
 
-```text
-data/imported/college-scorecard-programs/YYYY-MM-DD/
-```
-
-The Scorecard unit is institution + 4-digit CIP field + credential level.
-
-The staging dataset keeps multiple credential levels, but the live website currently promotes only:
+The Scorecard unit is institution + 4-digit CIP field + credential level. The temporary import keeps multiple credential levels, but the live website promotes only:
 
 ```text
 credential_level == 3  # Bachelor's Degree
+```
+
+At 100 schools, the temporary raw/program files are larger than GitHub's 100 MB per-file limit. They are therefore generated, validated, summarized, and used during the Action run but are not committed to the repository.
+
+Compact program audit metadata is committed under:
+
+```text
+data/imported/college-scorecard-programs-summary/YYYY-MM-DD/
 ```
 
 ## Validation
@@ -62,7 +81,7 @@ The goal is not perfect research-grade normalization. The goal is to catch obvio
 
 ## Promotion
 
-`promote_bachelors.py` converts validated staging data into the small browser-ready files in `data/`.
+`promote_bachelors.py` converts validated temporary program data into the browser-ready files in `data/`.
 
 Current promotion choices:
 
@@ -76,26 +95,16 @@ Current promotion choices:
 
 ## API key
 
-For this small seed pipeline, the scripts can use `DEMO_KEY`. A personal api.data.gov key can be supplied through the `COLLEGE_SCORECARD_API_KEY` environment variable or GitHub Actions secret when scaling up.
+The current workflow can run with api.data.gov's `DEMO_KEY`. A personal key can be supplied through the `COLLEGE_SCORECARD_API_KEY` environment variable or GitHub Actions secret if rate limits become a problem.
 
 Never commit a personal API key.
 
 ## Refreshing data
 
-The GitHub Action runs when relevant importer/workflow files change and can also be started manually with `workflow_dispatch`.
+The GitHub Action runs when relevant selection/import/workflow files change and can also be started manually with `workflow_dispatch`.
 
-For local testing from `projects/college-statistics/`, the scripts can also be run directly.
-
-Example:
-
-```bash
-python3 scripts/scorecard_import.py --snapshot 2026-08-30
-python3 scripts/validate_import.py data/imported/college-scorecard/2026-08-30
-python3 scripts/scorecard_program_import.py --snapshot 2026-08-30
-python3 scripts/validate_program_import.py data/imported/college-scorecard-programs/2026-08-30
-python3 scripts/promote_bachelors.py 2026-08-30
-```
+For local testing from `projects/college-statistics/`, run the same sequence with a chosen snapshot date and the generated selection file.
 
 ## Simplicity rule
 
-Staging can stay detailed for debugging, but the live website data should remain small and understandable. Do not add another transformation layer unless scaling or a concrete feature requires it.
+Keep only what is useful to the static site or to debugging the pipeline. Large raw program payloads are temporary at Top-100 scale; compact audit metadata and browser-ready JSON are enough for the repository.
