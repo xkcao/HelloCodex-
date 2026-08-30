@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
 """Import College Scorecard field-of-study data for the configured seed universities.
 
-The importer uses one batched API request for all UNITIDs, preserves the raw
-program payload for reproducibility, and writes a compact audit summary so large
-program snapshots can be inspected without opening multi-megabyte JSON files.
+Uses one batched API request for all UNITIDs, preserves raw program payloads, and
+writes normalized program records plus a compact audit summary.
 """
 
 from __future__ import annotations
@@ -38,20 +37,20 @@ def write_json(path: Path, payload) -> None:
         handle.write("\n")
 
 
-def value(record: dict, key: str):
-    if key in record:
-        return record[key]
+def nested_value(record: dict, dotted_key: str):
+    if dotted_key in record:
+        return record[dotted_key]
     current = record
-    for part in key.split("."):
+    for part in dotted_key.split("."):
         if not isinstance(current, dict) or part not in current:
             return None
         current = current[part]
     return current
 
 
-def first_present(record: dict, *keys):
-    for key in keys:
-        candidate = record.get(key)
+def first_value(record: dict, *paths):
+    for path in paths:
+        candidate = nested_value(record, path)
         if candidate not in (None, "", "PrivacySuppressed", "NA"):
             return candidate
     return None
@@ -79,7 +78,6 @@ def fetch_schools(unitids: list[str], api_key: str) -> list[dict]:
     )
     with urllib.request.urlopen(request, timeout=90) as response:
         payload = json.load(response)
-
     results = payload.get("results", [])
     returned = {str(record.get("id")) for record in results}
     missing = sorted(set(unitids) - returned)
@@ -91,34 +89,34 @@ def fetch_schools(unitids: list[str], api_key: str) -> list[dict]:
 
 
 def credential_parts(program: dict) -> tuple[int | str | None, str | None]:
-    credential = first_present(program, "credential", "credential_level")
+    credential = nested_value(program, "credential")
     if isinstance(credential, dict):
         return credential.get("level"), credential.get("title")
-
-    level = first_present(program, "credential.level", "credential_level")
-    title = first_present(program, "credential.title", "credential_title")
-    return level, title
+    return (
+        first_value(program, "credential.level", "credential_level"),
+        first_value(program, "credential.title", "credential_title"),
+    )
 
 
 def normalize_program(unitid: str, school_name: str | None, program: dict) -> dict:
-    cip = first_present(program, "code", "cip_code", "cipcode")
+    cip = first_value(program, "code", "cip_code", "cipcode")
     credential_level, credential_title = credential_parts(program)
-    title = first_present(program, "title", "cip_title")
-    earnings = first_present(
-        program,
-        "earnings.median_earnings",
-        "earnings.1_yr.overall_median_earnings",
-        "earnings.1_yr.earnings_median",
+    title = first_value(program, "title", "cip_title")
+
+    earnings_1yr = number_or_none(
+        first_value(program, "earnings.1_yr.overall_median_earnings")
     )
-    debt = first_present(
-        program,
-        "debt.median_debt",
-        "debt.all.all_inst.median",
-        "debt.median_debt.completers.overall",
+    earnings_4yr = number_or_none(
+        first_value(program, "earnings.4_yr.overall_median_earnings")
     )
-    awards = first_present(
-        program, "counts.ipeds_awards1", "counts.ipeds_awards2", "counts.ipeds_awards"
+    earnings_5yr = number_or_none(
+        first_value(program, "earnings.5_yr.overall_median_earnings")
     )
+    student_debt = number_or_none(
+        first_value(program, "debt.staff_grad_plus.all.all_inst.median")
+    )
+    awards_1 = number_or_none(first_value(program, "counts.ipeds_awards1"))
+    awards_2 = number_or_none(first_value(program, "counts.ipeds_awards2"))
 
     uid = f"us-ipeds-{unitid}"
     cip_text = str(cip) if cip is not None else None
@@ -137,16 +135,19 @@ def normalize_program(unitid: str, school_name: str | None, program: dict) -> di
         "title": title,
         "credential_level": credential_level,
         "credential_title": credential_title,
-        "median_earnings": number_or_none(earnings),
-        "median_debt": number_or_none(debt),
-        "annual_completions": number_or_none(awards),
+        "median_earnings_1yr": earnings_1yr,
+        "median_earnings_4yr": earnings_4yr,
+        "median_earnings_5yr": earnings_5yr,
+        "median_student_debt": student_debt,
+        "ipeds_awards_count_1": awards_1,
+        "ipeds_awards_count_2": awards_2,
         "source": "College Scorecard",
         "source_release": "latest",
         "metric_year": None,
         "population_note": (
-            "Field-of-study earnings and debt metrics derived from federal aid/tax "
-            "records describe federally aided students and should not automatically "
-            "be generalized to all graduates."
+            "Field-of-study earnings/debt measures based on federal aid/tax records "
+            "describe covered students and should not automatically be generalized "
+            "to all graduates."
         ),
         "source_payload": program,
     }
@@ -163,9 +164,12 @@ def compact_record(row: dict) -> dict:
             "title",
             "credential_level",
             "credential_title",
-            "median_earnings",
-            "median_debt",
-            "annual_completions",
+            "median_earnings_1yr",
+            "median_earnings_4yr",
+            "median_earnings_5yr",
+            "median_student_debt",
+            "ipeds_awards_count_1",
+            "ipeds_awards_count_2",
         )
     }
 
@@ -193,32 +197,22 @@ def build_audit(programs: list[dict], unitids: list[str]) -> dict:
     for row in programs[:100]:
         source_paths.update(flatten_key_paths(row.get("source_payload", {})))
 
-    outcome_like_paths = sorted(
-        path
-        for path in source_paths
-        if any(token in path.lower() for token in ("earn", "debt", "count", "award", "wage", "salary"))
-    )
-
     return {
         "program_count": len(programs),
         "unique_program_id_count": len(unique_ids),
         "unique_cip4_count": len(unique_cips),
         "university_count": len(by_university),
         "expected_university_count": len(unitids),
-        "records_with_median_earnings": sum(
-            row.get("median_earnings") is not None for row in programs
-        ),
-        "records_with_median_debt": sum(
-            row.get("median_debt") is not None for row in programs
-        ),
-        "records_with_annual_completions": sum(
-            row.get("annual_completions") is not None for row in programs
-        ),
+        "records_with_earnings_1yr": sum(row.get("median_earnings_1yr") is not None for row in programs),
+        "records_with_earnings_4yr": sum(row.get("median_earnings_4yr") is not None for row in programs),
+        "records_with_earnings_5yr": sum(row.get("median_earnings_5yr") is not None for row in programs),
+        "records_with_student_debt": sum(row.get("median_student_debt") is not None for row in programs),
+        "records_with_ipeds_awards_1": sum(row.get("ipeds_awards_count_1") is not None for row in programs),
+        "records_with_ipeds_awards_2": sum(row.get("ipeds_awards_count_2") is not None for row in programs),
         "records_missing_program_id": sum(not row.get("program_id") for row in programs),
         "records_by_university": dict(sorted(by_university.items())),
         "records_by_credential_level": dict(sorted(by_credential.items())),
         "source_field_paths_sample": sorted(source_paths),
-        "outcome_like_source_field_paths": outcome_like_paths,
         "sample_records": [compact_record(row) for row in programs[:20]],
     }
 
@@ -227,9 +221,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--seed", type=Path, default=DEFAULT_SEED)
     parser.add_argument("--output-root", type=Path, default=DEFAULT_OUTPUT_ROOT)
-    parser.add_argument(
-        "--snapshot", default=dt.datetime.now(dt.timezone.utc).date().isoformat()
-    )
+    parser.add_argument("--snapshot", default=dt.datetime.now(dt.timezone.utc).date().isoformat())
     parser.add_argument("--api-key", default=None)
     args = parser.parse_args()
 
@@ -240,11 +232,10 @@ def main() -> int:
     print(f"Fetching field-of-study data for {len(unitids)} universities in one request")
     schools = fetch_schools(unitids, api_key)
     programs: list[dict] = []
-
     for school in schools:
         unitid = str(school["id"])
-        school_name = value(school, "school.name")
-        source_programs = value(school, PROGRAM_FIELD) or []
+        school_name = nested_value(school, "school.name")
+        source_programs = nested_value(school, PROGRAM_FIELD) or []
         if not isinstance(source_programs, list):
             raise RuntimeError(f"Expected {PROGRAM_FIELD} list for UNITID {unitid}")
         programs.extend(
@@ -257,42 +248,34 @@ def main() -> int:
     retrieved_at = dt.datetime.now(dt.timezone.utc).isoformat()
     audit = build_audit(programs, unitids)
 
-    write_json(
-        output_dir / "raw.json",
-        {
-            "source": "College Scorecard",
-            "endpoint": BASE_URL,
-            "retrieved_at": retrieved_at,
-            "fields": FIELDS,
-            "records": schools,
-        },
-    )
+    write_json(output_dir / "raw.json", {
+        "source": "College Scorecard",
+        "endpoint": BASE_URL,
+        "retrieved_at": retrieved_at,
+        "fields": FIELDS,
+        "records": schools,
+    })
     write_json(output_dir / "programs.json", programs)
     write_json(output_dir / "audit.json", audit)
-    write_json(
-        output_dir / "manifest.json",
-        {
-            "source": "College Scorecard Field of Study",
-            "source_url": "https://collegescorecard.ed.gov/data/",
-            "retrieved_at": retrieved_at,
-            "snapshot": args.snapshot,
-            "seed_count": len(seeds),
-            "program_count": len(programs),
-            "unitids": unitids,
-            "request_mode": "batched-unitids",
-            "unit_of_analysis": "IPEDS UNITID + four-digit CIP code + credential level",
-            "year_policy": (
-                "metric_year remains null until each metric is mapped to its documented "
-                "cohort/reporting period; latest must not be treated as one calendar year."
-            ),
-            "promotion_status": "staging-only",
-            "generated_files": ["programs.json", "raw.json", "audit.json"],
-        },
-    )
+    write_json(output_dir / "manifest.json", {
+        "source": "College Scorecard Field of Study",
+        "source_url": "https://collegescorecard.ed.gov/data/",
+        "retrieved_at": retrieved_at,
+        "snapshot": args.snapshot,
+        "seed_count": len(seeds),
+        "program_count": len(programs),
+        "unitids": unitids,
+        "request_mode": "batched-unitids",
+        "unit_of_analysis": "IPEDS UNITID + four-digit CIP code + credential level",
+        "year_policy": "Metric-specific cohort/reporting years remain unresolved in this staging snapshot; latest is not treated as one calendar year.",
+        "promotion_status": "staging-only",
+        "generated_files": ["programs.json", "raw.json", "audit.json"],
+    })
 
     print(
-        f"Wrote {len(programs)} staged program records to {output_dir}; "
-        f"audit has {audit['records_with_median_earnings']} records with median earnings"
+        f"Wrote {len(programs)} staged records; "
+        f"1yr earnings={audit['records_with_earnings_1yr']}, "
+        f"4yr earnings={audit['records_with_earnings_4yr']}"
     )
     return 0
 
