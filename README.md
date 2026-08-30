@@ -1,59 +1,52 @@
 # HelloCodex
 
-HelloCodex is a GitHub Pages repository for a collection of independent static web projects. The repository root is a lightweight project portal, while each project lives in its own self-contained folder under `projects/`.
+HelloCodex is a GitHub Pages repository containing independent static web projects. The repository root is a simple project portal, and each project lives in its own folder under `projects/`.
 
-## Repository structure
+## Structure
 
 ```text
 /
-├── index.html                 # HelloCodex landing page
+├── index.html
 ├── assets/
-│   └── css/
-│       └── site.css           # Shared/root landing-page styles
 ├── projects/
 │   ├── soccer/
-│   │   ├── index.html
-│   │   ├── css/
-│   │   ├── js/
-│   │   ├── data/
-│   │   └── README.md
 │   └── college-statistics/
-│       ├── index.html
-│       ├── css/
-│       ├── js/
-│       ├── data/
-│       └── README.md
 └── README.md
 ```
+
+Each project keeps its own HTML, CSS, JavaScript, data, and documentation so it can evolve independently.
 
 ## Projects
 
 ### Soccer Dashboard
 
-The existing European soccer dashboard, including results, standings, top scorers and assists, lives at:
+European soccer dashboard with results, standings, scorers, and assists.
 
-`/projects/soccer/`
+Path: `/projects/soccer/`
 
 ### College Statistics
 
-A scaffold for a future project covering university majors, salaries, employment outcomes and education statistics lives at:
+A university and major explorer using public U.S. Department of Education College Scorecard data.
 
-`/projects/college-statistics/`
+The current pilot covers 10 U.S. universities and bachelor's programs. It shows program-level 1-year and 4-year median earnings where available, plus university-level in-state tuition and acceptance rate. The university cards also show a derived median across that university's available bachelor's-program 1-year earnings.
 
-## Adding a new project
+Path: `/projects/college-statistics/`
 
-1. Create a new folder under `projects/`, for example `projects/new-project/`.
-2. Add an `index.html` plus `css/`, `js/`, `data/`, and `README.md`.
-3. Keep project-specific paths relative to that project folder so it remains self-contained.
+## Adding a project
+
+1. Create a folder under `projects/`.
+2. Keep project-specific code and data inside that folder.
+3. Add an `index.html` and a short `README.md`.
 4. Add a project card to the root `index.html`.
-5. Reuse shared assets only when they are genuinely common across projects; otherwise keep styling and logic inside the project.
 
-## GitHub Pages organization
+Prefer simple, self-contained static projects. Introduce shared infrastructure only when multiple projects genuinely need it.
 
-GitHub Pages serves the repository root as the site root. Therefore:
+## GitHub Pages
 
-- `/index.html` is the HelloCodex home page.
-- `/projects/soccer/` serves `projects/soccer/index.html`.
-- `/projects/college-statistics/` serves `projects/college-statistics/index.html`.
+GitHub Pages serves the repository root as the site root:
 
-This structure lets each project evolve independently while keeping one stable GitHub Pages entry point.
+- `/` → HelloCodex project portal
+- `/projects/soccer/` → Soccer Dashboard
+- `/projects/college-statistics/` → College Statistics
+
+No backend server is required for the current projects.
