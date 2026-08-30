@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.1.0",
+  "schema_version": "1.1.1",
   "status": "Real federal pilot data",
   "current_year": 2026,
   "countries": [
@@ -8,5 +8,5 @@
   "generated_at": "2026-08-30",
   "source": "College Scorecard",
   "scope": "10-university bachelor's-degree pilot",
-  "notes": "Earnings are approximate indicators from College Scorecard. The main displayed earnings figure is one-year median earnings when available. Missing values are left blank."
+  "notes": "Earnings are approximate indicators from College Scorecard. The main displayed earnings figure is one-year median earnings when available. Tuition shown on the site is in-state tuition when available. Missing values are left blank."
 }
