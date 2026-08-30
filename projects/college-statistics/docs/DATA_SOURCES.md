@@ -1,42 +1,56 @@
 # Data Sources
 
-This document is a planning registry. The current site uses fictional placeholder data only.
+## Current production source
 
-## Candidate sources
+The live College Statistics pilot uses the U.S. Department of Education **College Scorecard**.
 
-### IPEDS
-Potential use: institution identifiers, enrollment, completions, tuition, graduation, finance, institutional characteristics.
+Current uses:
 
-### College Scorecard
-Potential use: admissions, cost, completion, debt, earnings, fields of study, institution metadata.
+- institution identity and location;
+- in-state tuition;
+- acceptance rate;
+- field-of-study / CIP program records;
+- 1-year, 4-year, and 5-year median earnings where available.
 
-### Bureau of Labor Statistics (BLS)
-Potential use: occupation-level wages, employment outlook, labor-market context. BLS data is generally occupation-based rather than university-specific, so mappings must be explicit.
+The frontend currently displays 1-year and 4-year program earnings.
 
-### U.S. Census Bureau
-Potential use: demographic, geographic, income, and labor-market context.
+## Interpretation
 
-### Common Data Set
-Potential use: institution-reported admissions, enrollment, financial aid, academic offerings, and student profile data. Availability and formatting vary by university.
+College Scorecard earnings are useful comparison indicators, but they should not be read as guaranteed salaries for all graduates. Coverage can differ by program and some values are unavailable or privacy-suppressed.
 
-### University websites
-Potential use: official program availability, degree requirements, deadlines, tuition details, and institutional metadata. Prefer structured official sources where possible.
+The site therefore:
 
-## Source policy to adopt before production data
+- shows missing values as `—`;
+- does not estimate missing earnings;
+- keeps 1-year and 4-year earnings separate;
+- labels tuition as in-state tuition;
+- treats acceptance rate and tuition as institution-level values;
+- treats earnings as program-level values.
 
-1. Record source name and source URL or dataset identifier.
-2. Record reporting year versus retrieval date separately.
-3. Never infer a missing statistic.
-4. Preserve raw imported data outside the browser-ready output when an automated pipeline is introduced.
-5. Define transformations and mappings, especially CIP-to-major and occupation-to-major mappings.
-6. Document licensing and redistribution constraints for every source.
-7. Prefer official government or institution data over secondary aggregators when the same measure exists.
+The university-card **Median across bachelor's programs** is calculated from available 1-year program earnings and is not a separate official Scorecard university metric.
 
-## Open questions
+## Possible future sources
 
-- What defines the initial “top 100” university list?
-- Which salary concept should be primary: alumni earnings, occupation wage, early-career, or mid-career?
-- What time window defines employment rate?
-- How should graduate school enrollment affect employment metrics?
-- How should in-state versus out-of-state tuition be represented?
-- Which ranking providers permit redistribution?
+Only add another source when it supports a clear website feature.
+
+- **IPEDS** — institution/completion data and broader federal education statistics.
+- **BLS** — occupation-level wages and job outlook; not university-specific.
+- **U.S. Census Bureau** — broader labor-market or geographic context.
+- **Official university sources / Common Data Set** — institution-specific details when a standardized federal field is insufficient.
+
+## Not currently used
+
+- Employment rate by university + major is not currently displayed.
+- Rankings are not currently displayed.
+
+Both require a sufficiently consistent source/definition before they should return to the UI.
+
+## Source rules
+
+Keep source handling simple:
+
+1. Prefer official public sources.
+2. Preserve the original source payload in staging when practical.
+3. Never invent missing values.
+4. Keep retrieval metadata so data can be refreshed or debugged later.
+5. Avoid adding complex cross-source mappings until a user-facing feature actually needs them.
