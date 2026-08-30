@@ -41,9 +41,23 @@ def main() -> int:
 
     seen = set()
     university_ids = set()
-    earnings_count = 0
-    debt_count = 0
-    completions_count = 0
+    counters = {
+        "records_with_earnings_1yr": 0,
+        "records_with_earnings_4yr": 0,
+        "records_with_earnings_5yr": 0,
+        "records_with_student_debt": 0,
+        "records_with_ipeds_awards_1": 0,
+        "records_with_ipeds_awards_2": 0,
+    }
+
+    field_map = {
+        "records_with_earnings_1yr": "median_earnings_1yr",
+        "records_with_earnings_4yr": "median_earnings_4yr",
+        "records_with_earnings_5yr": "median_earnings_5yr",
+        "records_with_student_debt": "median_student_debt",
+        "records_with_ipeds_awards_1": "ipeds_awards_count_1",
+        "records_with_ipeds_awards_2": "ipeds_awards_count_2",
+    }
 
     for index, row in enumerate(programs):
         uid = row.get("university_id")
@@ -60,6 +74,8 @@ def main() -> int:
             errors.append(f"Row {index}: missing CIP4 code")
         if credential is None:
             errors.append(f"Row {index}: missing credential level")
+        if not isinstance(credential, (int, str)):
+            errors.append(f"Row {index}: credential_level must be scalar")
         if not title:
             errors.append(f"Row {index}: missing program title")
         if not program_id:
@@ -71,17 +87,14 @@ def main() -> int:
         seen.add(key)
 
         if row.get("metric_year") is not None:
-            errors.append(
-                f"Row {index}: metric_year must remain null until cohort mapping is explicit"
-            )
+            errors.append(f"Row {index}: metric_year must remain null until cohort mapping is explicit")
         if row.get("source") != "College Scorecard":
             errors.append(f"Row {index}: unexpected source")
         if not isinstance(row.get("source_payload"), dict):
             errors.append(f"Row {index}: source_payload missing")
 
-        earnings_count += row.get("median_earnings") is not None
-        debt_count += row.get("median_debt") is not None
-        completions_count += row.get("annual_completions") is not None
+        for audit_key, record_key in field_map.items():
+            counters[audit_key] += row.get(record_key) is not None
 
     expected_universities = manifest.get("seed_count")
     if expected_universities is not None and len(university_ids) != expected_universities:
@@ -93,14 +106,11 @@ def main() -> int:
         errors.append("audit unique_program_id_count does not match validated identities")
     if audit.get("university_count") != len(university_ids):
         errors.append("audit university_count does not match programs.json")
-    if audit.get("records_with_median_earnings") != earnings_count:
-        errors.append("audit earnings count does not match programs.json")
-    if audit.get("records_with_median_debt") != debt_count:
-        errors.append("audit debt count does not match programs.json")
-    if audit.get("records_with_annual_completions") != completions_count:
-        errors.append("audit completions count does not match programs.json")
     if audit.get("records_missing_program_id") != 0:
         errors.append("audit reports records missing program_id")
+    for audit_key, count in counters.items():
+        if audit.get(audit_key) != count:
+            errors.append(f"audit {audit_key} does not match programs.json")
 
     if errors:
         print("Validation failed:", file=sys.stderr)
@@ -111,8 +121,9 @@ def main() -> int:
         return 1
 
     print(
-        f"Validation passed for {len(programs)} field-of-study records across "
-        f"{len(university_ids)} universities; {earnings_count} records contain median earnings"
+        f"Validation passed for {len(programs)} records across {len(university_ids)} universities; "
+        f"1yr earnings={counters['records_with_earnings_1yr']}, "
+        f"4yr earnings={counters['records_with_earnings_4yr']}"
     )
     return 0
 
