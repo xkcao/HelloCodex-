@@ -98,12 +98,10 @@ def main() -> int:
     write(DATA / "salaries.json", salaries)
     write(DATA / "tuition.json", list(tuition_by_university.values()))
     write(DATA / "admissions.json", admissions)
-    write(DATA / "employment.json", [])
-    write(DATA / "rankings.json", [])
 
     count = len(universities)
     write(DATA / "metadata.json", {
-        "schema_version": "1.2.0",
+        "schema_version": "1.2.1",
         "status": "Real federal data",
         "current_year": 2026,
         "countries": ["US"],
