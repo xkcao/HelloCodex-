@@ -12,6 +12,7 @@ on:
       - projects/college-statistics/scripts/validate_import.py
       - projects/college-statistics/scripts/scorecard_program_import.py
       - projects/college-statistics/scripts/validate_program_import.py
+      - projects/college-statistics/scripts/summarize_program_import.py
 
 permissions:
   contents: write
@@ -60,10 +61,15 @@ jobs:
         run: python3 scripts/validate_import.py "data/imported/college-scorecard/${{ steps.snapshot.outputs.date }}"
 
       - name: Import field-of-study data
+        env:
+          COLLEGE_SCORECARD_API_KEY: ${{ secrets.COLLEGE_SCORECARD_API_KEY || 'DEMO_KEY' }}
         run: python3 scripts/scorecard_program_import.py --snapshot "${{ steps.snapshot.outputs.date }}"
 
       - name: Validate field-of-study snapshot
         run: python3 scripts/validate_program_import.py "data/imported/college-scorecard-programs/${{ steps.snapshot.outputs.date }}"
+
+      - name: Summarize field-of-study snapshot
+        run: python3 scripts/summarize_program_import.py "data/imported/college-scorecard-programs/${{ steps.snapshot.outputs.date }}"
 
       - name: Commit validated staging snapshots
         shell: bash
