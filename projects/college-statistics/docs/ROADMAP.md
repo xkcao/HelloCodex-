@@ -1,36 +1,46 @@
 # Roadmap
 
-## Phase 1 — Static prototype
-- Normalized placeholder data
-- Modular frontend architecture
+The project should stay useful and simple. Expand data coverage first; add architecture only when the current static approach becomes limiting.
+
+## Current — 10-university real-data pilot
+
+- Real College Scorecard institution and field-of-study data
+- Bachelor's programs only in the live site
+- University-first browsing with expandable major tables
+- 1-year and 4-year program earnings
+- In-state tuition and acceptance rate
 - Search and filters
-- Data model and source documentation
+- Automated import, validation, and promotion through GitHub Actions
 
-## Phase 2 — Top 100 U.S. universities
-- Define an explicit inclusion/ranking methodology
-- Add stable official institution identifiers
-- Populate verified institution, admissions, tuition, major, salary, and employment data where available
-- Add provenance and validation checks
+## Next — roughly 100 U.S. universities
 
-## Phase 3 — Top 500 universities
-- Expand ingestion and validation tooling
-- Introduce chunked/lazy-loaded datasets if browser payload size requires it
-- Add comparison and detail-page routes
+- Define a clear inclusion method for the university list
+- Expand the seed/config list
+- Reuse the same import and promotion pipeline
+- Keep bachelor's-only scope unless another degree level becomes useful
+- Check payload size and browsing performance after expansion
 
-## Phase 4 — All accredited U.S. universities
-- Use authoritative institution universe
-- Expand program/CIP coverage
-- Support state/residency-specific tuition and broader outcome coverage
+The goal is for 10 → 100 schools to be mainly a data/configuration change, not a redesign.
 
-## Phase 5 — International expansion
-- Add country-aware identifiers, currencies, degree systems, and admissions fields
-- Keep shared core entities while allowing country-specific extensions
+## Later — broader U.S. coverage
 
-## Phase 6 — Annual automated updates
-- Build scheduled ETL outside GitHub Pages
-- Validate source changes and schema compatibility
-- Preserve historical records
-- Publish generated static JSON artifacts to the site
+If the 100-school version remains useful:
 
-## Architecture checkpoints
-At each phase, measure total JSON payload, parse/join time, search latency, and browser memory. Move from eager loading to dataset manifests/chunks before scale becomes a user-visible problem.
+- expand to more institutions;
+- improve program coverage and naming where necessary;
+- consider additional indicators only when a reliable source exists;
+- add chunked data loading only if browser performance actually requires it.
+
+## Optional future features
+
+Possible additions, not commitments:
+
+- university or major comparison views;
+- historical earnings/cost trends;
+- additional degree levels;
+- employment/job-outlook context from a suitable source;
+- international universities.
+
+## Guiding rule
+
+Do not build for hypothetical scale too early. Keep GitHub Pages + static JSON as long as it works well, and solve concrete problems one at a time.
