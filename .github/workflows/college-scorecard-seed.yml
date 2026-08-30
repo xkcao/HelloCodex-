@@ -10,6 +10,8 @@ on:
       - projects/college-statistics/config/scorecard_seed_universities.json
       - projects/college-statistics/scripts/scorecard_import.py
       - projects/college-statistics/scripts/validate_import.py
+      - projects/college-statistics/scripts/scorecard_program_import.py
+      - projects/college-statistics/scripts/validate_program_import.py
 
 permissions:
   contents: write
@@ -41,23 +43,32 @@ jobs:
         shell: bash
         run: echo "date=$(date -u +%F)" >> "$GITHUB_OUTPUT"
 
-      - name: Import College Scorecard seed data
+      - name: Import institution data
         env:
           COLLEGE_SCORECARD_API_KEY: ${{ secrets.COLLEGE_SCORECARD_API_KEY || 'DEMO_KEY' }}
         run: python3 scripts/scorecard_import.py --snapshot "${{ steps.snapshot.outputs.date }}"
 
-      - name: Validate imported snapshot
+      - name: Validate institution snapshot
         run: python3 scripts/validate_import.py "data/imported/college-scorecard/${{ steps.snapshot.outputs.date }}"
 
-      - name: Commit validated staging snapshot
+      - name: Import field-of-study data
+        env:
+          COLLEGE_SCORECARD_API_KEY: ${{ secrets.COLLEGE_SCORECARD_API_KEY || 'DEMO_KEY' }}
+        run: python3 scripts/scorecard_program_import.py --snapshot "${{ steps.snapshot.outputs.date }}"
+
+      - name: Validate field-of-study snapshot
+        run: python3 scripts/validate_program_import.py "data/imported/college-scorecard-programs/${{ steps.snapshot.outputs.date }}"
+
+      - name: Commit validated staging snapshots
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "data/imported/college-scorecard/${{ steps.snapshot.outputs.date }}"
+          git add "data/imported/college-scorecard-programs/${{ steps.snapshot.outputs.date }}"
           if git diff --cached --quiet; then
             echo "No staging changes to commit."
             exit 0
           fi
-          git commit -m "Import College Scorecard seed data ${{ steps.snapshot.outputs.date }}"
+          git commit -m "Import College Scorecard institution and program data ${{ steps.snapshot.outputs.date }}"
           git push origin HEAD:main
