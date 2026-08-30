@@ -1,4 +1,4 @@
-name: College Scorecard Seed Import
+name: College Scorecard Top 100 Import
 
 on:
   workflow_dispatch:
@@ -8,6 +8,7 @@ on:
     paths:
       - .github/workflows/college-scorecard-seed.yml
       - projects/college-statistics/config/scorecard_seed_universities.json
+      - projects/college-statistics/scripts/select_top100.py
       - projects/college-statistics/scripts/scorecard_import.py
       - projects/college-statistics/scripts/validate_import.py
       - projects/college-statistics/scripts/scorecard_program_import.py
@@ -19,7 +20,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: college-scorecard-seed-main
+  group: college-scorecard-top100-main
   cancel-in-progress: false
 
 jobs:
@@ -45,18 +46,18 @@ jobs:
         shell: bash
         run: echo "date=$(date -u +%F)" >> "$GITHUB_OUTPUT"
 
-      - name: Import institution data if needed
+      - name: Select 100-university coverage set
         env:
           COLLEGE_SCORECARD_API_KEY: ${{ secrets.COLLEGE_SCORECARD_API_KEY || 'DEMO_KEY' }}
-        shell: bash
-        run: |
-          SNAPSHOT="${{ steps.snapshot.outputs.date }}"
-          TARGET="data/imported/college-scorecard/$SNAPSHOT/manifest.json"
-          if [ -f "$TARGET" ]; then
-            echo "Reusing existing institution snapshot for $SNAPSHOT"
-          else
-            python3 scripts/scorecard_import.py --snapshot "$SNAPSHOT"
-          fi
+        run: python3 scripts/select_top100.py --snapshot "${{ steps.snapshot.outputs.date }}" --target 100
+
+      - name: Import institution data
+        env:
+          COLLEGE_SCORECARD_API_KEY: ${{ secrets.COLLEGE_SCORECARD_API_KEY || 'DEMO_KEY' }}
+        run: >-
+          python3 scripts/scorecard_import.py
+          --seed "data/imported/college-scorecard-selection/${{ steps.snapshot.outputs.date }}/universities.json"
+          --snapshot "${{ steps.snapshot.outputs.date }}"
 
       - name: Validate institution snapshot
         run: python3 scripts/validate_import.py "data/imported/college-scorecard/${{ steps.snapshot.outputs.date }}"
@@ -64,7 +65,10 @@ jobs:
       - name: Import field-of-study data
         env:
           COLLEGE_SCORECARD_API_KEY: ${{ secrets.COLLEGE_SCORECARD_API_KEY || 'DEMO_KEY' }}
-        run: python3 scripts/scorecard_program_import.py --snapshot "${{ steps.snapshot.outputs.date }}"
+        run: >-
+          python3 scripts/scorecard_program_import.py
+          --seed "data/imported/college-scorecard-selection/${{ steps.snapshot.outputs.date }}/universities.json"
+          --snapshot "${{ steps.snapshot.outputs.date }}"
 
       - name: Validate field-of-study snapshot
         run: python3 scripts/validate_program_import.py "data/imported/college-scorecard-programs/${{ steps.snapshot.outputs.date }}"
@@ -72,14 +76,15 @@ jobs:
       - name: Summarize field-of-study snapshot
         run: python3 scripts/summarize_program_import.py "data/imported/college-scorecard-programs/${{ steps.snapshot.outputs.date }}"
 
-      - name: Promote bachelor's pilot to website data
+      - name: Promote bachelor's data to website
         run: python3 scripts/promote_bachelors.py "${{ steps.snapshot.outputs.date }}"
 
-      - name: Commit validated staging and website data
+      - name: Commit validated snapshots and website data
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "data/imported/college-scorecard-selection/${{ steps.snapshot.outputs.date }}"
           git add "data/imported/college-scorecard/${{ steps.snapshot.outputs.date }}"
           git add "data/imported/college-scorecard-programs/${{ steps.snapshot.outputs.date }}"
           git add data/universities.json data/majors.json data/university-major.json
@@ -89,5 +94,5 @@ jobs:
             echo "No data changes to commit."
             exit 0
           fi
-          git commit -m "Publish College Scorecard bachelor's pilot ${{ steps.snapshot.outputs.date }}"
+          git commit -m "Publish College Scorecard Top 100 coverage ${{ steps.snapshot.outputs.date }}"
           git push origin HEAD:main
