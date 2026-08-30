@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Promote the latest validated 10-school Scorecard pilot into website-ready JSON.
+"""Promote a validated College Scorecard snapshot into website-ready JSON.
 
-Scope is intentionally simple: bachelor's programs only. One-year median earnings
-is used as the primary earnings indicator when available. Missing values stay null.
+Scope stays intentionally simple: bachelor's programs only. One-year median
+earnings is the primary earnings indicator when available. Missing values stay null.
 """
 
 from __future__ import annotations
@@ -79,9 +79,6 @@ def main() -> int:
             "source_release": "latest",
         })
 
-    # Display in-state tuition when available. For private institutions the
-    # in-state/out-of-state distinction typically does not change the tuition value,
-    # but the published website label remains explicit about which Scorecard field is used.
     tuition_by_university = {}
     for row in tuition_rows:
         uid = row["university_id"]
@@ -103,15 +100,22 @@ def main() -> int:
     write(DATA / "admissions.json", admissions)
     write(DATA / "employment.json", [])
     write(DATA / "rankings.json", [])
+
+    count = len(universities)
     write(DATA / "metadata.json", {
-        "schema_version": "1.1.1",
-        "status": "Real federal pilot data",
+        "schema_version": "1.2.0",
+        "status": "Real federal data",
         "current_year": 2026,
         "countries": ["US"],
         "generated_at": args.snapshot,
         "source": "College Scorecard",
-        "scope": "10-university bachelor's-degree pilot",
-        "notes": "Earnings are approximate indicators from College Scorecard. The main displayed earnings figure is one-year median earnings when available. Tuition shown on the site is in-state tuition when available. Missing values are left blank.",
+        "scope": f"{count}-university bachelor's-degree coverage set",
+        "notes": (
+            "Earnings are approximate indicators from College Scorecard. The displayed university "
+            "earnings summary is derived from available bachelor's-program values. Tuition shown is "
+            "in-state tuition when available. Missing values are left blank. The university set is a "
+            "coverage set, not a displayed ranking."
+        ),
     })
 
     populated_1yr = sum(row["earnings_1yr"] is not None for row in salaries)
