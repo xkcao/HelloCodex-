@@ -41,7 +41,6 @@ def main() -> int:
 
     bachelors = [row for row in programs if row.get("credential_level") == 3]
 
-    # A major is the common CIP4 field, shared across universities.
     major_by_id = {}
     relationships = []
     salaries = []
@@ -65,20 +64,24 @@ def main() -> int:
             "available": True,
             "source": "College Scorecard",
         })
+        earnings_1yr = row.get("median_earnings_1yr")
+        earnings_4yr = row.get("median_earnings_4yr")
+        earnings_5yr = row.get("median_earnings_5yr")
         salaries.append({
             "university_id": row["university_id"],
             "major_id": major_id,
-            "median_salary": row.get("earnings_1yr"),
-            "earnings_1yr": row.get("earnings_1yr"),
-            "earnings_4yr": row.get("earnings_4yr"),
-            "earnings_5yr": row.get("earnings_5yr"),
+            "median_salary": earnings_1yr,
+            "earnings_1yr": earnings_1yr,
+            "earnings_4yr": earnings_4yr,
+            "earnings_5yr": earnings_5yr,
             "currency": "USD",
             "source": "College Scorecard",
             "source_release": "latest",
         })
 
-    # Prefer in-state tuition for public schools; private schools normally have the
-    # same value for both residency rows, so in-state is still a useful display value.
+    # Display in-state tuition when available. For private institutions the
+    # in-state/out-of-state distinction typically does not change the tuition value,
+    # but the published website label remains explicit about which Scorecard field is used.
     tuition_by_university = {}
     for row in tuition_rows:
         uid = row["university_id"]
@@ -101,19 +104,22 @@ def main() -> int:
     write(DATA / "employment.json", [])
     write(DATA / "rankings.json", [])
     write(DATA / "metadata.json", {
-        "schema_version": "1.1.0",
+        "schema_version": "1.1.1",
         "status": "Real federal pilot data",
         "current_year": 2026,
         "countries": ["US"],
         "generated_at": args.snapshot,
         "source": "College Scorecard",
         "scope": "10-university bachelor's-degree pilot",
-        "notes": "Earnings are approximate indicators from College Scorecard. The main displayed earnings figure is one-year median earnings when available. Missing values are left blank.",
+        "notes": "Earnings are approximate indicators from College Scorecard. The main displayed earnings figure is one-year median earnings when available. Tuition shown on the site is in-state tuition when available. Missing values are left blank.",
     })
 
+    populated_1yr = sum(row["earnings_1yr"] is not None for row in salaries)
+    populated_4yr = sum(row["earnings_4yr"] is not None for row in salaries)
     print(
         f"Promoted {len(universities)} universities, {len(major_by_id)} majors, "
-        f"and {len(relationships)} bachelor's program records"
+        f"and {len(relationships)} bachelor's program records; "
+        f"1yr earnings={populated_1yr}, 4yr earnings={populated_4yr}"
     )
     return 0
 
