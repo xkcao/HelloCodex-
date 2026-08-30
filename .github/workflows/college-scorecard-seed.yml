@@ -79,14 +79,27 @@ jobs:
       - name: Promote bachelor's data to website
         run: python3 scripts/promote_bachelors.py "${{ steps.snapshot.outputs.date }}"
 
-      - name: Commit validated snapshots and website data
+      - name: Commit compact audit and website data
         shell: bash
         run: |
+          SNAPSHOT="${{ steps.snapshot.outputs.date }}"
+          PROGRAM_DIR="data/imported/college-scorecard-programs/$SNAPSHOT"
+          SUMMARY_DIR="data/imported/college-scorecard-programs-summary/$SNAPSHOT"
+
+          mkdir -p "$SUMMARY_DIR"
+          cp "$PROGRAM_DIR/audit.json" "$SUMMARY_DIR/audit.json"
+          cp "$PROGRAM_DIR/manifest.json" "$SUMMARY_DIR/manifest.json"
+
+          # The full 100-school raw/program staging files exceed GitHub's file-size
+          # limit and are not needed by the static site after validation/promotion.
+          # Keep only compact audit metadata in the repository.
+          git rm -rf --ignore-unmatch "$PROGRAM_DIR"
+
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add "data/imported/college-scorecard-selection/${{ steps.snapshot.outputs.date }}"
-          git add "data/imported/college-scorecard/${{ steps.snapshot.outputs.date }}"
-          git add "data/imported/college-scorecard-programs/${{ steps.snapshot.outputs.date }}"
+          git add "data/imported/college-scorecard-selection/$SNAPSHOT"
+          git add "data/imported/college-scorecard/$SNAPSHOT"
+          git add "$SUMMARY_DIR"
           git add data/universities.json data/majors.json data/university-major.json
           git add data/salaries.json data/tuition.json data/admissions.json
           git add data/employment.json data/rankings.json data/metadata.json
@@ -94,5 +107,5 @@ jobs:
             echo "No data changes to commit."
             exit 0
           fi
-          git commit -m "Publish College Scorecard Top 100 coverage ${{ steps.snapshot.outputs.date }}"
+          git commit -m "Publish College Scorecard Top 100 coverage $SNAPSHOT"
           git push origin HEAD:main
