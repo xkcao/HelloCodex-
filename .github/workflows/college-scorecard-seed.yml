@@ -13,6 +13,7 @@ on:
       - projects/college-statistics/scripts/scorecard_program_import.py
       - projects/college-statistics/scripts/validate_program_import.py
       - projects/college-statistics/scripts/summarize_program_import.py
+      - projects/college-statistics/scripts/promote_bachelors.py
 
 permissions:
   contents: write
@@ -71,16 +72,22 @@ jobs:
       - name: Summarize field-of-study snapshot
         run: python3 scripts/summarize_program_import.py "data/imported/college-scorecard-programs/${{ steps.snapshot.outputs.date }}"
 
-      - name: Commit validated staging snapshots
+      - name: Promote bachelor's pilot to website data
+        run: python3 scripts/promote_bachelors.py "${{ steps.snapshot.outputs.date }}"
+
+      - name: Commit validated staging and website data
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add "data/imported/college-scorecard/${{ steps.snapshot.outputs.date }}"
           git add "data/imported/college-scorecard-programs/${{ steps.snapshot.outputs.date }}"
+          git add data/universities.json data/majors.json data/university-major.json
+          git add data/salaries.json data/tuition.json data/admissions.json
+          git add data/employment.json data/rankings.json data/metadata.json
           if git diff --cached --quiet; then
-            echo "No staging changes to commit."
+            echo "No data changes to commit."
             exit 0
           fi
-          git commit -m "Import College Scorecard institution and program data ${{ steps.snapshot.outputs.date }}"
+          git commit -m "Publish College Scorecard bachelor's pilot ${{ steps.snapshot.outputs.date }}"
           git push origin HEAD:main
