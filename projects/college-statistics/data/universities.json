@@ -1,52 +1,52 @@
 [
   {
-    "university_id": "us-ipeds-166027",
-    "name": "Harvard University",
+    "university_id": "us-ipeds-100858",
+    "name": "Auburn University",
     "short_name": null,
-    "state": "MA",
-    "city": "Cambridge",
+    "state": "AL",
+    "city": "Auburn",
     "country": "US",
-    "type": "Private nonprofit",
-    "website": "www.harvard.edu/",
-    "enrollment": 7601,
+    "type": "Public",
+    "website": "www.auburn.edu/",
+    "enrollment": 26816,
     "established": null,
     "logo": null,
     "external_ids": {
-      "ipeds_unitid": "166027"
+      "ipeds_unitid": "100858"
     },
     "source": "College Scorecard"
   },
   {
-    "university_id": "us-ipeds-166683",
-    "name": "Massachusetts Institute of Technology",
-    "short_name": null,
-    "state": "MA",
-    "city": "Cambridge",
-    "country": "US",
-    "type": "Private nonprofit",
-    "website": "web.mit.edu/",
-    "enrollment": 4535,
-    "established": null,
-    "logo": null,
-    "external_ids": {
-      "ipeds_unitid": "166683"
-    },
-    "source": "College Scorecard"
-  },
-  {
-    "university_id": "us-ipeds-243744",
-    "name": "Stanford University",
+    "university_id": "us-ipeds-110422",
+    "name": "California Polytechnic State University-San Luis Obispo",
     "short_name": null,
     "state": "CA",
-    "city": "Stanford",
+    "city": "San Luis Obispo",
     "country": "US",
-    "type": "Private nonprofit",
-    "website": "www.stanford.edu/",
-    "enrollment": 7554,
+    "type": "Public",
+    "website": "calpoly.edu/",
+    "enrollment": 21996,
     "established": null,
     "logo": null,
     "external_ids": {
-      "ipeds_unitid": "243744"
+      "ipeds_unitid": "110422"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-110583",
+    "name": "California State University-Long Beach",
+    "short_name": null,
+    "state": "CA",
+    "city": "Long Beach",
+    "country": "US",
+    "type": "Public",
+    "website": "www.csulb.edu/",
+    "enrollment": 35924,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "110583"
     },
     "source": "College Scorecard"
   },
@@ -68,6 +68,40 @@
     "source": "College Scorecard"
   },
   {
+    "university_id": "us-ipeds-110644",
+    "name": "University of California-Davis",
+    "short_name": null,
+    "state": "CA",
+    "city": "Davis",
+    "country": "US",
+    "type": "Public",
+    "website": "ucdavis.edu/",
+    "enrollment": 32253,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "110644"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-110653",
+    "name": "University of California-Irvine",
+    "short_name": null,
+    "state": "CA",
+    "city": "Irvine",
+    "country": "US",
+    "type": "Public",
+    "website": "www.uci.edu/",
+    "enrollment": 30197,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "110653"
+    },
+    "source": "College Scorecard"
+  },
+  {
     "university_id": "us-ipeds-110662",
     "name": "University of California-Los Angeles",
     "short_name": null,
@@ -85,53 +119,461 @@
     "source": "College Scorecard"
   },
   {
-    "university_id": "us-ipeds-236948",
-    "name": "University of Washington-Seattle Campus",
+    "university_id": "us-ipeds-110680",
+    "name": "University of California-San Diego",
     "short_name": null,
-    "state": "WA",
-    "city": "Seattle",
+    "state": "CA",
+    "city": "La Jolla",
     "country": "US",
     "type": "Public",
-    "website": "https://www.washington.edu/",
-    "enrollment": 31942,
+    "website": "www.ucsd.edu/",
+    "enrollment": 34948,
     "established": null,
     "logo": null,
     "external_ids": {
-      "ipeds_unitid": "236948"
+      "ipeds_unitid": "110680"
     },
     "source": "College Scorecard"
   },
   {
-    "university_id": "us-ipeds-170976",
-    "name": "University of Michigan-Ann Arbor",
+    "university_id": "us-ipeds-110705",
+    "name": "University of California-Santa Barbara",
     "short_name": null,
-    "state": "MI",
-    "city": "Ann Arbor",
+    "state": "CA",
+    "city": "Santa Barbara",
     "country": "US",
     "type": "Public",
-    "website": "https://umich.edu/",
-    "enrollment": 34177,
+    "website": "www.ucsb.edu/",
+    "enrollment": 23113,
     "established": null,
     "logo": null,
     "external_ids": {
-      "ipeds_unitid": "170976"
+      "ipeds_unitid": "110705"
     },
     "source": "College Scorecard"
   },
   {
-    "university_id": "us-ipeds-228778",
-    "name": "The University of Texas at Austin",
+    "university_id": "us-ipeds-117946",
+    "name": "Loyola Marymount University",
     "short_name": null,
-    "state": "TX",
-    "city": "Austin",
+    "state": "CA",
+    "city": "Los Angeles",
     "country": "US",
-    "type": "Public",
-    "website": "https://www.utexas.edu/",
-    "enrollment": 42855,
+    "type": "Private nonprofit",
+    "website": "https://www.lmu.edu/",
+    "enrollment": 7094,
     "established": null,
     "logo": null,
     "external_ids": {
-      "ipeds_unitid": "228778"
+      "ipeds_unitid": "117946"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-122409",
+    "name": "San Diego State University",
+    "short_name": null,
+    "state": "CA",
+    "city": "San Diego",
+    "country": "US",
+    "type": "Public",
+    "website": "https://www.sdsu.edu/",
+    "enrollment": 35377,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "122409"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-122931",
+    "name": "Santa Clara University",
+    "short_name": null,
+    "state": "CA",
+    "city": "Santa Clara",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.scu.edu/",
+    "enrollment": 6552,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "122931"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-123961",
+    "name": "University of Southern California",
+    "short_name": null,
+    "state": "CA",
+    "city": "Los Angeles",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.usc.edu/",
+    "enrollment": 20443,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "123961"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-128328",
+    "name": "United States Air Force Academy",
+    "short_name": null,
+    "state": "CO",
+    "city": "USAF Academy",
+    "country": "US",
+    "type": "Public",
+    "website": "www.usafa.edu/",
+    "enrollment": 4114,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "128328"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-129242",
+    "name": "Fairfield University",
+    "short_name": null,
+    "state": "CT",
+    "city": "Fairfield",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "fairfield.edu/",
+    "enrollment": 5373,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "129242"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-130697",
+    "name": "Wesleyan University",
+    "short_name": null,
+    "state": "CT",
+    "city": "Middletown",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.wesleyan.edu/",
+    "enrollment": 3067,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "130697"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-130794",
+    "name": "Yale University",
+    "short_name": null,
+    "state": "CT",
+    "city": "New Haven",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.yale.edu/",
+    "enrollment": 6758,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "130794"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-130934",
+    "name": "Delaware State University",
+    "short_name": null,
+    "state": "DE",
+    "city": "Dover",
+    "country": "US",
+    "type": "Public",
+    "website": "www.desu.edu/",
+    "enrollment": 4398,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "130934"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-131469",
+    "name": "George Washington University",
+    "short_name": null,
+    "state": "DC",
+    "city": "Washington",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.gwu.edu/",
+    "enrollment": 11182,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "131469"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-131496",
+    "name": "Georgetown University",
+    "short_name": null,
+    "state": "DC",
+    "city": "Washington",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.georgetown.edu/",
+    "enrollment": 7569,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "131496"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-131520",
+    "name": "Howard University",
+    "short_name": null,
+    "state": "DC",
+    "city": "Washington",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.howard.edu/",
+    "enrollment": 10108,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "131520"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-132903",
+    "name": "University of Central Florida",
+    "short_name": null,
+    "state": "FL",
+    "city": "Orlando",
+    "country": "US",
+    "type": "Public",
+    "website": "https://www.ucf.edu/",
+    "enrollment": 59146,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "132903"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-133650",
+    "name": "Florida Agricultural and Mechanical University",
+    "short_name": null,
+    "state": "FL",
+    "city": "Tallahassee",
+    "country": "US",
+    "type": "Public",
+    "website": "https://www.famu.edu/",
+    "enrollment": 7582,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "133650"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-134097",
+    "name": "Florida State University",
+    "short_name": null,
+    "state": "FL",
+    "city": "Tallahassee",
+    "country": "US",
+    "type": "Public",
+    "website": "https://www.fsu.edu/",
+    "enrollment": 32212,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "134097"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-134130",
+    "name": "University of Florida",
+    "short_name": null,
+    "state": "FL",
+    "city": "Gainesville",
+    "country": "US",
+    "type": "Public",
+    "website": "https://www.ufl.edu/",
+    "enrollment": 35629,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "134130"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-135726",
+    "name": "University of Miami",
+    "short_name": null,
+    "state": "FL",
+    "city": "Coral Gables",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.miami.edu/",
+    "enrollment": 12913,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "135726"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-137351",
+    "name": "University of South Florida",
+    "short_name": null,
+    "state": "FL",
+    "city": "Tampa",
+    "country": "US",
+    "type": "Public",
+    "website": "www.usf.edu/",
+    "enrollment": 37207,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "137351"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-137847",
+    "name": "The University of Tampa",
+    "short_name": null,
+    "state": "FL",
+    "city": "Tampa",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.ut.edu/",
+    "enrollment": 10572,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "137847"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-139658",
+    "name": "Emory University",
+    "short_name": null,
+    "state": "GA",
+    "city": "Atlanta",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.emory.edu/",
+    "enrollment": 7298,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "139658"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-139755",
+    "name": "Georgia Institute of Technology-Main Campus",
+    "short_name": null,
+    "state": "GA",
+    "city": "Atlanta",
+    "country": "US",
+    "type": "Public",
+    "website": "www.gatech.edu/",
+    "enrollment": 18785,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "139755"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-139959",
+    "name": "University of Georgia",
+    "short_name": null,
+    "state": "GA",
+    "city": "Athens",
+    "country": "US",
+    "type": "Public",
+    "website": "www.uga.edu/",
+    "enrollment": 32137,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "139959"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-141060",
+    "name": "Spelman College",
+    "short_name": null,
+    "state": "GA",
+    "city": "Atlanta",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.spelman.edu/",
+    "enrollment": 3414,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "141060"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-141334",
+    "name": "University of West Georgia",
+    "short_name": null,
+    "state": "GA",
+    "city": "Carrollton",
+    "country": "US",
+    "type": "Public",
+    "website": "www.westga.edu/",
+    "enrollment": 7520,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "141334"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-144050",
+    "name": "University of Chicago",
+    "short_name": null,
+    "state": "IL",
+    "city": "Chicago",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.uchicago.edu/",
+    "enrollment": 7569,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "144050"
     },
     "source": "College Scorecard"
   },
@@ -153,6 +595,737 @@
     "source": "College Scorecard"
   },
   {
+    "university_id": "us-ipeds-147767",
+    "name": "Northwestern University",
+    "short_name": null,
+    "state": "IL",
+    "city": "Evanston",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.northwestern.edu/",
+    "enrollment": 9201,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "147767"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-152080",
+    "name": "University of Notre Dame",
+    "short_name": null,
+    "state": "IN",
+    "city": "Notre Dame",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.nd.edu/",
+    "enrollment": 8818,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "152080"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-159009",
+    "name": "Grambling State University",
+    "short_name": null,
+    "state": "LA",
+    "city": "Grambling",
+    "country": "US",
+    "type": "Public",
+    "website": "www.gram.edu/",
+    "enrollment": 4164,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "159009"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-160621",
+    "name": "Southern University and A & M College",
+    "short_name": null,
+    "state": "LA",
+    "city": "Baton Rouge",
+    "country": "US",
+    "type": "Public",
+    "website": "www.subr.edu/",
+    "enrollment": 5519,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "160621"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-160755",
+    "name": "Tulane University of Louisiana",
+    "short_name": null,
+    "state": "LA",
+    "city": "New Orleans",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://tulane.edu/",
+    "enrollment": 7767,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "160755"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-162928",
+    "name": "Johns Hopkins University",
+    "short_name": null,
+    "state": "MD",
+    "city": "Baltimore",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.jhu.edu/",
+    "enrollment": 5693,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "162928"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-163286",
+    "name": "University of Maryland-College Park",
+    "short_name": null,
+    "state": "MD",
+    "city": "College Park",
+    "country": "US",
+    "type": "Public",
+    "website": "www.umd.edu/",
+    "enrollment": 30760,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "163286"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-164155",
+    "name": "United States Naval Academy",
+    "short_name": null,
+    "state": "MD",
+    "city": "Annapolis",
+    "country": "US",
+    "type": "Public",
+    "website": "www.usna.edu/",
+    "enrollment": 4474,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "164155"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-164739",
+    "name": "Bentley University",
+    "short_name": null,
+    "state": "MA",
+    "city": "Waltham",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.bentley.edu/",
+    "enrollment": 4474,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "164739"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-164748",
+    "name": "Berklee College of Music",
+    "short_name": null,
+    "state": "MA",
+    "city": "Boston",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.berklee.edu/",
+    "enrollment": 7468,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "164748"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-164924",
+    "name": "Boston College",
+    "short_name": null,
+    "state": "MA",
+    "city": "Chestnut Hill",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.bc.edu/",
+    "enrollment": 10085,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "164924"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-164988",
+    "name": "Boston University",
+    "short_name": null,
+    "state": "MA",
+    "city": "Boston",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.bu.edu/",
+    "enrollment": 18248,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "164988"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-165015",
+    "name": "Brandeis University",
+    "short_name": null,
+    "state": "MA",
+    "city": "Waltham",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.brandeis.edu/",
+    "enrollment": 3618,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "165015"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-165662",
+    "name": "Emerson College",
+    "short_name": null,
+    "state": "MA",
+    "city": "Boston",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.emerson.edu/",
+    "enrollment": 3870,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "165662"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-166027",
+    "name": "Harvard University",
+    "short_name": null,
+    "state": "MA",
+    "city": "Cambridge",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.harvard.edu/",
+    "enrollment": 7601,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "166027"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-166124",
+    "name": "College of the Holy Cross",
+    "short_name": null,
+    "state": "MA",
+    "city": "Worcester",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.holycross.edu/",
+    "enrollment": 3106,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "166124"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-166683",
+    "name": "Massachusetts Institute of Technology",
+    "short_name": null,
+    "state": "MA",
+    "city": "Cambridge",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "web.mit.edu/",
+    "enrollment": 4535,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "166683"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-167358",
+    "name": "Northeastern University",
+    "short_name": null,
+    "state": "MA",
+    "city": "Boston",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.northeastern.edu/",
+    "enrollment": 17326,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "167358"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-168148",
+    "name": "Tufts University",
+    "short_name": null,
+    "state": "MA",
+    "city": "Medford",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.tufts.edu/",
+    "enrollment": 7061,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "168148"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-170976",
+    "name": "University of Michigan-Ann Arbor",
+    "short_name": null,
+    "state": "MI",
+    "city": "Ann Arbor",
+    "country": "US",
+    "type": "Public",
+    "website": "https://umich.edu/",
+    "enrollment": 34177,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "170976"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-174844",
+    "name": "St Olaf College",
+    "short_name": null,
+    "state": "MN",
+    "city": "Northfield",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "wp.stolaf.edu/",
+    "enrollment": 3093,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "174844"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-179867",
+    "name": "Washington University in St Louis",
+    "short_name": null,
+    "state": "MO",
+    "city": "St. Louis",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://washu.edu/",
+    "enrollment": 7857,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "179867"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-182670",
+    "name": "Dartmouth College",
+    "short_name": null,
+    "state": "NH",
+    "city": "Hanover",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://dartmouth.edu/",
+    "enrollment": 4541,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "182670"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-186131",
+    "name": "Princeton University",
+    "short_name": null,
+    "state": "NJ",
+    "city": "Princeton",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.princeton.edu/",
+    "enrollment": 5709,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "186131"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-186867",
+    "name": "Stevens Institute of Technology",
+    "short_name": null,
+    "state": "NJ",
+    "city": "Hoboken",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.stevens.edu/",
+    "enrollment": 4222,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "186867"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-189097",
+    "name": "Barnard College",
+    "short_name": null,
+    "state": "NY",
+    "city": "New York",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.barnard.edu/",
+    "enrollment": 3264,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "189097"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-190099",
+    "name": "Colgate University",
+    "short_name": null,
+    "state": "NY",
+    "city": "Hamilton",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.colgate.edu/",
+    "enrollment": 3180,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "190099"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-190150",
+    "name": "Columbia University in the City of New York",
+    "short_name": null,
+    "state": "NY",
+    "city": "New York",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.columbia.edu/",
+    "enrollment": 8973,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "190150"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-190415",
+    "name": "Cornell University",
+    "short_name": null,
+    "state": "NY",
+    "city": "Ithaca",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.cornell.edu/",
+    "enrollment": 15995,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "190415"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-190512",
+    "name": "CUNY Bernard M Baruch College",
+    "short_name": null,
+    "state": "NY",
+    "city": "New York",
+    "country": "US",
+    "type": "Public",
+    "website": "www.baruch.cuny.edu/",
+    "enrollment": 16154,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "190512"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-193900",
+    "name": "New York University",
+    "short_name": null,
+    "state": "NY",
+    "city": "New York",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.nyu.edu/",
+    "enrollment": 28663,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "193900"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-195030",
+    "name": "University of Rochester",
+    "short_name": null,
+    "state": "NY",
+    "city": "Rochester",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.rochester.edu/",
+    "enrollment": 6331,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "195030"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-196079",
+    "name": "Binghamton University",
+    "short_name": null,
+    "state": "NY",
+    "city": "Vestal",
+    "country": "US",
+    "type": "Public",
+    "website": "www.binghamton.edu/",
+    "enrollment": 14655,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "196079"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-196097",
+    "name": "Stony Brook University",
+    "short_name": null,
+    "state": "NY",
+    "city": "Stony Brook",
+    "country": "US",
+    "type": "Public",
+    "website": "https://www.stonybrook.edu/",
+    "enrollment": 18101,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "196097"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-196413",
+    "name": "Syracuse University",
+    "short_name": null,
+    "state": "NY",
+    "city": "Syracuse",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.syracuse.edu/",
+    "enrollment": 15477,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "196413"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-197036",
+    "name": "United States Military Academy",
+    "short_name": null,
+    "state": "NY",
+    "city": "West  Point",
+    "country": "US",
+    "type": "Public",
+    "website": "www.westpoint.edu/",
+    "enrollment": 4408,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "197036"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-198419",
+    "name": "Duke University",
+    "short_name": null,
+    "state": "NC",
+    "city": "Durham",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.duke.edu/",
+    "enrollment": 6442,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "198419"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-199102",
+    "name": "North Carolina A & T State University",
+    "short_name": null,
+    "state": "NC",
+    "city": "Greensboro",
+    "country": "US",
+    "type": "Public",
+    "website": "www.ncat.edu/",
+    "enrollment": 12182,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "199102"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-199120",
+    "name": "University of North Carolina at Chapel Hill",
+    "short_name": null,
+    "state": "NC",
+    "city": "Chapel Hill",
+    "country": "US",
+    "type": "Public",
+    "website": "https://www.unc.edu/",
+    "enrollment": 20752,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "199120"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-199193",
+    "name": "North Carolina State University at Raleigh",
+    "short_name": null,
+    "state": "NC",
+    "city": "Raleigh",
+    "country": "US",
+    "type": "Public",
+    "website": "www.ncsu.edu/",
+    "enrollment": 27371,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "199193"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-199847",
+    "name": "Wake Forest University",
+    "short_name": null,
+    "state": "NC",
+    "city": "Winston-Salem",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.wfu.edu/",
+    "enrollment": 5485,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "199847"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-201645",
+    "name": "Case Western Reserve University",
+    "short_name": null,
+    "state": "OH",
+    "city": "Cleveland",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.case.edu/",
+    "enrollment": 6437,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "201645"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-211291",
+    "name": "Bucknell University",
+    "short_name": null,
+    "state": "PA",
+    "city": "Lewisburg",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.bucknell.edu/",
+    "enrollment": 3876,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "211291"
+    },
+    "source": "College Scorecard"
+  },
+  {
     "university_id": "us-ipeds-211440",
     "name": "Carnegie Mellon University",
     "short_name": null,
@@ -166,6 +1339,363 @@
     "logo": null,
     "external_ids": {
       "ipeds_unitid": "211440"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-213543",
+    "name": "Lehigh University",
+    "short_name": null,
+    "state": "PA",
+    "city": "Bethlehem",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.lehigh.edu/",
+    "enrollment": 5898,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "213543"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-215062",
+    "name": "University of Pennsylvania",
+    "short_name": null,
+    "state": "PA",
+    "city": "Philadelphia",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.upenn.edu/",
+    "enrollment": 10650,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "215062"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-216597",
+    "name": "Villanova University",
+    "short_name": null,
+    "state": "PA",
+    "city": "Villanova",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.villanova.edu/",
+    "enrollment": 6938,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "216597"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-217156",
+    "name": "Brown University",
+    "short_name": null,
+    "state": "RI",
+    "city": "Providence",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.brown.edu/",
+    "enrollment": 7226,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "217156"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-217402",
+    "name": "Providence College",
+    "short_name": null,
+    "state": "RI",
+    "city": "Providence",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.providence.edu/",
+    "enrollment": 4229,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "217402"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-217882",
+    "name": "Clemson University",
+    "short_name": null,
+    "state": "SC",
+    "city": "Clemson",
+    "country": "US",
+    "type": "Public",
+    "website": "www.clemson.edu/",
+    "enrollment": 23300,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "217882"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-221759",
+    "name": "The University of Tennessee-Knoxville",
+    "short_name": null,
+    "state": "TN",
+    "city": "Knoxville",
+    "country": "US",
+    "type": "Public",
+    "website": "www.utk.edu/",
+    "enrollment": 30418,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "221759"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-221999",
+    "name": "Vanderbilt University",
+    "short_name": null,
+    "state": "TN",
+    "city": "Nashville",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.vanderbilt.edu/",
+    "enrollment": 7208,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "221999"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-223232",
+    "name": "Baylor University",
+    "short_name": null,
+    "state": "TX",
+    "city": "Waco",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.baylor.edu/",
+    "enrollment": 14785,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "223232"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-226152",
+    "name": "Texas A & M International University",
+    "short_name": null,
+    "state": "TX",
+    "city": "Laredo",
+    "country": "US",
+    "type": "Public",
+    "website": "www.tamiu.edu/",
+    "enrollment": 6667,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "226152"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-227757",
+    "name": "Rice University",
+    "short_name": null,
+    "state": "TX",
+    "city": "Houston",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.rice.edu/",
+    "enrollment": 4776,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "227757"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-228778",
+    "name": "The University of Texas at Austin",
+    "short_name": null,
+    "state": "TX",
+    "city": "Austin",
+    "country": "US",
+    "type": "Public",
+    "website": "https://www.utexas.edu/",
+    "enrollment": 42855,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "228778"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-228875",
+    "name": "Texas Christian University",
+    "short_name": null,
+    "state": "TX",
+    "city": "Fort Worth",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.tcu.edu/",
+    "enrollment": 11026,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "228875"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-231624",
+    "name": "William & Mary",
+    "short_name": null,
+    "state": "VA",
+    "city": "Williamsburg",
+    "country": "US",
+    "type": "Public",
+    "website": "https://www.wm.edu/",
+    "enrollment": 7055,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "231624"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-231651",
+    "name": "Regent University",
+    "short_name": null,
+    "state": "VA",
+    "city": "Virginia Beach",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "https://www.regent.edu/",
+    "enrollment": 4729,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "231651"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-234076",
+    "name": "University of Virginia-Main Campus",
+    "short_name": null,
+    "state": "VA",
+    "city": "Charlottesville",
+    "country": "US",
+    "type": "Public",
+    "website": "https://www.virginia.edu/",
+    "enrollment": 17597,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "234076"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-236948",
+    "name": "University of Washington-Seattle Campus",
+    "short_name": null,
+    "state": "WA",
+    "city": "Seattle",
+    "country": "US",
+    "type": "Public",
+    "website": "https://www.washington.edu/",
+    "enrollment": 31942,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "236948"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-240444",
+    "name": "University of Wisconsin-Madison",
+    "short_name": null,
+    "state": "WI",
+    "city": "Madison",
+    "country": "US",
+    "type": "Public",
+    "website": "www.wisc.edu/",
+    "enrollment": 36902,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "240444"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-242705",
+    "name": "Inter American University of Puerto Rico-Bayamon",
+    "short_name": null,
+    "state": "PR",
+    "city": "Bayamon",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "bayamon.inter.edu/",
+    "enrollment": 3476,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "242705"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-243744",
+    "name": "Stanford University",
+    "short_name": null,
+    "state": "CA",
+    "city": "Stanford",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.stanford.edu/",
+    "enrollment": 7554,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "243744"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-243780",
+    "name": "Purdue University-Main Campus",
+    "short_name": null,
+    "state": "IN",
+    "city": "West Lafayette",
+    "country": "US",
+    "type": "Public",
+    "website": "https://www.purdue.edu/",
+    "enrollment": 44503,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "243780"
     },
     "source": "College Scorecard"
   }

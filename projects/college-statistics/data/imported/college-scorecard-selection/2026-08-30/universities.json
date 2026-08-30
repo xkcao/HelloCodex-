@@ -1,0 +1,502 @@
+[
+  {
+    "unitid": "166027",
+    "name": "Harvard University",
+    "selection": "base-seed"
+  },
+  {
+    "unitid": "166683",
+    "name": "Massachusetts Institute of Technology",
+    "selection": "base-seed"
+  },
+  {
+    "unitid": "243744",
+    "name": "Stanford University",
+    "selection": "base-seed"
+  },
+  {
+    "unitid": "110635",
+    "name": "University of California, Berkeley",
+    "selection": "base-seed"
+  },
+  {
+    "unitid": "110662",
+    "name": "University of California, Los Angeles",
+    "selection": "base-seed"
+  },
+  {
+    "unitid": "236948",
+    "name": "University of Washington-Seattle Campus",
+    "selection": "base-seed"
+  },
+  {
+    "unitid": "170976",
+    "name": "University of Michigan-Ann Arbor",
+    "selection": "base-seed"
+  },
+  {
+    "unitid": "228778",
+    "name": "The University of Texas at Austin",
+    "selection": "base-seed"
+  },
+  {
+    "unitid": "145637",
+    "name": "University of Illinois Urbana-Champaign",
+    "selection": "base-seed"
+  },
+  {
+    "unitid": "211440",
+    "name": "Carnegie Mellon University",
+    "selection": "base-seed"
+  },
+  {
+    "unitid": "130794",
+    "name": "Yale University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "190150",
+    "name": "Columbia University in the City of New York",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "144050",
+    "name": "University of Chicago",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "186131",
+    "name": "Princeton University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "167358",
+    "name": "Northeastern University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "217156",
+    "name": "Brown University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "182670",
+    "name": "Dartmouth College",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "215062",
+    "name": "University of Pennsylvania",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "198419",
+    "name": "Duke University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "221999",
+    "name": "Vanderbilt University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "162928",
+    "name": "Johns Hopkins University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "147767",
+    "name": "Northwestern University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "227757",
+    "name": "Rice University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "190415",
+    "name": "Cornell University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "189097",
+    "name": "Barnard College",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "193900",
+    "name": "New York University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "164155",
+    "name": "United States Naval Academy",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "123961",
+    "name": "University of Southern California",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "139658",
+    "name": "Emory University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "164988",
+    "name": "Boston University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "152080",
+    "name": "University of Notre Dame",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "168148",
+    "name": "Tufts University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "179867",
+    "name": "Washington University in St Louis",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "197036",
+    "name": "United States Military Academy",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "131496",
+    "name": "Georgetown University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "190099",
+    "name": "Colgate University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "160755",
+    "name": "Tulane University of Louisiana",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "139755",
+    "name": "Georgia Institute of Technology-Main Campus",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "128328",
+    "name": "United States Air Force Academy",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "199120",
+    "name": "University of North Carolina at Chapel Hill",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "164924",
+    "name": "Boston College",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "130697",
+    "name": "Wesleyan University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "234076",
+    "name": "University of Virginia-Main Campus",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "166124",
+    "name": "College of the Holy Cross",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "135726",
+    "name": "University of Miami",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "133650",
+    "name": "Florida Agricultural and Mechanical University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "199847",
+    "name": "Wake Forest University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "134130",
+    "name": "University of Florida",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "134097",
+    "name": "Florida State University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "141060",
+    "name": "Spelman College",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "213543",
+    "name": "Lehigh University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "110680",
+    "name": "University of California-San Diego",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "216597",
+    "name": "Villanova University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "110653",
+    "name": "University of California-Irvine",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "211291",
+    "name": "Bucknell University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "110422",
+    "name": "California Polytechnic State University-San Luis Obispo",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "110705",
+    "name": "University of California-Santa Barbara",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "129242",
+    "name": "Fairfield University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "231624",
+    "name": "William & Mary",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "160621",
+    "name": "Southern University and A & M College",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "122409",
+    "name": "San Diego State University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "201645",
+    "name": "Case Western Reserve University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "139959",
+    "name": "University of Georgia",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "231651",
+    "name": "Regent University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "217882",
+    "name": "Clemson University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "196079",
+    "name": "Binghamton University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "242705",
+    "name": "Inter American University of Puerto Rico-Bayamon",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "195030",
+    "name": "University of Rochester",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "132903",
+    "name": "University of Central Florida",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "137847",
+    "name": "The University of Tampa",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "165015",
+    "name": "Brandeis University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "131520",
+    "name": "Howard University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "221759",
+    "name": "The University of Tennessee-Knoxville",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "199193",
+    "name": "North Carolina State University at Raleigh",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "110644",
+    "name": "University of California-Davis",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "137351",
+    "name": "University of South Florida",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "164748",
+    "name": "Berklee College of Music",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "226152",
+    "name": "Texas A & M International University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "228875",
+    "name": "Texas Christian University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "163286",
+    "name": "University of Maryland-College Park",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "159009",
+    "name": "Grambling State University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "164739",
+    "name": "Bentley University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "117946",
+    "name": "Loyola Marymount University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "240444",
+    "name": "University of Wisconsin-Madison",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "100858",
+    "name": "Auburn University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "196413",
+    "name": "Syracuse University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "110583",
+    "name": "California State University-Long Beach",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "130934",
+    "name": "Delaware State University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "131469",
+    "name": "George Washington University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "190512",
+    "name": "CUNY Bernard M Baruch College",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "186867",
+    "name": "Stevens Institute of Technology",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "122931",
+    "name": "Santa Clara University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "174844",
+    "name": "St Olaf College",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "196097",
+    "name": "Stony Brook University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "243780",
+    "name": "Purdue University-Main Campus",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "199102",
+    "name": "North Carolina A & T State University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "217402",
+    "name": "Providence College",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "223232",
+    "name": "Baylor University",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "165662",
+    "name": "Emerson College",
+    "selection": "scorecard-selectivity-proxy"
+  },
+  {
+    "unitid": "141334",
+    "name": "University of West Georgia",
+    "selection": "scorecard-selectivity-proxy"
+  }
+]

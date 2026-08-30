@@ -1,0 +1,9 @@
+{
+  "snapshot": "2026-08-30",
+  "count": 100,
+  "source": "College Scorecard",
+  "ranking_status": "coverage-set-not-ranking",
+  "method": "Keep configured base seed, then fill to target with public/private-nonprofit bachelor's-predominant institutions with at least 3,000 undergraduate students, ordered by lowest available College Scorecard admission rate.",
+  "target": 100,
+  "base_seed_count": 10
+}

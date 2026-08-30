@@ -40,10 +40,42 @@
     "description": null
   },
   {
+    "major_id": "cip4-0102",
+    "name": "Agricultural Mechanization.",
+    "category": "College Scorecard field of study",
+    "cip_code": "0102",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-0103",
+    "name": "Agricultural Production Operations.",
+    "category": "College Scorecard field of study",
+    "cip_code": "0103",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-0108",
     "name": "Agricultural Public Services.",
     "category": "College Scorecard field of study",
     "cip_code": "0108",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-0104",
+    "name": "Agricultural and Food Products Processing.",
+    "category": "College Scorecard field of study",
+    "cip_code": "0104",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-0199",
+    "name": "Agricultural/Animal/Plant/Veterinary Science and Related Fields, Other.",
+    "category": "College Scorecard field of study",
+    "cip_code": "0199",
     "stem": null,
     "description": null
   },
@@ -56,10 +88,34 @@
     "description": null
   },
   {
+    "major_id": "cip4-0113",
+    "name": "Agriculture/Veterinary Preparatory Programs.",
+    "category": "College Scorecard field of study",
+    "cip_code": "0113",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-4901",
+    "name": "Air Transportation.",
+    "category": "College Scorecard field of study",
+    "cip_code": "4901",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-5109",
     "name": "Allied Health Diagnostic, Intervention, and Treatment Professions.",
     "category": "College Scorecard field of study",
     "cip_code": "5109",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1616",
+    "name": "American Sign Language.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1616",
     "stem": null,
     "description": null
   },
@@ -88,6 +144,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-0106",
+    "name": "Applied Horticulture and Horticultural Business Services.",
+    "category": "College Scorecard field of study",
+    "cip_code": "0106",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-2703",
     "name": "Applied Mathematics.",
     "category": "College Scorecard field of study",
@@ -96,10 +160,26 @@
     "description": null
   },
   {
+    "major_id": "cip4-2706",
+    "name": "Applied Statistics.",
+    "category": "College Scorecard field of study",
+    "cip_code": "2706",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-4503",
     "name": "Archeology.",
     "category": "College Scorecard field of study",
     "cip_code": "4503",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1501",
+    "name": "Architectural Engineering Technologies/Technicians.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1501",
     "stem": null,
     "description": null
   },
@@ -184,6 +264,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-1002",
+    "name": "Audiovisual Communications Technologies/Technicians.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1002",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-3017",
     "name": "Behavioral Sciences.",
     "category": "College Scorecard field of study",
@@ -192,10 +280,26 @@
     "description": null
   },
   {
+    "major_id": "cip4-3902",
+    "name": "Bible/Biblical Studies.",
+    "category": "College Scorecard field of study",
+    "cip_code": "3902",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-1302",
     "name": "Bilingual, Multilingual, and Multicultural Education.",
     "category": "College Scorecard field of study",
     "cip_code": "1302",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1443",
+    "name": "Biochemical Engineering.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1443",
     "stem": null,
     "description": null
   },
@@ -216,10 +320,34 @@
     "description": null
   },
   {
+    "major_id": "cip4-3001",
+    "name": "Biological and Physical Sciences.",
+    "category": "College Scorecard field of study",
+    "cip_code": "3001",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1445",
+    "name": "Biological/Biosystems Engineering.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1445",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-2601",
     "name": "Biology, General.",
     "category": "College Scorecard field of study",
     "cip_code": "2601",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-4101",
+    "name": "Biology/Biotechnology Technologies/Technicians.",
+    "category": "College Scorecard field of study",
+    "cip_code": "4101",
     "stem": null,
     "description": null
   },
@@ -268,6 +396,14 @@
     "name": "Business Administration, Management and Operations.",
     "category": "College Scorecard field of study",
     "cip_code": "5202",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-5204",
+    "name": "Business Operations Support and Assistant Services.",
+    "category": "College Scorecard field of study",
+    "cip_code": "5204",
     "stem": null,
     "description": null
   },
@@ -352,6 +488,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-1502",
+    "name": "Civil Engineering Technologies/Technicians.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1502",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-1408",
     "name": "Civil Engineering.",
     "category": "College Scorecard field of study",
@@ -372,6 +516,14 @@
     "name": "Classics and Classical Languages, Literatures, and Linguistics.",
     "category": "College Scorecard field of study",
     "cip_code": "1612",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-3035",
+    "name": "Climate Science.",
+    "category": "College Scorecard field of study",
+    "cip_code": "3035",
     "stem": null,
     "description": null
   },
@@ -416,10 +568,42 @@
     "description": null
   },
   {
+    "major_id": "cip4-0999",
+    "name": "Communication, Journalism, and Related Programs, Other.",
+    "category": "College Scorecard field of study",
+    "cip_code": "0999",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1001",
+    "name": "Communications Technologies/Technicians.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1001",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-4402",
+    "name": "Community Organization and Advocacy.",
+    "category": "College Scorecard field of study",
+    "cip_code": "4402",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-3030",
     "name": "Computational Science.",
     "category": "College Scorecard field of study",
     "cip_code": "3030",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1512",
+    "name": "Computer Engineering Technologies/Technicians.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1512",
     "stem": null,
     "description": null
   },
@@ -456,6 +640,22 @@
     "description": null
   },
   {
+    "major_id": "cip4-1105",
+    "name": "Computer Systems Analysis.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1105",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1109",
+    "name": "Computer Systems Networking and Telecommunications.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1109",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-1199",
     "name": "Computer and Information Sciences and Support Services, Other.",
     "category": "College Scorecard field of study",
@@ -480,6 +680,22 @@
     "description": null
   },
   {
+    "major_id": "cip4-1510",
+    "name": "Construction Engineering Technology/Technician.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1510",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1433",
+    "name": "Construction Engineering.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1433",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-5220",
     "name": "Construction Management.",
     "category": "College Scorecard field of study",
@@ -500,6 +716,22 @@
     "name": "Criminal Justice and Corrections.",
     "category": "College Scorecard field of study",
     "cip_code": "4301",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-4504",
+    "name": "Criminology.",
+    "category": "College Scorecard field of study",
+    "cip_code": "4504",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1205",
+    "name": "Culinary Arts and Related Services.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1205",
     "stem": null,
     "description": null
   },
@@ -564,6 +796,14 @@
     "name": "Dietetics and Clinical Nutrition Services.",
     "category": "College Scorecard field of study",
     "cip_code": "5131",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1513",
+    "name": "Drafting/Design Engineering Technologies/Technicians.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1513",
     "stem": null,
     "description": null
   },
@@ -640,6 +880,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-1306",
+    "name": "Educational Assessment, Evaluation, and Research.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1306",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-1447",
     "name": "Electrical and Computer Engineering.",
     "category": "College Scorecard field of study",
@@ -664,10 +912,26 @@
     "description": null
   },
   {
+    "major_id": "cip4-4701",
+    "name": "Electrical/Electronics Maintenance and Repair Technologies/Technicians.",
+    "category": "College Scorecard field of study",
+    "cip_code": "4701",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-1441",
     "name": "Electromechanical Engineering.",
     "category": "College Scorecard field of study",
     "cip_code": "1441",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1444",
+    "name": "Engineering Chemistry.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1444",
     "stem": null,
     "description": null
   },
@@ -728,6 +992,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-1511",
+    "name": "Engineering-Related Technologies/Technicians.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1511",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-1599",
     "name": "Engineering/Engineering-Related Technologies/Technicians, Other.",
     "category": "College Scorecard field of study",
@@ -744,6 +1016,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-2399",
+    "name": "English Language and Literature/Letters, Other.",
+    "category": "College Scorecard field of study",
+    "cip_code": "2399",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-5207",
     "name": "Entrepreneurial and Small Business Operations.",
     "category": "College Scorecard field of study",
@@ -752,10 +1032,26 @@
     "description": null
   },
   {
+    "major_id": "cip4-1505",
+    "name": "Environmental Control Technologies/Technicians.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1505",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-0404",
     "name": "Environmental Design.",
     "category": "College Scorecard field of study",
     "cip_code": "0404",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-3041",
+    "name": "Environmental Geosciences.",
+    "category": "College Scorecard field of study",
+    "cip_code": "3041",
     "stem": null,
     "description": null
   },
@@ -784,10 +1080,34 @@
     "description": null
   },
   {
+    "major_id": "cip4-1904",
+    "name": "Family and Consumer Economics and Related Studies.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1904",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1902",
+    "name": "Family and Consumer Sciences/Human Sciences Business Services.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1902",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-1901",
     "name": "Family and Consumer Sciences/Human Sciences, General.",
     "category": "College Scorecard field of study",
     "cip_code": "1901",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1999",
+    "name": "Family and Consumer Sciences/Human Sciences, Other.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1999",
     "stem": null,
     "description": null
   },
@@ -812,6 +1132,14 @@
     "name": "Fine and Studio Arts.",
     "category": "College Scorecard field of study",
     "cip_code": "5007",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-4302",
+    "name": "Fire Protection.",
+    "category": "College Scorecard field of study",
+    "cip_code": "4302",
     "stem": null,
     "description": null
   },
@@ -864,6 +1192,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-5218",
+    "name": "General Sales, Merchandising and Related Marketing Operations.",
+    "category": "College Scorecard field of study",
+    "cip_code": "5218",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-2608",
     "name": "Genetics.",
     "category": "College Scorecard field of study",
@@ -912,6 +1248,38 @@
     "description": null
   },
   {
+    "major_id": "cip4-3011",
+    "name": "Gerontology.",
+    "category": "College Scorecard field of study",
+    "cip_code": "3011",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1003",
+    "name": "Graphic Communications.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1003",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-5132",
+    "name": "Health Professions Education, Ethics, and Humanities.",
+    "category": "College Scorecard field of study",
+    "cip_code": "5132",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-5199",
+    "name": "Health Professions and Related Clinical Sciences, Other.",
+    "category": "College Scorecard field of study",
+    "cip_code": "5199",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-5100",
     "name": "Health Services/Allied Health/Health Sciences, General.",
     "category": "College Scorecard field of study",
@@ -928,10 +1296,66 @@
     "description": null
   },
   {
+    "major_id": "cip4-5111",
+    "name": "Health/Medical Preparatory Programs.",
+    "category": "College Scorecard field of study",
+    "cip_code": "5111",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-5302",
+    "name": "High School/Secondary Certificate Programs.",
+    "category": "College Scorecard field of study",
+    "cip_code": "5302",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-3012",
+    "name": "Historic Preservation and Conservation.",
+    "category": "College Scorecard field of study",
+    "cip_code": "3012",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-5401",
     "name": "History.",
     "category": "College Scorecard field of study",
     "cip_code": "5401",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-4399",
+    "name": "Homeland Security, Law Enforcement, Firefighting and Related Protective Services, Other.",
+    "category": "College Scorecard field of study",
+    "cip_code": "4399",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-4303",
+    "name": "Homeland Security.",
+    "category": "College Scorecard field of study",
+    "cip_code": "4303",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-5209",
+    "name": "Hospitality Administration/Management.",
+    "category": "College Scorecard field of study",
+    "cip_code": "5209",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1906",
+    "name": "Housing and Human Environments.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1906",
     "stem": null,
     "description": null
   },
@@ -968,6 +1392,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-4400",
+    "name": "Human Services, General.",
+    "category": "College Scorecard field of study",
+    "cip_code": "4400",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-1435",
     "name": "Industrial Engineering.",
     "category": "College Scorecard field of study",
@@ -976,10 +1408,26 @@
     "description": null
   },
   {
+    "major_id": "cip4-1506",
+    "name": "Industrial Production Technologies/Technicians.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1506",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-1104",
     "name": "Information Science/Studies.",
     "category": "College Scorecard field of study",
     "cip_code": "1104",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-5217",
+    "name": "Insurance.",
+    "category": "College Scorecard field of study",
+    "cip_code": "5217",
     "stem": null,
     "description": null
   },
@@ -1008,6 +1456,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-0107",
+    "name": "International Agriculture.",
+    "category": "College Scorecard field of study",
+    "cip_code": "0107",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-5211",
     "name": "International Business.",
     "category": "College Scorecard field of study",
@@ -1024,10 +1480,26 @@
     "description": null
   },
   {
+    "major_id": "cip4-1307",
+    "name": "International and Comparative Education.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1307",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-3020",
     "name": "International/Globalization Studies.",
     "category": "College Scorecard field of study",
     "cip_code": "3020",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1608",
+    "name": "Iranian/Persian Languages, Literatures, and Linguistics.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1608",
     "stem": null,
     "description": null
   },
@@ -1056,10 +1528,26 @@
     "description": null
   },
   {
+    "major_id": "cip4-2299",
+    "name": "Legal Professions and Studies, Other.",
+    "category": "College Scorecard field of study",
+    "cip_code": "2299",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-2202",
     "name": "Legal Research and Advanced Professional Studies.",
     "category": "College Scorecard field of study",
     "cip_code": "2202",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-2203",
+    "name": "Legal Support Services.",
+    "category": "College Scorecard field of study",
+    "cip_code": "2203",
     "stem": null,
     "description": null
   },
@@ -1092,6 +1580,14 @@
     "name": "Linguistic, Comparative, and Related Language Studies and Services.",
     "category": "College Scorecard field of study",
     "cip_code": "1601",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-3047",
+    "name": "Linguistics and Anthropology.",
+    "category": "College Scorecard field of study",
+    "cip_code": "3047",
     "stem": null,
     "description": null
   },
@@ -1160,6 +1656,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-3049",
+    "name": "Mathematical Economics.",
+    "category": "College Scorecard field of study",
+    "cip_code": "3049",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-3008",
     "name": "Mathematics and Computer Science.",
     "category": "College Scorecard field of study",
@@ -1184,6 +1688,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-1508",
+    "name": "Mechanical Engineering Related Technologies/Technicians.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1508",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-1419",
     "name": "Mechanical Engineering.",
     "category": "College Scorecard field of study",
@@ -1200,10 +1712,26 @@
     "description": null
   },
   {
+    "major_id": "cip4-5114",
+    "name": "Medical Clinical Sciences/Graduate Medical Studies.",
+    "category": "College Scorecard field of study",
+    "cip_code": "5114",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-3013",
     "name": "Medieval and Renaissance Studies.",
     "category": "College Scorecard field of study",
     "cip_code": "3013",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-5115",
+    "name": "Mental and Social Health Services and Allied Professions.",
+    "category": "College Scorecard field of study",
+    "cip_code": "5115",
     "stem": null,
     "description": null
   },
@@ -1232,6 +1760,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-2903",
+    "name": "Military Applied Sciences.",
+    "category": "College Scorecard field of study",
+    "cip_code": "2903",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-1421",
     "name": "Mining and Mineral Engineering.",
     "category": "College Scorecard field of study",
@@ -1240,10 +1776,26 @@
     "description": null
   },
   {
+    "major_id": "cip4-3903",
+    "name": "Missions/Missionary Studies and Missiology.",
+    "category": "College Scorecard field of study",
+    "cip_code": "3903",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-1606",
     "name": "Modern Greek Language and Literature.",
     "category": "College Scorecard field of study",
     "cip_code": "1606",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-5136",
+    "name": "Movement and Mind-Body Therapies and Education.",
+    "category": "College Scorecard field of study",
+    "cip_code": "5136",
     "stem": null,
     "description": null
   },
@@ -1260,6 +1812,14 @@
     "name": "Multi/Interdisciplinary Studies, Other.",
     "category": "College Scorecard field of study",
     "cip_code": "3099",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-3014",
+    "name": "Museology/Museum Studies.",
+    "category": "College Scorecard field of study",
+    "cip_code": "3014",
     "stem": null,
     "description": null
   },
@@ -1328,6 +1888,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-1514",
+    "name": "Nuclear Engineering Technology/Technician.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1514",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-1423",
     "name": "Nuclear Engineering.",
     "category": "College Scorecard field of study",
@@ -1344,10 +1912,26 @@
     "description": null
   },
   {
+    "major_id": "cip4-1424",
+    "name": "Ocean Engineering.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1424",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-1437",
     "name": "Operations Research.",
     "category": "College Scorecard field of study",
     "cip_code": "1437",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-3199",
+    "name": "Parks, Recreation, Leisure, Fitness, and Kinesiology, Other.",
+    "category": "College Scorecard field of study",
+    "cip_code": "3199",
     "stem": null,
     "description": null
   },
@@ -1364,6 +1948,14 @@
     "name": "Parks, Recreation, and Leisure Studies.",
     "category": "College Scorecard field of study",
     "cip_code": "3101",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-3907",
+    "name": "Pastoral Counseling and Specialized Ministries.",
+    "category": "College Scorecard field of study",
+    "cip_code": "3907",
     "stem": null,
     "description": null
   },
@@ -1396,6 +1988,14 @@
     "name": "Pharmacy, Pharmaceutical Sciences, and Administration.",
     "category": "College Scorecard field of study",
     "cip_code": "5120",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-3800",
+    "name": "Philosophy and Religious Studies, General.",
+    "category": "College Scorecard field of study",
+    "cip_code": "3800",
     "stem": null,
     "description": null
   },
@@ -1472,6 +2072,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-1432",
+    "name": "Polymer/Plastics Engineering.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1432",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-4201",
     "name": "Psychology, General.",
     "category": "College Scorecard field of study",
@@ -1484,6 +2092,22 @@
     "name": "Psychology, Other.",
     "category": "College Scorecard field of study",
     "cip_code": "4299",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-4499",
+    "name": "Public Administration and Social Service Professions, Other.",
+    "category": "College Scorecard field of study",
+    "cip_code": "4499",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-4404",
+    "name": "Public Administration.",
+    "category": "College Scorecard field of study",
+    "cip_code": "4404",
     "stem": null,
     "description": null
   },
@@ -1520,6 +2144,22 @@
     "description": null
   },
   {
+    "major_id": "cip4-0410",
+    "name": "Real Estate Development.",
+    "category": "College Scorecard field of study",
+    "cip_code": "0410",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-5215",
+    "name": "Real Estate.",
+    "category": "College Scorecard field of study",
+    "cip_code": "5215",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-5138",
     "name": "Registered Nursing, Nursing Administration, Nursing Research and Clinical Nursing.",
     "category": "College Scorecard field of study",
@@ -1540,6 +2180,14 @@
     "name": "Religion/Religious Studies.",
     "category": "College Scorecard field of study",
     "cip_code": "3802",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-3905",
+    "name": "Religious Music and Worship.",
+    "category": "College Scorecard field of study",
+    "cip_code": "3905",
     "stem": null,
     "description": null
   },
@@ -1568,10 +2216,34 @@
     "description": null
   },
   {
+    "major_id": "cip4-4100",
+    "name": "Science Technologies/Technicians, General.",
+    "category": "College Scorecard field of study",
+    "cip_code": "4100",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-4199",
+    "name": "Science Technologies/Technicians, Other.",
+    "category": "College Scorecard field of study",
+    "cip_code": "4199",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-3015",
     "name": "Science, Technology and Society.",
     "category": "College Scorecard field of study",
     "cip_code": "3015",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-4304",
+    "name": "Security Science and Technology.",
+    "category": "College Scorecard field of study",
+    "cip_code": "4304",
     "stem": null,
     "description": null
   },
@@ -1616,10 +2288,26 @@
     "description": null
   },
   {
+    "major_id": "cip4-4513",
+    "name": "Sociology and Anthropology.",
+    "category": "College Scorecard field of study",
+    "cip_code": "4513",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-4511",
     "name": "Sociology.",
     "category": "College Scorecard field of study",
     "cip_code": "4511",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-0112",
+    "name": "Soil Sciences.",
+    "category": "College Scorecard field of study",
+    "cip_code": "0112",
     "stem": null,
     "description": null
   },
@@ -1648,6 +2336,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-5219",
+    "name": "Specialized Sales, Merchandising and  Marketing Operations.",
+    "category": "College Scorecard field of study",
+    "cip_code": "5219",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-3105",
     "name": "Sports, Kinesiology, and Physical Education/Fitness.",
     "category": "College Scorecard field of study",
@@ -1660,6 +2356,14 @@
     "name": "Statistics.",
     "category": "College Scorecard field of study",
     "cip_code": "2705",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-1438",
+    "name": "Surveying Engineering.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1438",
     "stem": null,
     "description": null
   },
@@ -1712,6 +2416,14 @@
     "description": null
   },
   {
+    "major_id": "cip4-1428",
+    "name": "Textile Sciences and Engineering.",
+    "category": "College Scorecard field of study",
+    "cip_code": "1428",
+    "stem": null,
+    "description": null
+  },
+  {
     "major_id": "cip4-3906",
     "name": "Theological and Ministerial Studies.",
     "category": "College Scorecard field of study",
@@ -1732,6 +2444,14 @@
     "name": "Urban Studies/Affairs.",
     "category": "College Scorecard field of study",
     "cip_code": "4512",
+    "stem": null,
+    "description": null
+  },
+  {
+    "major_id": "cip4-0183",
+    "name": "Veterinary/Animal Health Technologies/Technicians.",
+    "category": "College Scorecard field of study",
+    "cip_code": "0183",
     "stem": null,
     "description": null
   },

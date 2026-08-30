@@ -1,21 +1,21 @@
 [
   {
-    "university_id": "us-ipeds-166027",
-    "tuition": 61676,
+    "university_id": "us-ipeds-100858",
+    "tuition": 12890,
     "currency": "USD",
     "residency": "in_state",
     "source": "College Scorecard"
   },
   {
-    "university_id": "us-ipeds-166683",
-    "tuition": 62396,
+    "university_id": "us-ipeds-110422",
+    "tuition": 13596,
     "currency": "USD",
     "residency": "in_state",
     "source": "College Scorecard"
   },
   {
-    "university_id": "us-ipeds-243744",
-    "tuition": 65910,
+    "university_id": "us-ipeds-110583",
+    "tuition": 7350,
     "currency": "USD",
     "residency": "in_state",
     "source": "College Scorecard"
@@ -28,6 +28,20 @@
     "source": "College Scorecard"
   },
   {
+    "university_id": "us-ipeds-110644",
+    "tuition": 16774,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-110653",
+    "tuition": 15722,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
     "university_id": "us-ipeds-110662",
     "tuition": 15203,
     "currency": "USD",
@@ -35,22 +49,183 @@
     "source": "College Scorecard"
   },
   {
-    "university_id": "us-ipeds-236948",
-    "tuition": 12973,
+    "university_id": "us-ipeds-110680",
+    "tuition": 16758,
     "currency": "USD",
     "residency": "in_state",
     "source": "College Scorecard"
   },
   {
-    "university_id": "us-ipeds-170976",
-    "tuition": 17736,
+    "university_id": "us-ipeds-110705",
+    "tuition": 16414,
     "currency": "USD",
     "residency": "in_state",
     "source": "College Scorecard"
   },
   {
-    "university_id": "us-ipeds-228778",
-    "tuition": 11688,
+    "university_id": "us-ipeds-117946",
+    "tuition": 62357,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-122409",
+    "tuition": 8728,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-122931",
+    "tuition": 61293,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-123961",
+    "tuition": 72097,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-129242",
+    "tuition": 58350,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-130697",
+    "tuition": 70342,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-130794",
+    "tuition": 67250,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-130934",
+    "tuition": 10670,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-131469",
+    "tuition": 67710,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-131496",
+    "tuition": 68017,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-131520",
+    "tuition": 35810,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-132903",
+    "tuition": 6368,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-133650",
+    "tuition": 5785,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-134097",
+    "tuition": 5656,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-134130",
+    "tuition": 6381,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-135726",
+    "tuition": 62616,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-137351",
+    "tuition": 6410,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-137847",
+    "tuition": 34408,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-139658",
+    "tuition": 64280,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-139755",
+    "tuition": 12058,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-139959",
+    "tuition": 11450,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-141060",
+    "tuition": 31556,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-141334",
+    "tuition": 6088,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-144050",
+    "tuition": 70662,
     "currency": "USD",
     "residency": "in_state",
     "source": "College Scorecard"
@@ -63,8 +238,442 @@
     "source": "College Scorecard"
   },
   {
+    "university_id": "us-ipeds-147767",
+    "tuition": 68322,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-152080",
+    "tuition": 65025,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-159009",
+    "tuition": 7683,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-160621",
+    "tuition": 9922,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-160755",
+    "tuition": 68678,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-162928",
+    "tuition": 65230,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-163286",
+    "tuition": 11809,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-164739",
+    "tuition": 61000,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-164748",
+    "tuition": 52040,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-164924",
+    "tuition": 70702,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-164988",
+    "tuition": 68102,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-165015",
+    "tuition": 68080,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-165662",
+    "tuition": 57056,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-166027",
+    "tuition": 61676,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-166124",
+    "tuition": 64500,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-166683",
+    "tuition": 62396,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-167358",
+    "tuition": 66162,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-168148",
+    "tuition": 70704,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-170976",
+    "tuition": 17736,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-174844",
+    "tuition": 59760,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-179867",
+    "tuition": 65790,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-182670",
+    "tuition": 68268,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-186131",
+    "tuition": 62688,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-186867",
+    "tuition": 63462,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-189097",
+    "tuition": 69888,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-190099",
+    "tuition": 70306,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-190150",
+    "tuition": 71845,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-190415",
+    "tuition": 69314,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-190512",
+    "tuition": 7464,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-193900",
+    "tuition": 62796,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-195030",
+    "tuition": 67080,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-196079",
+    "tuition": 10567,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-196097",
+    "tuition": 10931,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-196413",
+    "tuition": 65528,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-198419",
+    "tuition": 68758,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-199102",
+    "tuition": 6813,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-199120",
+    "tuition": 8994,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-199193",
+    "tuition": 8799,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-199847",
+    "tuition": 67642,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-201645",
+    "tuition": 66608,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-211291",
+    "tuition": 67812,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
     "university_id": "us-ipeds-211440",
     "tuition": 66246,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-213543",
+    "tuition": 64980,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-215062",
+    "tuition": 68686,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-216597",
+    "tuition": 67776,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-217156",
+    "tuition": 71412,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-217402",
+    "tuition": 63550,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-217882",
+    "tuition": 15554,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-221759",
+    "tuition": 13812,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-221999",
+    "tuition": 67498,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-223232",
+    "tuition": 58100,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-226152",
+    "tuition": 7894,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-227757",
+    "tuition": 64144,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-228778",
+    "tuition": 11688,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-228875",
+    "tuition": 61740,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-231624",
+    "tuition": 25914,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-231651",
+    "tuition": 21650,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-234076",
+    "tuition": 21803,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-236948",
+    "tuition": 12973,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-240444",
+    "tuition": 11603,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-242705",
+    "tuition": 5780,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-243744",
+    "tuition": 65910,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-243780",
+    "tuition": 9992,
     "currency": "USD",
     "residency": "in_state",
     "source": "College Scorecard"
