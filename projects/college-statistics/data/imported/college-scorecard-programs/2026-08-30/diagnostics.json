@@ -14,15 +14,15 @@
     "Stanford University": 186
   },
   "credential_counts": {
-    "{'level': 5, 'title': \"Master's Degree\"}": 914,
-    "{'level': 6, 'title': 'Doctoral Degree'}": 702,
-    "{'level': 3, 'title': \"Bachelor's Degree\"}": 834,
-    "{'level': 7, 'title': 'First Professional Degree'}": 55,
-    "{'level': 4, 'title': 'Post-baccalaureate Certificate'}": 33,
-    "{'level': 8, 'title': 'Graduate/Professional Certificate'}": 180,
-    "{'level': 1, 'title': 'Undergraduate Certificate or Diploma'}": 49,
-    "{'level': 2, 'title': \"Associate's Degree\"}": 1,
-    "{'level': 99, 'title': 'Non-Credential Program (Preparatory Coursework/Teacher Certification)'}": 23
+    "5": 914,
+    "6": 702,
+    "3": 834,
+    "7": 55,
+    "4": 33,
+    "8": 180,
+    "1": 49,
+    "2": 1,
+    "99": 23
   },
   "interesting_source_fields": {
     "counts": {
@@ -806,13 +806,10 @@
   ],
   "sample_program_by_university": {
     "University of California-Berkeley": {
-      "program_id": "us-ipeds-110635-cip4-0101-cred-{'level': 5, 'title': \"Master's Degree\"}",
+      "program_id": "us-ipeds-110635-cip4-0101-cred-5",
       "cip4_code": "0101",
       "title": "Agricultural Business and Management.",
-      "credential_level": {
-        "level": 5,
-        "title": "Master's Degree"
-      },
+      "credential_level": 5,
       "median_earnings": null,
       "median_debt": null,
       "annual_completions": null,
@@ -1120,13 +1117,10 @@
       }
     },
     "University of California-Los Angeles": {
-      "program_id": "us-ipeds-110662-cip4-0301-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "program_id": "us-ipeds-110662-cip4-0301-cred-3",
       "cip4_code": "0301",
       "title": "Natural Resources Conservation and Research.",
-      "credential_level": {
-        "level": 3,
-        "title": "Bachelor's Degree"
-      },
+      "credential_level": 3,
       "median_earnings": null,
       "median_debt": null,
       "annual_completions": null,
@@ -1434,13 +1428,10 @@
       }
     },
     "University of Illinois Urbana-Champaign": {
-      "program_id": "us-ipeds-145637-cip4-0100-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "program_id": "us-ipeds-145637-cip4-0100-cred-3",
       "cip4_code": "0100",
       "title": "Agriculture, General.",
-      "credential_level": {
-        "level": 3,
-        "title": "Bachelor's Degree"
-      },
+      "credential_level": 3,
       "median_earnings": null,
       "median_debt": null,
       "annual_completions": null,
@@ -1748,13 +1739,10 @@
       }
     },
     "Harvard University": {
-      "program_id": "us-ipeds-166027-cip4-0107-cred-{'level': 8, 'title': 'Graduate/Professional Certificate'}",
+      "program_id": "us-ipeds-166027-cip4-0107-cred-8",
       "cip4_code": "0107",
       "title": "International Agriculture.",
-      "credential_level": {
-        "level": 8,
-        "title": "Graduate/Professional Certificate"
-      },
+      "credential_level": 8,
       "median_earnings": null,
       "median_debt": null,
       "annual_completions": null,
@@ -2062,13 +2050,10 @@
       }
     },
     "Massachusetts Institute of Technology": {
-      "program_id": "us-ipeds-166683-cip4-0402-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "program_id": "us-ipeds-166683-cip4-0402-cred-3",
       "cip4_code": "0402",
       "title": "Architecture.",
-      "credential_level": {
-        "level": 3,
-        "title": "Bachelor's Degree"
-      },
+      "credential_level": 3,
       "median_earnings": null,
       "median_debt": null,
       "annual_completions": null,
@@ -2376,13 +2361,10 @@
       }
     },
     "University of Michigan-Ann Arbor": {
-      "program_id": "us-ipeds-170976-cip4-0301-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "program_id": "us-ipeds-170976-cip4-0301-cred-3",
       "cip4_code": "0301",
       "title": "Natural Resources Conservation and Research.",
-      "credential_level": {
-        "level": 3,
-        "title": "Bachelor's Degree"
-      },
+      "credential_level": 3,
       "median_earnings": null,
       "median_debt": null,
       "annual_completions": null,
@@ -2690,13 +2672,10 @@
       }
     },
     "Carnegie Mellon University": {
-      "program_id": "us-ipeds-211440-cip4-0301-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "program_id": "us-ipeds-211440-cip4-0301-cred-3",
       "cip4_code": "0301",
       "title": "Natural Resources Conservation and Research.",
-      "credential_level": {
-        "level": 3,
-        "title": "Bachelor's Degree"
-      },
+      "credential_level": 3,
       "median_earnings": null,
       "median_debt": null,
       "annual_completions": null,
@@ -3004,13 +2983,10 @@
       }
     },
     "The University of Texas at Austin": {
-      "program_id": "us-ipeds-228778-cip4-0301-cred-{'level': 5, 'title': \"Master's Degree\"}",
+      "program_id": "us-ipeds-228778-cip4-0301-cred-5",
       "cip4_code": "0301",
       "title": "Natural Resources Conservation and Research.",
-      "credential_level": {
-        "level": 5,
-        "title": "Master's Degree"
-      },
+      "credential_level": 5,
       "median_earnings": null,
       "median_debt": null,
       "annual_completions": null,
@@ -3318,13 +3294,10 @@
       }
     },
     "University of Washington-Seattle Campus": {
-      "program_id": "us-ipeds-236948-cip4-0110-cred-{'level': 3, 'title': \"Bachelor's Degree\"}",
+      "program_id": "us-ipeds-236948-cip4-0110-cred-3",
       "cip4_code": "0110",
       "title": "Food Science and Technology.",
-      "credential_level": {
-        "level": 3,
-        "title": "Bachelor's Degree"
-      },
+      "credential_level": 3,
       "median_earnings": null,
       "median_debt": null,
       "annual_completions": null,
@@ -3632,13 +3605,10 @@
       }
     },
     "Stanford University": {
-      "program_id": "us-ipeds-243744-cip4-0181-cred-{'level': 5, 'title': \"Master's Degree\"}",
+      "program_id": "us-ipeds-243744-cip4-0181-cred-5",
       "cip4_code": "0181",
       "title": "Veterinary Biomedical and Clinical Sciences.",
-      "credential_level": {
-        "level": 5,
-        "title": "Master's Degree"
-      },
+      "credential_level": 5,
       "median_earnings": null,
       "median_debt": null,
       "annual_completions": null,
