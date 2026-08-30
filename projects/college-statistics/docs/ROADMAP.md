@@ -2,25 +2,31 @@
 
 The project should stay useful and simple. Expand data coverage first; add architecture only when the current static approach becomes limiting.
 
-## Current — 10-university real-data pilot
+## Current — 100-school real-data coverage
 
+- 100 U.S. institutions selected by a documented, reproducible coverage rule
 - Real College Scorecard institution and field-of-study data
 - Bachelor's programs only in the live site
 - University-first browsing with expandable major tables
 - 1-year and 4-year program earnings
 - In-state tuition and acceptance rate
 - Search and filters
-- Automated import, validation, and promotion through GitHub Actions
+- Automated selection, import, validation, and promotion through GitHub Actions
+- Compact repository staging: very large program raw files are validated during the workflow but not committed
 
-## Next — roughly 100 U.S. universities
+The 100-school set is a coverage set, not an official ranking.
 
-- Define a clear inclusion method for the university list
-- Expand the seed/config list
-- Reuse the same import and promotion pipeline
-- Keep bachelor's-only scope unless another degree level becomes useful
-- Check payload size and browsing performance after expansion
+## Next — improve the 100-school experience
 
-The goal is for 10 → 100 schools to be mainly a data/configuration change, not a redesign.
+Before expanding again, use the current site and solve concrete usability/data issues that appear.
+
+Possible near-term work:
+
+- verify that searching/filtering remains comfortable with 100 schools;
+- improve school selection methodology only if obvious institutions are missing;
+- improve major naming/grouping where 4-digit CIP labels are awkward;
+- review missing earnings coverage and clarify labels where needed;
+- monitor browser payload and load time.
 
 ## Later — broader U.S. coverage
 
