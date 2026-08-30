@@ -65,7 +65,7 @@ The Scorecard unit is institution + 4-digit CIP field + credential level. The te
 credential_level == 3  # Bachelor's Degree
 ```
 
-At 100 schools, the temporary raw/program files are larger than GitHub's 100 MB per-file limit. They are therefore generated, validated, summarized, and used during the Action run but are not committed to the repository.
+At 100 schools, the temporary raw/program files are larger than GitHub's 100 MB per-file limit. They are generated, validated, summarized, and used during the Action run but are not committed to the repository.
 
 Compact program audit metadata is committed under:
 
@@ -81,7 +81,15 @@ The goal is not perfect research-grade normalization. The goal is to catch obvio
 
 ## Promotion
 
-`promote_bachelors.py` converts validated temporary program data into the browser-ready files in `data/`.
+`promote_bachelors.py` converts validated temporary program data into only the browser-ready files the current site uses:
+
+- `universities.json`
+- `majors.json`
+- `university-major.json`
+- `salaries.json`
+- `tuition.json`
+- `admissions.json`
+- `metadata.json`
 
 Current promotion choices:
 
@@ -90,8 +98,9 @@ Current promotion choices:
 - 1-year, 4-year, and 5-year earnings retained when available;
 - in-state tuition used as the displayed tuition value when available;
 - acceptance rate kept at institution level;
-- missing values remain `null`;
-- employment and rankings are left empty.
+- missing values remain `null`.
+
+No empty placeholder datasets are generated for features the site does not currently support.
 
 ## API key
 
