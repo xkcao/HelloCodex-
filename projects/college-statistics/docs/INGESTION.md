@@ -12,11 +12,22 @@ The live website still uses fictional placeholder records because its current ta
 
 ## Authentication
 
-College Scorecard API requests require an `api.data.gov` key. Never commit a key to this repository. Set it only in your shell environment:
+For the small 10-school seed import, the script defaults to api.data.gov's public `DEMO_KEY`. This is intended only for initial exploration and has much lower rate limits than a personal key.
+
+Run the seed import with no setup:
+
+```bash
+python3 scripts/scorecard_import.py
+```
+
+For repeated runs or larger datasets, obtain your own api.data.gov key and keep it out of the repository:
 
 ```bash
 export COLLEGE_SCORECARD_API_KEY="your-key-here"
+python3 scripts/scorecard_import.py
 ```
+
+You can also override the key for a single run with `--api-key`. Never commit a personal API key.
 
 ## Fetch
 
@@ -32,7 +43,7 @@ The importer uses the API's `latest` institution-level fields and writes a dated
 - `universities.json` — normalized university identity records
 - `tuition.json` — normalized in-state/out-of-state tuition records
 - `admissions.json` — normalized admissions records
-- `manifest.json` — retrieval metadata, source URL, selected UNITIDs, and promotion status
+- `manifest.json` — retrieval metadata, source URL, selected UNITIDs, API-key mode, and promotion status
 
 Use a fixed snapshot name when reproducing an import:
 
