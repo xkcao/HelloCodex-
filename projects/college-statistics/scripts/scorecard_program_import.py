@@ -90,11 +90,19 @@ def fetch_schools(unitids: list[str], api_key: str) -> list[dict]:
     return results
 
 
+def credential_parts(program: dict) -> tuple[int | str | None, str | None]:
+    credential = first_present(program, "credential", "credential_level")
+    if isinstance(credential, dict):
+        return credential.get("level"), credential.get("title")
+
+    level = first_present(program, "credential.level", "credential_level")
+    title = first_present(program, "credential.title", "credential_title")
+    return level, title
+
+
 def normalize_program(unitid: str, school_name: str | None, program: dict) -> dict:
     cip = first_present(program, "code", "cip_code", "cipcode")
-    credential = first_present(
-        program, "credential.level", "credential_level", "credential"
-    )
+    credential_level, credential_title = credential_parts(program)
     title = first_present(program, "title", "cip_title")
     earnings = first_present(
         program,
@@ -114,10 +122,10 @@ def normalize_program(unitid: str, school_name: str | None, program: dict) -> di
 
     uid = f"us-ipeds-{unitid}"
     cip_text = str(cip) if cip is not None else None
-    credential_text = str(credential) if credential is not None else None
+    credential_id = str(credential_level) if credential_level is not None else None
     program_id = (
-        f"{uid}-cip4-{cip_text}-cred-{credential_text}"
-        if cip_text and credential_text
+        f"{uid}-cip4-{cip_text}-cred-{credential_id}"
+        if cip_text and credential_id
         else None
     )
 
@@ -127,7 +135,8 @@ def normalize_program(unitid: str, school_name: str | None, program: dict) -> di
         "university_name": school_name,
         "cip4_code": cip_text,
         "title": title,
-        "credential_level": credential,
+        "credential_level": credential_level,
+        "credential_title": credential_title,
         "median_earnings": number_or_none(earnings),
         "median_debt": number_or_none(debt),
         "annual_completions": number_or_none(awards),
@@ -144,7 +153,6 @@ def normalize_program(unitid: str, school_name: str | None, program: dict) -> di
 
 
 def compact_record(row: dict) -> dict:
-    """Return a small inspectable representation without source_payload."""
     return {
         key: row.get(key)
         for key in (
@@ -154,6 +162,7 @@ def compact_record(row: dict) -> dict:
             "cip4_code",
             "title",
             "credential_level",
+            "credential_title",
             "median_earnings",
             "median_debt",
             "annual_completions",
@@ -161,11 +170,34 @@ def compact_record(row: dict) -> dict:
     }
 
 
+def flatten_key_paths(obj, prefix="") -> set[str]:
+    paths: set[str] = set()
+    if isinstance(obj, dict):
+        for key, child in obj.items():
+            path = f"{prefix}.{key}" if prefix else str(key)
+            paths.add(path)
+            paths.update(flatten_key_paths(child, path))
+    elif isinstance(obj, list) and obj:
+        paths.update(flatten_key_paths(obj[0], prefix))
+    return paths
+
+
 def build_audit(programs: list[dict], unitids: list[str]) -> dict:
     by_university = collections.Counter(row["university_id"] for row in programs)
-    by_credential = collections.Counter(str(row["credential_level"]) for row in programs)
+    by_credential = collections.Counter(
+        f"{row.get('credential_level')} - {row.get('credential_title')}" for row in programs
+    )
     unique_ids = {row.get("program_id") for row in programs if row.get("program_id")}
     unique_cips = {row.get("cip4_code") for row in programs if row.get("cip4_code")}
+    source_paths: set[str] = set()
+    for row in programs[:100]:
+        source_paths.update(flatten_key_paths(row.get("source_payload", {})))
+
+    outcome_like_paths = sorted(
+        path
+        for path in source_paths
+        if any(token in path.lower() for token in ("earn", "debt", "count", "award", "wage", "salary"))
+    )
 
     return {
         "program_count": len(programs),
@@ -182,11 +214,11 @@ def build_audit(programs: list[dict], unitids: list[str]) -> dict:
         "records_with_annual_completions": sum(
             row.get("annual_completions") is not None for row in programs
         ),
-        "records_missing_program_id": sum(
-            not row.get("program_id") for row in programs
-        ),
+        "records_missing_program_id": sum(not row.get("program_id") for row in programs),
         "records_by_university": dict(sorted(by_university.items())),
         "records_by_credential_level": dict(sorted(by_credential.items())),
+        "source_field_paths_sample": sorted(source_paths),
+        "outcome_like_source_field_paths": outcome_like_paths,
         "sample_records": [compact_record(row) for row in programs[:20]],
     }
 
