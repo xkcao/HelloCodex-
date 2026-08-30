@@ -30,13 +30,13 @@ Connects a university to a bachelor's field of study.
 Current live scope is `credential_level: 3` / Bachelor's Degree only.
 
 ### `salaries.json`
-Despite the historical filename, this file currently stores College Scorecard earnings indicators by university + major:
+Despite the historical filename, this file stores College Scorecard earnings indicators by university + major:
 
 - `earnings_1yr`
 - `earnings_4yr`
 - `earnings_5yr` when available
 
-The frontend currently displays 1-year and 4-year values. Missing values remain `null`.
+The frontend displays 1-year and 4-year values. Missing values remain `null`.
 
 ### `tuition.json`
 One institution-level display value per university. The live site uses in-state tuition when available.
@@ -47,12 +47,9 @@ Institution-level admissions data. The live site currently uses acceptance rate.
 ### `metadata.json`
 Small dataset-level description: status, source, scope, generation date, and notes.
 
-### `employment.json` and `rankings.json`
-Currently empty and not displayed. They remain as lightweight extension points but should not drive frontend features until a simple, reliable source is chosen.
-
 ## Runtime join
 
-`js/api.js` loads the JSON files and joins them using `university_id` and `major_id`.
+`js/api.js` loads only the files used by the current page and joins them using `university_id` and `major_id`.
 
 The UI then groups matching program records by university.
 
@@ -69,6 +66,7 @@ Keep the model practical:
 - do not guess unavailable statistics;
 - keep institution facts separate from program facts;
 - preserve source information;
-- add new fields/files only when the website actually needs them.
+- do not create placeholder files for possible future features;
+- add new files only when the website actually needs them.
 
-The staging snapshots in `data/imported/` may contain more detail than the live files. That is intentional: staging is for traceability, while `data/` should stay browser-friendly and simple.
+The staging area in `data/imported/` may contain more detail than the live files. At Top-100 scale, large program payloads are temporary during the workflow; the repository keeps compact audit metadata plus browser-ready JSON.
