@@ -1,8 +1,72 @@
 [
-  {"university_id":"u-northlake","tuition":47000,"currency":"USD","residency":"standard","source":"placeholder","year":2026},
-  {"university_id":"u-pacific-crest","tuition":39000,"currency":"USD","residency":"standard","source":"placeholder","year":2026},
-  {"university_id":"u-redwood-tech","tuition":62000,"currency":"USD","residency":"standard","source":"placeholder","year":2026},
-  {"university_id":"u-great-lakes","tuition":28000,"currency":"USD","residency":"standard","source":"placeholder","year":2026},
-  {"university_id":"u-atlantic-commonwealth","tuition":54000,"currency":"USD","residency":"standard","source":"placeholder","year":2026},
-  {"university_id":"u-desert-valley","tuition":24000,"currency":"USD","residency":"standard","source":"placeholder","year":2026}
+  {
+    "university_id": "us-ipeds-166027",
+    "tuition": 61676,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-166683",
+    "tuition": 62396,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-243744",
+    "tuition": 65910,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-110635",
+    "tuition": 16347,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-110662",
+    "tuition": 15203,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-236948",
+    "tuition": 12973,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-170976",
+    "tuition": 17736,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-228778",
+    "tuition": 11688,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-145637",
+    "tuition": 16004,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-211440",
+    "tuition": 66246,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard"
+  }
 ]

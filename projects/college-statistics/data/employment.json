@@ -1,14 +1,1 @@
-[
-  {"university_id":"u-northlake","major_id":"m-cs","employment_rate":94,"unemployment_rate":4,"graduate_school_rate":12,"source":"placeholder","year":2026},
-  {"university_id":"u-northlake","major_id":"m-biology","employment_rate":88,"unemployment_rate":6,"graduate_school_rate":28,"source":"placeholder","year":2026},
-  {"university_id":"u-pacific-crest","major_id":"m-business","employment_rate":91,"unemployment_rate":5,"graduate_school_rate":10,"source":"placeholder","year":2026},
-  {"university_id":"u-pacific-crest","major_id":"m-psychology","employment_rate":84,"unemployment_rate":7,"graduate_school_rate":24,"source":"placeholder","year":2026},
-  {"university_id":"u-redwood-tech","major_id":"m-cs","employment_rate":97,"unemployment_rate":2,"graduate_school_rate":9,"source":"placeholder","year":2026},
-  {"university_id":"u-redwood-tech","major_id":"m-mech-eng","employment_rate":95,"unemployment_rate":3,"graduate_school_rate":11,"source":"placeholder","year":2026},
-  {"university_id":"u-great-lakes","major_id":"m-data-science","employment_rate":93,"unemployment_rate":4,"graduate_school_rate":14,"source":"placeholder","year":2026},
-  {"university_id":"u-great-lakes","major_id":"m-economics","employment_rate":89,"unemployment_rate":5,"graduate_school_rate":16,"source":"placeholder","year":2026},
-  {"university_id":"u-atlantic-commonwealth","major_id":"m-nursing","employment_rate":98,"unemployment_rate":1,"graduate_school_rate":8,"source":"placeholder","year":2026},
-  {"university_id":"u-atlantic-commonwealth","major_id":"m-finance","employment_rate":92,"unemployment_rate":4,"graduate_school_rate":10,"source":"placeholder","year":2026},
-  {"university_id":"u-desert-valley","major_id":"m-marketing","employment_rate":86,"unemployment_rate":7,"graduate_school_rate":8,"source":"placeholder","year":2026},
-  {"university_id":"u-desert-valley","major_id":"m-mech-eng","employment_rate":92,"unemployment_rate":4,"graduate_school_rate":12,"source":"placeholder","year":2026}
-]
+[]

@@ -1,9 +1,12 @@
 {
-  "schema_version":"1.0.0",
-  "status":"Placeholder data",
-  "current_year":2026,
-  "countries":["US"],
-  "default_country":"US",
-  "generated_at":"2026-08-30",
-  "notes":"All records in this prototype are fictional placeholders. IDs and file relationships illustrate the production architecture."
+  "schema_version": "1.1.0",
+  "status": "Real federal pilot data",
+  "current_year": 2026,
+  "countries": [
+    "US"
+  ],
+  "generated_at": "2026-08-30",
+  "source": "College Scorecard",
+  "scope": "10-university bachelor's-degree pilot",
+  "notes": "Earnings are approximate indicators from College Scorecard. The main displayed earnings figure is one-year median earnings when available. Missing values are left blank."
 }
