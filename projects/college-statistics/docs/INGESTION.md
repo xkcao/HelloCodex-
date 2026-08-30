@@ -1,88 +1,101 @@
 # Data Ingestion
 
-The first production-data pipeline uses the U.S. Department of Education College Scorecard API as a staging source for institution-level records.
+The College Statistics project uses a small GitHub Actions pipeline to refresh its College Scorecard pilot data.
 
-## Why staging first
+## Current flow
 
-The live website still uses fictional placeholder records because its current table also depends on major-level salary and employment data. Replacing only the university rows would break those joins. Real source data is therefore imported into `data/imported/college-scorecard/<snapshot>/` first, validated, and promoted to the live datasets only when the related records are ready.
-
-## Seed set
-
-`config/scorecard_seed_universities.json` contains 10 institutions identified by IPEDS UNITID. These are not a permanent "top 10" ranking. They are a small test set for proving IDs, source mappings, null handling, validation, and repeatable updates before scaling to 100+ schools.
-
-## Authentication
-
-For the small 10-school seed import, the script defaults to api.data.gov's public `DEMO_KEY`. This is intended only for initial exploration and has much lower rate limits than a personal key.
-
-Run the seed import with no setup:
-
-```bash
-python3 scripts/scorecard_import.py
+```text
+College Scorecard API
+        ↓
+institution + field-of-study snapshots
+        ↓
+validation
+        ↓
+bachelor's-only promotion
+        ↓
+live JSON in data/
 ```
 
-For repeated runs or larger datasets, obtain your own api.data.gov key and keep it out of the repository:
+The workflow is defined in:
 
-```bash
-export COLLEGE_SCORECARD_API_KEY="your-key-here"
-python3 scripts/scorecard_import.py
+```text
+.github/workflows/college-scorecard-seed.yml
 ```
 
-You can also override the key for a single run with `--api-key`. Never commit a personal API key.
+## Seed universities
 
-## Fetch
+`config/scorecard_seed_universities.json` contains 10 institutions identified by IPEDS UNITID.
 
-From `projects/college-statistics/` run:
+They are a test set, not a ranking or permanent top-10 list.
 
-```bash
-python3 scripts/scorecard_import.py
+## Institution import
+
+`scorecard_import.py` fetches institution-level data and writes a dated snapshot under:
+
+```text
+data/imported/college-scorecard/YYYY-MM-DD/
 ```
 
-The importer uses the API's `latest` institution-level fields and writes a dated snapshot containing:
+This includes raw source data plus normalized university, tuition, admissions, and manifest files.
 
-- `raw.json` — source response retained for audit/debugging
-- `universities.json` — normalized university identity records
-- `tuition.json` — normalized in-state/out-of-state tuition records
-- `admissions.json` — normalized admissions records
-- `manifest.json` — retrieval metadata, source URL, selected UNITIDs, API-key mode, and promotion status
+## Program import
 
-Use a fixed snapshot name when reproducing an import:
+`scorecard_program_import.py` fetches College Scorecard field-of-study data for the same schools and writes:
+
+```text
+data/imported/college-scorecard-programs/YYYY-MM-DD/
+```
+
+The Scorecard unit is institution + 4-digit CIP field + credential level.
+
+The staging dataset keeps multiple credential levels, but the live website currently promotes only:
+
+```text
+credential_level == 3  # Bachelor's Degree
+```
+
+## Validation
+
+The validators check basic integrity such as IDs, duplicates, expected institutions, field presence, value ranges, and program outcome coverage.
+
+The goal is not perfect research-grade normalization. The goal is to catch obvious pipeline errors before data reaches the website.
+
+## Promotion
+
+`promote_bachelors.py` converts validated staging data into the small browser-ready files in `data/`.
+
+Current promotion choices:
+
+- bachelor's programs only;
+- 4-digit CIP fields shared across universities;
+- 1-year, 4-year, and 5-year earnings retained when available;
+- in-state tuition used as the displayed tuition value when available;
+- acceptance rate kept at institution level;
+- missing values remain `null`;
+- employment and rankings are left empty.
+
+## API key
+
+For this small seed pipeline, the scripts can use `DEMO_KEY`. A personal api.data.gov key can be supplied through the `COLLEGE_SCORECARD_API_KEY` environment variable or GitHub Actions secret when scaling up.
+
+Never commit a personal API key.
+
+## Refreshing data
+
+The GitHub Action runs when relevant importer/workflow files change and can also be started manually with `workflow_dispatch`.
+
+For local testing from `projects/college-statistics/`, the scripts can also be run directly.
+
+Example:
 
 ```bash
 python3 scripts/scorecard_import.py --snapshot 2026-08-30
-```
-
-## Validate
-
-```bash
 python3 scripts/validate_import.py data/imported/college-scorecard/2026-08-30
+python3 scripts/scorecard_program_import.py --snapshot 2026-08-30
+python3 scripts/validate_program_import.py data/imported/college-scorecard-programs/2026-08-30
+python3 scripts/promote_bachelors.py 2026-08-30
 ```
 
-Validation checks stable IDs, duplicate IDs, references, source metadata, tuition values, and acceptance-rate ranges.
+## Simplicity rule
 
-## Important year rule
-
-College Scorecard `latest` fields may correspond to different underlying reporting/cohort years. The importer deliberately writes `year: null` rather than inventing a year. Before staged records are promoted into production, map each metric to its correct cohort/reporting year using the official College Scorecard data dictionary and cohort map.
-
-## Stable university IDs
-
-For U.S. institutions imported from Scorecard, the project uses:
-
-```text
-us-ipeds-<UNITID>
-```
-
-Example: `us-ipeds-166027`.
-
-The federal UNITID is also retained under `external_ids.ipeds_unitid`. This keeps the internal ID globally namespaced while preserving the authoritative source identifier for future joins with IPEDS and other U.S. education datasets.
-
-## Promotion rule
-
-Do not copy staged files directly over the live `data/*.json` files. Promotion should happen only after:
-
-1. validation passes;
-2. field/cohort years are resolved;
-3. joins to majors and outcome datasets are defined;
-4. the frontend has been tested against the new records;
-5. source metadata is preserved.
-
-The next milestone is to run this seed import successfully, inspect the real output, and then design the first field-of-study import for majors/outcomes.
+Staging can stay detailed for debugging, but the live website data should remain small and understandable. Do not add another transformation layer unless scaling or a concrete feature requires it.
