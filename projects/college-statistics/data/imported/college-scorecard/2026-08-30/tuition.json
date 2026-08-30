@@ -1,0 +1,202 @@
+[
+  {
+    "university_id": "us-ipeds-166027",
+    "tuition": 61676,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.in_state"
+  },
+  {
+    "university_id": "us-ipeds-166027",
+    "tuition": 61676,
+    "currency": "USD",
+    "residency": "out_of_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.out_of_state"
+  },
+  {
+    "university_id": "us-ipeds-166683",
+    "tuition": 62396,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.in_state"
+  },
+  {
+    "university_id": "us-ipeds-166683",
+    "tuition": 62396,
+    "currency": "USD",
+    "residency": "out_of_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.out_of_state"
+  },
+  {
+    "university_id": "us-ipeds-243744",
+    "tuition": 65910,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.in_state"
+  },
+  {
+    "university_id": "us-ipeds-243744",
+    "tuition": 65910,
+    "currency": "USD",
+    "residency": "out_of_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.out_of_state"
+  },
+  {
+    "university_id": "us-ipeds-110635",
+    "tuition": 16347,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.in_state"
+  },
+  {
+    "university_id": "us-ipeds-110635",
+    "tuition": 50547,
+    "currency": "USD",
+    "residency": "out_of_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.out_of_state"
+  },
+  {
+    "university_id": "us-ipeds-110662",
+    "tuition": 15203,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.in_state"
+  },
+  {
+    "university_id": "us-ipeds-110662",
+    "tuition": 49403,
+    "currency": "USD",
+    "residency": "out_of_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.out_of_state"
+  },
+  {
+    "university_id": "us-ipeds-236948",
+    "tuition": 12973,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.in_state"
+  },
+  {
+    "university_id": "us-ipeds-236948",
+    "tuition": 43209,
+    "currency": "USD",
+    "residency": "out_of_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.out_of_state"
+  },
+  {
+    "university_id": "us-ipeds-170976",
+    "tuition": 17736,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.in_state"
+  },
+  {
+    "university_id": "us-ipeds-170976",
+    "tuition": 60946,
+    "currency": "USD",
+    "residency": "out_of_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.out_of_state"
+  },
+  {
+    "university_id": "us-ipeds-228778",
+    "tuition": 11688,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.in_state"
+  },
+  {
+    "university_id": "us-ipeds-228778",
+    "tuition": 44908,
+    "currency": "USD",
+    "residency": "out_of_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.out_of_state"
+  },
+  {
+    "university_id": "us-ipeds-145637",
+    "tuition": 16004,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.in_state"
+  },
+  {
+    "university_id": "us-ipeds-145637",
+    "tuition": 35124,
+    "currency": "USD",
+    "residency": "out_of_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.out_of_state"
+  },
+  {
+    "university_id": "us-ipeds-211440",
+    "tuition": 66246,
+    "currency": "USD",
+    "residency": "in_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.in_state"
+  },
+  {
+    "university_id": "us-ipeds-211440",
+    "tuition": 66246,
+    "currency": "USD",
+    "residency": "out_of_state",
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest",
+    "source_field": "latest.cost.tuition.out_of_state"
+  }
+]

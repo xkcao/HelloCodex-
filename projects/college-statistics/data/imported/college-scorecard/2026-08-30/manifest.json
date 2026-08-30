@@ -1,0 +1,28 @@
+{
+  "source": "College Scorecard",
+  "source_url": "https://collegescorecard.ed.gov/data/",
+  "retrieved_at": "2026-08-30T18:05:44.009426+00:00",
+  "snapshot": "2026-08-30",
+  "seed_count": 10,
+  "unitids": [
+    "166027",
+    "166683",
+    "243744",
+    "110635",
+    "110662",
+    "236948",
+    "170976",
+    "228778",
+    "145637",
+    "211440"
+  ],
+  "generated_files": [
+    "universities.json",
+    "tuition.json",
+    "admissions.json",
+    "raw.json"
+  ],
+  "promotion_status": "staging-only",
+  "api_key_mode": "demo",
+  "notes": "Scorecard latest fields can represent different underlying cohort years. The importer leaves year null rather than guessing; resolve cohort years from the official data dictionary before promoting records to live data."
+}

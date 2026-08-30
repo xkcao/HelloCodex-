@@ -1,0 +1,112 @@
+[
+  {
+    "university_id": "us-ipeds-166027",
+    "acceptance_rate": 3.65,
+    "sat_midpoint": 1553,
+    "act_midpoint": 35,
+    "gpa_average": null,
+    "application_deadline": null,
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest"
+  },
+  {
+    "university_id": "us-ipeds-166683",
+    "acceptance_rate": 4.55,
+    "sat_midpoint": 1560,
+    "act_midpoint": null,
+    "gpa_average": null,
+    "application_deadline": null,
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest"
+  },
+  {
+    "university_id": "us-ipeds-243744",
+    "acceptance_rate": 3.61,
+    "sat_midpoint": 1553,
+    "act_midpoint": 35,
+    "gpa_average": null,
+    "application_deadline": null,
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest"
+  },
+  {
+    "university_id": "us-ipeds-110635",
+    "acceptance_rate": 10.98,
+    "sat_midpoint": null,
+    "act_midpoint": null,
+    "gpa_average": null,
+    "application_deadline": null,
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest"
+  },
+  {
+    "university_id": "us-ipeds-110662",
+    "acceptance_rate": 8.97,
+    "sat_midpoint": null,
+    "act_midpoint": null,
+    "gpa_average": null,
+    "application_deadline": null,
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest"
+  },
+  {
+    "university_id": "us-ipeds-236948",
+    "acceptance_rate": 39.15,
+    "sat_midpoint": null,
+    "act_midpoint": null,
+    "gpa_average": null,
+    "application_deadline": null,
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest"
+  },
+  {
+    "university_id": "us-ipeds-170976",
+    "acceptance_rate": 15.64,
+    "sat_midpoint": 1465,
+    "act_midpoint": null,
+    "gpa_average": null,
+    "application_deadline": null,
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest"
+  },
+  {
+    "university_id": "us-ipeds-228778",
+    "acceptance_rate": 26.64,
+    "sat_midpoint": 1395,
+    "act_midpoint": 30,
+    "gpa_average": null,
+    "application_deadline": null,
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest"
+  },
+  {
+    "university_id": "us-ipeds-145637",
+    "acceptance_rate": 42.37,
+    "sat_midpoint": 1440,
+    "act_midpoint": 32,
+    "gpa_average": null,
+    "application_deadline": null,
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest"
+  },
+  {
+    "university_id": "us-ipeds-211440",
+    "acceptance_rate": 11.66,
+    "sat_midpoint": 1546,
+    "act_midpoint": 34,
+    "gpa_average": null,
+    "application_deadline": null,
+    "source": "College Scorecard",
+    "year": null,
+    "source_release": "latest"
+  }
+]

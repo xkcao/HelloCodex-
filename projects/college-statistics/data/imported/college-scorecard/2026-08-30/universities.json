@@ -1,0 +1,172 @@
+[
+  {
+    "university_id": "us-ipeds-166027",
+    "name": "Harvard University",
+    "short_name": null,
+    "state": "MA",
+    "city": "Cambridge",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.harvard.edu/",
+    "enrollment": 7601,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "166027"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-166683",
+    "name": "Massachusetts Institute of Technology",
+    "short_name": null,
+    "state": "MA",
+    "city": "Cambridge",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "web.mit.edu/",
+    "enrollment": 4535,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "166683"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-243744",
+    "name": "Stanford University",
+    "short_name": null,
+    "state": "CA",
+    "city": "Stanford",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.stanford.edu/",
+    "enrollment": 7554,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "243744"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-110635",
+    "name": "University of California-Berkeley",
+    "short_name": null,
+    "state": "CA",
+    "city": "Berkeley",
+    "country": "US",
+    "type": "Public",
+    "website": "www.berkeley.edu/",
+    "enrollment": 33068,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "110635"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-110662",
+    "name": "University of California-Los Angeles",
+    "short_name": null,
+    "state": "CA",
+    "city": "Los Angeles",
+    "country": "US",
+    "type": "Public",
+    "website": "www.ucla.edu/",
+    "enrollment": 33475,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "110662"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-236948",
+    "name": "University of Washington-Seattle Campus",
+    "short_name": null,
+    "state": "WA",
+    "city": "Seattle",
+    "country": "US",
+    "type": "Public",
+    "website": "https://www.washington.edu/",
+    "enrollment": 31942,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "236948"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-170976",
+    "name": "University of Michigan-Ann Arbor",
+    "short_name": null,
+    "state": "MI",
+    "city": "Ann Arbor",
+    "country": "US",
+    "type": "Public",
+    "website": "https://umich.edu/",
+    "enrollment": 34177,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "170976"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-228778",
+    "name": "The University of Texas at Austin",
+    "short_name": null,
+    "state": "TX",
+    "city": "Austin",
+    "country": "US",
+    "type": "Public",
+    "website": "https://www.utexas.edu/",
+    "enrollment": 42855,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "228778"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-145637",
+    "name": "University of Illinois Urbana-Champaign",
+    "short_name": null,
+    "state": "IL",
+    "city": "Champaign",
+    "country": "US",
+    "type": "Public",
+    "website": "www.illinois.edu/",
+    "enrollment": 36258,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "145637"
+    },
+    "source": "College Scorecard"
+  },
+  {
+    "university_id": "us-ipeds-211440",
+    "name": "Carnegie Mellon University",
+    "short_name": null,
+    "state": "PA",
+    "city": "Pittsburgh",
+    "country": "US",
+    "type": "Private nonprofit",
+    "website": "www.cmu.edu/",
+    "enrollment": 7304,
+    "established": null,
+    "logo": null,
+    "external_ids": {
+      "ipeds_unitid": "211440"
+    },
+    "source": "College Scorecard"
+  }
+]
