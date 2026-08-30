@@ -1,6 +1,6 @@
 import {loadData,buildRecords} from "./api.js";
 import {applyFilters} from "./filters.js";
-import {average,currency,median,percent,unique} from "./utils.js";
+import {currency,median,unique} from "./utils.js";
 
 const el=id=>document.getElementById(id);
 const state={records:[],meta:null};
@@ -10,17 +10,16 @@ function populateMajors(records){
   for(const major of majors){const option=document.createElement("option");option.value=major.id;option.textContent=major.name;el("majorFilter").append(option);}
 }
 
-function currentFilters(){return {query:el("searchInput").value,major:el("majorFilter").value,maxTuition:el("tuitionFilter").value,minEmployment:el("employmentFilter").value};}
+function currentFilters(){return {query:el("searchInput").value,major:el("majorFilter").value,maxTuition:el("tuitionFilter").value};}
 
 function render(records){
   el("resultCount").textContent=`${records.length} program${records.length===1?"":"s"}`;
   el("universityCount").textContent=unique(records.map(r=>r.university.university_id)).length;
   el("majorCount").textContent=unique(records.map(r=>r.major.major_id)).length;
-  el("medianSalary").textContent=currency(median(records.map(r=>r.salary?.median_salary)));
-  const employment=average(records.map(r=>r.employment?.employment_rate));
-  el("employmentRate").textContent=employment==null?"—":percent(Math.round(employment));
+  el("programCount").textContent=records.length;
+  el("medianSalary").textContent=currency(median(records.map(r=>r.salary?.earnings_1yr)));
   el("emptyState").hidden=records.length>0;
-  el("resultsBody").innerHTML=records.map(r=>`<tr><td>${r.university.name}<br><small>${r.university.city}, ${r.university.state}</small></td><td>${r.major.name}</td><td class="metric">${currency(r.salary?.median_salary)}</td><td class="metric employment">${percent(r.employment?.employment_rate)}</td><td class="metric">${currency(r.tuition?.tuition)}</td><td class="metric">${percent(r.admissions?.acceptance_rate)}</td></tr>`).join("");
+  el("resultsBody").innerHTML=records.map(r=>`<tr><td>${r.university.name}<br><small>${r.university.city}, ${r.university.state}</small></td><td>${r.major.name}</td><td class="metric">${currency(r.salary?.earnings_1yr)}</td><td class="metric">${currency(r.salary?.earnings_4yr)}</td><td class="metric">${currency(r.tuition?.tuition)}</td><td class="metric">${r.admissions?.acceptance_rate==null?"—":`${r.admissions.acceptance_rate}%`}</td></tr>`).join("");
 }
 
 function refresh(){render(applyFilters(state.records,currentFilters()));}
@@ -31,7 +30,7 @@ async function init(){
     state.meta=data.metadata;
     state.records=buildRecords(data);
     populateMajors(state.records);
-    ["searchInput","majorFilter","tuitionFilter","employmentFilter"].forEach(id=>el(id).addEventListener(id==="searchInput"?"input":"change",refresh));
+    ["searchInput","majorFilter","tuitionFilter"].forEach(id=>el(id).addEventListener(id==="searchInput"?"input":"change",refresh));
     el("dataBadge").textContent=`${data.metadata.status} · ${data.metadata.current_year}`;
     render(state.records);
   }catch(error){
