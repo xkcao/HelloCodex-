@@ -1,0 +1,8 @@
+[
+  {"university_id":"u-northlake","source":"placeholder-ranking","year":2026,"overall_rank":41,"engineering_rank":null,"cs_rank":35,"business_rank":null},
+  {"university_id":"u-pacific-crest","source":"placeholder-ranking","year":2026,"overall_rank":67,"engineering_rank":null,"cs_rank":null,"business_rank":48},
+  {"university_id":"u-redwood-tech","source":"placeholder-ranking","year":2026,"overall_rank":19,"engineering_rank":14,"cs_rank":11,"business_rank":null},
+  {"university_id":"u-great-lakes","source":"placeholder-ranking","year":2026,"overall_rank":58,"engineering_rank":37,"cs_rank":40,"business_rank":52},
+  {"university_id":"u-atlantic-commonwealth","source":"placeholder-ranking","year":2026,"overall_rank":31,"engineering_rank":null,"cs_rank":null,"business_rank":29},
+  {"university_id":"u-desert-valley","source":"placeholder-ranking","year":2026,"overall_rank":89,"engineering_rank":61,"cs_rank":null,"business_rank":74}
+]

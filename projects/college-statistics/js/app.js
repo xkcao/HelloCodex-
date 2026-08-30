@@ -1,79 +1,45 @@
-const state={records:[]};
-const $=id=>document.getElementById(id);
-const money=new Intl.NumberFormat('en-US',{style:'currency',currency:'USD',maximumFractionDigits:0});
-const percent=value=>`${Number(value).toFixed(0)}%`;
+import {loadData,buildRecords} from "./api.js";
+import {applyFilters} from "./filters.js";
+import {average,currency,median,percent,unique} from "./utils.js";
 
-async function loadData(){
+const el=id=>document.getElementById(id);
+const state={records:[],meta:null};
+
+function populateMajors(records){
+  const majors=unique(records.map(r=>JSON.stringify({id:r.major.major_id,name:r.major.name}))).map(JSON.parse).sort((a,b)=>a.name.localeCompare(b.name));
+  for(const major of majors){const option=document.createElement("option");option.value=major.id;option.textContent=major.name;el("majorFilter").append(option);}
+}
+
+function currentFilters(){return {query:el("searchInput").value,major:el("majorFilter").value,maxTuition:el("tuitionFilter").value,minEmployment:el("employmentFilter").value};}
+
+function render(records){
+  el("resultCount").textContent=`${records.length} program${records.length===1?"":"s"}`;
+  el("universityCount").textContent=unique(records.map(r=>r.university.university_id)).length;
+  el("majorCount").textContent=unique(records.map(r=>r.major.major_id)).length;
+  el("medianSalary").textContent=currency(median(records.map(r=>r.salary?.median_salary)));
+  const employment=average(records.map(r=>r.employment?.employment_rate));
+  el("employmentRate").textContent=employment==null?"—":percent(Math.round(employment));
+  el("emptyState").hidden=records.length>0;
+  el("resultsBody").innerHTML=records.map(r=>`<tr><td>${r.university.name}<br><small>${r.university.city}, ${r.university.state}</small></td><td>${r.major.name}</td><td class="metric">${currency(r.salary?.median_salary)}</td><td class="metric employment">${percent(r.employment?.employment_rate)}</td><td class="metric">${currency(r.tuition?.tuition)}</td><td class="metric">${percent(r.admissions?.acceptance_rate)}</td></tr>`).join("");
+}
+
+function refresh(){render(applyFilters(state.records,currentFilters()));}
+
+async function init(){
   try{
-    const response=await fetch('data/colleges.json');
-    if(!response.ok) throw new Error(`HTTP ${response.status}`);
-    state.records=await response.json();
-    populateMajors();
-    applyFilters();
+    const data=await loadData();
+    state.meta=data.metadata;
+    state.records=buildRecords(data);
+    populateMajors(state.records);
+    ["searchInput","majorFilter","tuitionFilter","employmentFilter"].forEach(id=>el(id).addEventListener(id==="searchInput"?"input":"change",refresh));
+    el("dataBadge").textContent=`${data.metadata.status} · ${data.metadata.current_year}`;
+    render(state.records);
   }catch(error){
-    console.error('Unable to load college data:',error);
-    $('resultsBody').innerHTML='<tr><td colspan="6">Unable to load placeholder data.</td></tr>';
+    console.error(error);
+    el("dataBadge").textContent="Data load error";
+    el("emptyState").hidden=false;
+    el("emptyState").textContent="Unable to load project data.";
   }
 }
 
-function populateMajors(){
-  const majors=[...new Set(state.records.map(r=>r.major))].sort();
-  majors.forEach(major=>{
-    const option=document.createElement('option');
-    option.value=major;
-    option.textContent=major;
-    $('majorFilter').appendChild(option);
-  });
-}
-
-function applyFilters(){
-  const query=$('searchInput').value.trim().toLowerCase();
-  const major=$('majorFilter').value;
-  const maxTuition=$('tuitionFilter').value;
-  const minEmployment=Number($('employmentFilter').value);
-  const filtered=state.records.filter(record=>{
-    const matchesText=!query||`${record.university} ${record.major}`.toLowerCase().includes(query);
-    const matchesMajor=major==='all'||record.major===major;
-    const matchesTuition=maxTuition==='all'||record.tuition<=Number(maxTuition);
-    const matchesEmployment=record.employmentRate>=minEmployment;
-    return matchesText&&matchesMajor&&matchesTuition&&matchesEmployment;
-  });
-  renderRows(filtered);
-  updateSummary(filtered);
-}
-
-function renderRows(records){
-  const body=$('resultsBody');
-  body.innerHTML=records.map(record=>`<tr>
-    <td>${escapeHtml(record.university)}<br><small>${escapeHtml(record.location)}</small></td>
-    <td>${escapeHtml(record.major)}</td>
-    <td class="metric">${money.format(record.medianSalary)}</td>
-    <td class="metric employment">${percent(record.employmentRate)}</td>
-    <td class="metric">${money.format(record.tuition)}</td>
-    <td class="metric">${percent(record.acceptanceRate)}</td>
-  </tr>`).join('');
-  $('emptyState').hidden=records.length!==0;
-  $('resultCount').textContent=`${records.length} record${records.length===1?'':'s'}`;
-}
-
-function updateSummary(records){
-  const universities=new Set(records.map(r=>r.university));
-  const majors=new Set(records.map(r=>r.major));
-  const salaries=records.map(r=>r.medianSalary).sort((a,b)=>a-b);
-  const mid=Math.floor(salaries.length/2);
-  const median=salaries.length?(salaries.length%2?salaries[mid]:(salaries[mid-1]+salaries[mid])/2):0;
-  const employment=records.length?records.reduce((sum,r)=>sum+r.employmentRate,0)/records.length:0;
-  $('universityCount').textContent=universities.size;
-  $('majorCount').textContent=majors.size;
-  $('medianSalary').textContent=records.length?money.format(median):'—';
-  $('employmentRate').textContent=records.length?percent(employment):'—';
-}
-
-function escapeHtml(value){
-  return String(value).replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
-}
-
-['searchInput','majorFilter','tuitionFilter','employmentFilter'].forEach(id=>{
-  $(id).addEventListener(id==='searchInput'?'input':'change',applyFilters);
-});
-loadData();
+init();

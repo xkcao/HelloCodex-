@@ -1,0 +1,8 @@
+[
+  {"university_id":"u-northlake","acceptance_rate":38,"sat_midpoint":1400,"act_midpoint":31,"gpa_average":3.78,"application_deadline":"2027-01-15","source":"placeholder","year":2026},
+  {"university_id":"u-pacific-crest","acceptance_rate":52,"sat_midpoint":1320,"act_midpoint":29,"gpa_average":3.62,"application_deadline":"2027-02-01","source":"placeholder","year":2026},
+  {"university_id":"u-redwood-tech","acceptance_rate":21,"sat_midpoint":1490,"act_midpoint":34,"gpa_average":3.91,"application_deadline":"2027-01-05","source":"placeholder","year":2026},
+  {"university_id":"u-great-lakes","acceptance_rate":61,"sat_midpoint":1280,"act_midpoint":28,"gpa_average":3.55,"application_deadline":"2027-02-01","source":"placeholder","year":2026},
+  {"university_id":"u-atlantic-commonwealth","acceptance_rate":33,"sat_midpoint":1430,"act_midpoint":32,"gpa_average":3.81,"application_deadline":"2027-01-10","source":"placeholder","year":2026},
+  {"university_id":"u-desert-valley","acceptance_rate":74,"sat_midpoint":1190,"act_midpoint":25,"gpa_average":3.42,"application_deadline":"2027-03-01","source":"placeholder","year":2026}
+]

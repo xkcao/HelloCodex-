@@ -1,0 +1,9 @@
+{
+  "schema_version":"1.0.0",
+  "status":"Placeholder data",
+  "current_year":2026,
+  "countries":["US"],
+  "default_country":"US",
+  "generated_at":"2026-08-30",
+  "notes":"All records in this prototype are fictional placeholders. IDs and file relationships illustrate the production architecture."
+}

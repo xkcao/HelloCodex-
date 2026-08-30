@@ -1,0 +1,12 @@
+[
+  {"major_id":"m-cs","name":"Computer Science","category":"Computing","cip_code":"11.0701","stem":true,"description":"Study of computation, software, algorithms, and systems."},
+  {"major_id":"m-biology","name":"Biology","category":"Life Sciences","cip_code":"26.0101","stem":true,"description":"Study of living systems and biological processes."},
+  {"major_id":"m-business","name":"Business","category":"Business","cip_code":"52.0101","stem":false,"description":"Broad study of organizations, management, and commerce."},
+  {"major_id":"m-psychology","name":"Psychology","category":"Social Sciences","cip_code":"42.0101","stem":false,"description":"Study of behavior and mental processes."},
+  {"major_id":"m-mech-eng","name":"Mechanical Engineering","category":"Engineering","cip_code":"14.1901","stem":true,"description":"Engineering of mechanical systems, energy, and machines."},
+  {"major_id":"m-data-science","name":"Data Science","category":"Computing","cip_code":"30.7001","stem":true,"description":"Statistical and computational analysis of data."},
+  {"major_id":"m-economics","name":"Economics","category":"Social Sciences","cip_code":"45.0601","stem":false,"description":"Study of production, markets, incentives, and policy."},
+  {"major_id":"m-nursing","name":"Nursing","category":"Health","cip_code":"51.3801","stem":true,"description":"Clinical preparation for professional nursing practice."},
+  {"major_id":"m-finance","name":"Finance","category":"Business","cip_code":"52.0801","stem":false,"description":"Study of capital, investments, markets, and financial decisions."},
+  {"major_id":"m-marketing","name":"Marketing","category":"Business","cip_code":"52.1401","stem":false,"description":"Study of markets, customers, communication, and growth."}
+]

@@ -1,0 +1,8 @@
+[
+  {"university_id":"u-northlake","name":"Northlake University","short_name":"Northlake","state":"WA","city":"Seattle","country":"US","type":"Private","website":"https://example.edu/northlake","enrollment":18400,"established":1898,"logo":null},
+  {"university_id":"u-pacific-crest","name":"Pacific Crest College","short_name":"Pacific Crest","state":"OR","city":"Portland","country":"US","type":"Private","website":"https://example.edu/pacific-crest","enrollment":12100,"established":1911,"logo":null},
+  {"university_id":"u-redwood-tech","name":"Redwood Institute of Technology","short_name":"Redwood Tech","state":"CA","city":"San Jose","country":"US","type":"Private","website":"https://example.edu/redwood-tech","enrollment":9800,"established":1964,"logo":null},
+  {"university_id":"u-great-lakes","name":"Great Lakes State University","short_name":"GLSU","state":"WI","city":"Madison","country":"US","type":"Public","website":"https://example.edu/great-lakes","enrollment":32200,"established":1849,"logo":null},
+  {"university_id":"u-atlantic-commonwealth","name":"Atlantic Commonwealth University","short_name":"ACU","state":"MA","city":"Boston","country":"US","type":"Private","website":"https://example.edu/acu","enrollment":20600,"established":1876,"logo":null},
+  {"university_id":"u-desert-valley","name":"Desert Valley University","short_name":"DVU","state":"AZ","city":"Phoenix","country":"US","type":"Public","website":"https://example.edu/dvu","enrollment":28700,"established":1957,"logo":null}
+]

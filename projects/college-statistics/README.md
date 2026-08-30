@@ -1,27 +1,40 @@
 # College Statistics
 
-A self-contained HelloCodex project for exploring university and major statistics.
+A static GitHub Pages project designed as a scalable, data-first college and major statistics explorer.
 
-## Structure
+## Architecture
 
-- `index.html` — project UI and semantic page structure
-- `css/styles.css` — responsive visual design
-- `js/app.js` — data loading, search, filtering, and rendering
-- `data/colleges.json` — placeholder college/major records
+- `index.html` — semantic UI shell only
+- `css/main.css` — global layout and visual foundations
+- `css/components.css` — dashboard component styles
+- `js/app.js` — application orchestration/rendering
+- `js/api.js` — independent data loading and joins
+- `js/filters.js` — filter logic
+- `js/search.js` — search logic
+- `js/router.js` — reserved detail-page routing boundary
+- `js/charts.js` — reserved chart boundary
+- `js/compare.js` — reserved comparison boundary
+- `js/utils.js` — shared formatting/statistical helpers
+- `data/` — normalized, independently replaceable datasets
+- `assets/` — project-local logos/icons
+- `docs/` — data model, sources, and roadmap
 
-## Current data
+## Data status
 
-This initial version intentionally uses fictional placeholder data. The sample records demonstrate the expected data shape for:
+All current records are fictional placeholders. They demonstrate the schema and preserve the existing prototype experience; they are not real university statistics.
 
-- universities
-- majors
-- median salary
-- employment rate
-- tuition
-- acceptance rate
+## Design principles
 
-The UI is separated from the dataset so future updates can replace `data/colleges.json` with verified data without restructuring the application.
+1. Stable IDs instead of joining on names.
+2. Universities and majors are independent entities connected by a relationship dataset.
+3. Salary, employment, tuition, admissions, and rankings remain separate facts with source/year metadata.
+4. No business logic lives in HTML.
+5. Missing production data should be `null`, never guessed.
+6. The browser-facing schema should remain stable even when future ETL/source pipelines change.
+7. Historical records should be appended by year rather than overwritten.
 
-## Running locally
+See `docs/DATA_MODEL.md`, `docs/DATA_SOURCES.md`, and `docs/ROADMAP.md` before adding production data.
 
-Because the page loads JSON with `fetch()`, serve the project through a local HTTP server rather than opening `index.html` directly from the filesystem. It also works as-is when deployed through GitHub Pages.
+## Local development
+
+The project loads JSON with `fetch()`, so run it through an HTTP server rather than opening `index.html` directly from the filesystem. GitHub Pages serves it correctly without a backend.
