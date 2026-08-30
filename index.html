@@ -3,29 +3,48 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="European soccer results, standings, scorers and assists." />
-  <title>European Soccer Hub</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="HelloCodex — a collection of independent web projects." />
+  <title>HelloCodex | Projects</title>
+  <link rel="stylesheet" href="assets/css/site.css" />
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="eyebrow">European Soccer Hub</div>
-      <h1>Your weekend soccer snapshot.</h1>
-      <p class="lead">Results, league tables, top scorers and assist leaders across England, Spain, Italy, Germany and France — all in one lightweight site.</p>
-      <div class="notice"><strong>Latest update:</strong> <span id="dataStatus">loading…</span></div>
-      <nav id="leagueTabs" class="league-tabs" aria-label="Leagues"></nav>
-    </header>
+  <main class="shell">
+    <section class="hero">
+      <p class="eyebrow">HelloCodex</p>
+      <h1>Small projects, built to explore useful ideas.</h1>
+      <p class="intro">HelloCodex is a growing collection of independent web projects. Each project lives in its own folder, keeps its own assets and data, and can evolve without affecting the others.</p>
+    </section>
 
-    <main class="grid">
-      <section id="results" class="card wide" aria-live="polite"></section>
-      <section id="standings" class="card wide"></section>
-      <section id="scorers" class="card"></section>
-      <section id="assists" class="card"></section>
-    </main>
+    <section class="projects" aria-labelledby="projects-title">
+      <div class="section-heading">
+        <h2 id="projects-title">Projects</h2>
+        <p>Choose a project to explore.</p>
+      </div>
 
-    <footer class="footer">Built from an iPhone using ChatGPT · Hosted on GitHub Pages</footer>
-  </div>
-  <script src="app.js"></script>
+      <div class="project-grid">
+        <article class="project-card">
+          <div class="card-topline">
+            <span class="category">Sports</span>
+            <span class="status available">Available</span>
+          </div>
+          <h3>Soccer Dashboard</h3>
+          <p>Live football statistics, standings, results, scorers and assists.</p>
+          <a class="button" href="projects/soccer/">Launch</a>
+        </article>
+
+        <article class="project-card muted-card">
+          <div class="card-topline">
+            <span class="category">Education & Careers</span>
+            <span class="status soon">Coming Soon</span>
+          </div>
+          <h3>College Statistics</h3>
+          <p>Explore university majors, salaries, employment outcomes and education statistics.</p>
+          <span class="button disabled" aria-disabled="true">Coming Soon</span>
+        </article>
+      </div>
+    </section>
+
+    <footer>Built with ChatGPT · Hosted on GitHub Pages</footer>
+  </main>
 </body>
 </html>
