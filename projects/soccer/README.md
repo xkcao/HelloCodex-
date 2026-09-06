@@ -4,9 +4,9 @@ A lightweight GitHub Pages dashboard for recent results and league snapshots acr
 
 ## What the site shows
 
-- The 10 most recent completed results returned for each league
-- A top-five standings snapshot
-- Partial leading-scorer and assist lists when the source provides them
+- The 10 most recent completed results available for each league
+- A top-five standings snapshot calculated from completed results
+- Dated leading-scorer and assist snapshots
 - Explicit messages when scorer or assist details are unavailable
 - Scorer-list warnings when the listed goals do not account for the final score
 
@@ -18,7 +18,7 @@ The selected league is stored in the page URL, so refreshing or sharing the link
 - `css/styles.css` — responsive project styling
 - `js/app.js` — data loading, validation, rendering and interactions
 - `data/soccer.json` — soccer data used by the dashboard
-- `scripts/update_soccer.py` — dependency-free API updater and validator
+- `scripts/update_soccer.py` — dependency-free public-data updater and validator
 - `../../.github/workflows/refresh-soccer.yml` — daily and manual GitHub Actions workflow
 
 The project remains self-contained and framework-free. GitHub Pages serves the dashboard, while GitHub Actions updates its static JSON; no continuously running backend or database is required.
@@ -27,16 +27,11 @@ The project remains self-contained and framework-free. GitHub Pages serves the d
 
 The `Refresh soccer data` workflow runs daily at 7:17 AM in the `America/Los_Angeles` timezone, so daylight saving time is handled automatically. It can also be run manually from the repository's **Actions** tab.
 
-The updater uses the football-data.org v4 API and its competition codes `PL`, `PD`, `SA`, `BL1` and `FL1`. It retrieves completed matches, total standings and leaders for all five leagues. Requests are deliberately spaced to remain below the free-plan rate limit.
+The updater downloads the current-season JSON files from the public-domain [Open Football](https://github.com/openfootball/football.json) project. No account, API token, repository secret or manual activation is required. It calculates standings from completed results using points, goal difference and goals scored. This is a transparent calculated snapshot; official league ordering can differ when competition-specific tie-break rules apply.
 
-One repository secret is required:
+Player-leader data is not available in this source, so the updater preserves the last manually verified scorer and assist snapshots and displays their date instead of pretending they were refreshed.
 
-1. Create a free API token at [football-data.org](https://www.football-data.org/client/register).
-2. In GitHub, open **Settings → Secrets and variables → Actions**.
-3. Add a repository secret named `FOOTBALL_DATA_TOKEN` containing the token.
-4. Open **Actions → Refresh soccer data → Run workflow** once to confirm the setup.
-
-The workflow has write access only to repository contents. If the token is absent, an API request fails, any league is missing, a completed score is malformed, or standings are incomplete, the updater exits without changing `data/soccer.json`. It fetches and validates the complete five-league snapshot before writing. When the data has not changed, it creates no commit.
+The workflow has write access only to repository contents, using GitHub's automatically supplied workflow credential. If a download fails, a league is missing, a score is malformed, or the public source is behind the published snapshot, the updater leaves `data/soccer.json` unchanged. It fetches and validates the complete five-league candidate before writing. When data has not changed, it creates no commit.
 
 ## Data rules
 
@@ -44,9 +39,9 @@ Both automated and manual updates follow the same rules:
 
 1. Include completed matches only.
 2. Use source-provided values; never estimate missing data.
-3. Leave unavailable scorer or assist details empty.
+3. Preserve dated scorer and assist snapshots until a reliable key-free source is available.
 4. Keep the `updated` description accurate.
-5. Treat standings, scorers and assists as partial snapshots.
+5. Treat standings, scorers and assists as snapshots and label their scope accurately.
 6. Use an empty array for an unavailable section.
 7. Validate the entire snapshot before publishing.
 

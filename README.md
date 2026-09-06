@@ -21,7 +21,7 @@ Each project keeps its own HTML, CSS, JavaScript, data, scripts and documentatio
 
 ### Soccer Dashboard
 
-A lightweight European soccer dashboard with automatically refreshed completed results and partial snapshots of standings, scorers and assists. A daily GitHub Action updates the static data after validating all five leagues; see the project README for its one-time API-token setup.
+A lightweight European soccer dashboard with automatically refreshed completed results and calculated standings, plus dated scorer and assist snapshots. A daily GitHub Action validates all five leagues and updates the static data without an API account, token or repository secret.
 
 Path: `/projects/soccer/`
 

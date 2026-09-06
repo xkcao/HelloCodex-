@@ -17,18 +17,9 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    env:
-      FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
-
-      - name: Verify configuration
-        run: |
-          if [ -z "$FOOTBALL_DATA_TOKEN" ]; then
-            echo "::error::Add the FOOTBALL_DATA_TOKEN repository secret."
-            exit 1
-          fi
 
       - name: Refresh and validate soccer data
         run: python3 projects/soccer/scripts/update_soccer.py

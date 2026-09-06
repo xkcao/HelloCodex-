@@ -1,31 +1,28 @@
 #!/usr/bin/env python3
-"""Refresh the static soccer dashboard from football-data.org."""
+"""Refresh results and calculated standings from key-free Open Football data."""
 
 from __future__ import annotations
 
 import json
-import os
 import sys
-import time
 import urllib.error
 import urllib.request
-from collections import Counter
+from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
 
-API_ROOT = "https://api.football-data.org/v4"
+SOURCE_ROOT = "https://raw.githubusercontent.com/openfootball/football.json/master"
 DATA_FILE = Path(__file__).resolve().parents[1] / "data" / "soccer.json"
-REQUEST_DELAY_SECONDS = 6.5
 RECENT_RESULTS = 10
-LEADER_LIMIT = 5
+STANDINGS_LIMIT = 5
 
 LEAGUES = (
-    {"id": "premier-league", "name": "Premier League", "country": "England", "code": "PL"},
-    {"id": "la-liga", "name": "La Liga", "country": "Spain", "code": "PD"},
-    {"id": "serie-a", "name": "Serie A", "country": "Italy", "code": "SA"},
-    {"id": "bundesliga", "name": "Bundesliga", "country": "Germany", "code": "BL1"},
-    {"id": "ligue-1", "name": "Ligue 1", "country": "France", "code": "FL1"},
+    {"id": "premier-league", "name": "Premier League", "country": "England", "file": "en.1.json"},
+    {"id": "la-liga", "name": "La Liga", "country": "Spain", "file": "es.1.json"},
+    {"id": "serie-a", "name": "Serie A", "country": "Italy", "file": "it.1.json"},
+    {"id": "bundesliga", "name": "Bundesliga", "country": "Germany", "file": "de.1.json"},
+    {"id": "ligue-1", "name": "Ligue 1", "country": "France", "file": "fr.1.json"},
 )
 
 
@@ -33,160 +30,167 @@ class UpdateError(RuntimeError):
     pass
 
 
-class FootballDataClient:
-    def __init__(self, token: str) -> None:
-        self.token = token
-        self.request_count = 0
-
-    def get(self, path: str) -> dict:
-        if self.request_count:
-            time.sleep(REQUEST_DELAY_SECONDS)
-        self.request_count += 1
-
-        request = urllib.request.Request(
-            f"{API_ROOT}{path}",
-            headers={
-                "X-Auth-Token": self.token,
-                "X-Unfold-Goals": "true",
-                "User-Agent": "HelloCodex-Soccer-Updater/1.0",
-            },
-        )
-        try:
-            with urllib.request.urlopen(request, timeout=30) as response:
-                return json.load(response)
-        except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, json.JSONDecodeError) as error:
-            raise UpdateError(f"API request failed for {path}: {error}") from error
+class SourceBehind(UpdateError):
+    pass
 
 
-def integer(value: object, label: str) -> int:
-    if isinstance(value, bool) or not isinstance(value, int):
-        raise UpdateError(f"Expected an integer for {label}")
-    return value
+def season_for(moment: datetime) -> str:
+    start_year = moment.year if moment.month >= 7 else moment.year - 1
+    return f"{start_year}-{(start_year + 1) % 100:02d}"
 
 
-def compress_scorers(match: dict, expected_goals: int) -> list[str]:
-    goals = match.get("goals")
-    if not isinstance(goals, list) or len(goals) != expected_goals:
-        return []
+def fetch_json(url: str) -> dict:
+    request = urllib.request.Request(url, headers={"User-Agent": "HelloCodex-Soccer-Updater/2.0"})
+    try:
+        with urllib.request.urlopen(request, timeout=30) as response:
+            return json.load(response)
+    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, json.JSONDecodeError) as error:
+        raise UpdateError(f"Could not load {url}: {error}") from error
 
-    ordered_names: list[str] = []
-    for goal in goals:
-        scorer = goal.get("scorer") or {}
-        name = scorer.get("name")
-        if not isinstance(name, str) or not name.strip():
-            return []
-        if goal.get("type") == "OWN_GOAL":
-            name = f"{name} (own goal)"
-        ordered_names.append(name.strip())
 
-    counts = Counter(ordered_names)
-    emitted: set[str] = set()
-    result: list[str] = []
-    for name in ordered_names:
-        if name in emitted:
+def full_time_score(match: dict) -> tuple[int, int] | None:
+    score = match.get("score")
+    if isinstance(score, dict):
+        score = score.get("ft")
+    if not isinstance(score, list) or len(score) != 2:
+        return None
+    if any(isinstance(value, bool) or not isinstance(value, int) or value < 0 for value in score):
+        raise UpdateError("A completed match has a malformed score")
+    return score[0], score[1]
+
+
+def completed_matches(payload: dict, league_id: str, today: str) -> list[dict]:
+    matches = payload.get("matches")
+    if not isinstance(matches, list):
+        raise UpdateError(f"{league_id}: source has no match list")
+
+    completed = []
+    seen = set()
+    for match in matches:
+        if not isinstance(match, dict):
+            raise UpdateError(f"{league_id}: malformed match entry")
+        score = full_time_score(match)
+        date = match.get("date")
+        home = match.get("team1")
+        away = match.get("team2")
+        if score is None or not isinstance(date, str) or date > today:
             continue
-        emitted.add(name)
-        result.append(f"{name} ×{counts[name]}" if counts[name] > 1 else name)
-    return result
-
-
-def build_results(payload: dict, league_id: str) -> list[dict]:
-    finished = [match for match in payload.get("matches", []) if match.get("status") == "FINISHED"]
-    finished.sort(key=lambda match: match.get("utcDate", ""), reverse=True)
-    if not finished:
-        raise UpdateError(f"{league_id}: API returned no completed matches")
-
-    results = []
-    for match in finished[:RECENT_RESULTS]:
-        score = (match.get("score") or {}).get("fullTime") or {}
-        home_score = integer(score.get("home"), f"{league_id} home score")
-        away_score = integer(score.get("away"), f"{league_id} away score")
-        home = (match.get("homeTeam") or {}).get("name")
-        away = (match.get("awayTeam") or {}).get("name")
-        if not home or not away or home_score < 0 or away_score < 0:
-            raise UpdateError(f"{league_id}: malformed completed match")
-        results.append(
+        if not isinstance(home, str) or not home.strip() or not isinstance(away, str) or not away.strip():
+            raise UpdateError(f"{league_id}: completed match has a missing team")
+        key = (date, home, away)
+        if key in seen:
+            raise UpdateError(f"{league_id}: duplicate completed match")
+        seen.add(key)
+        completed.append(
             {
-                "home": home,
-                "away": away,
-                "homeScore": home_score,
-                "awayScore": away_score,
-                "scorers": compress_scorers(match, home_score + away_score),
+                "date": date,
+                "time": match.get("time") if isinstance(match.get("time"), str) else "",
+                "home": home.strip(),
+                "away": away.strip(),
+                "homeScore": score[0],
+                "awayScore": score[1],
+                "scorers": [],
             }
         )
-    return results
+
+    completed.sort(key=lambda match: (match["date"], match["time"], match["home"]))
+    if not completed:
+        raise UpdateError(f"{league_id}: source has no completed matches")
+    return completed
 
 
-def build_standings(payload: dict, league_id: str) -> list[dict]:
-    total = next((item for item in payload.get("standings", []) if item.get("type") == "TOTAL"), None)
-    table = (total or {}).get("table")
-    if not isinstance(table, list) or len(table) < LEADER_LIMIT:
-        raise UpdateError(f"{league_id}: standings are missing or incomplete")
+def calculate_standings(matches: list[dict]) -> list[dict]:
+    table = defaultdict(lambda: {"p": 0, "w": 0, "d": 0, "l": 0, "gf": 0, "ga": 0})
+    for match in matches:
+        home = table[match["home"]]
+        away = table[match["away"]]
+        home_goals = match["homeScore"]
+        away_goals = match["awayScore"]
+        home["p"] += 1
+        away["p"] += 1
+        home["gf"] += home_goals
+        home["ga"] += away_goals
+        away["gf"] += away_goals
+        away["ga"] += home_goals
+        if home_goals > away_goals:
+            home["w"] += 1
+            away["l"] += 1
+        elif home_goals < away_goals:
+            away["w"] += 1
+            home["l"] += 1
+        else:
+            home["d"] += 1
+            away["d"] += 1
 
-    standings = []
-    for entry in table[:LEADER_LIMIT]:
-        team = (entry.get("team") or {}).get("name")
-        row = {
-            "team": team,
-            "p": integer(entry.get("playedGames"), f"{league_id} played"),
-            "w": integer(entry.get("won"), f"{league_id} wins"),
-            "d": integer(entry.get("draw"), f"{league_id} draws"),
-            "l": integer(entry.get("lost"), f"{league_id} losses"),
-            "gd": integer(entry.get("goalDifference"), f"{league_id} goal difference"),
-            "pts": integer(entry.get("points"), f"{league_id} points"),
-        }
-        if not team or row["p"] != row["w"] + row["d"] + row["l"]:
-            raise UpdateError(f"{league_id}: inconsistent standings row")
-        standings.append(row)
-    return standings
-
-
-def build_leaders(payload: dict) -> tuple[list[dict], list[dict]]:
-    raw = payload.get("scorers")
-    if not isinstance(raw, list):
-        return [], []
-
-    scorers = []
-    assist_candidates = []
-    for entry in raw:
-        player = (entry.get("player") or {}).get("name")
-        team = (entry.get("team") or {}).get("name")
-        goals = entry.get("goals")
-        assists = entry.get("assists")
-        if player and team and isinstance(goals, int):
-            scorers.append({"player": player, "team": team, "goals": goals})
-        if player and team and isinstance(assists, int) and assists > 0:
-            assist_candidates.append({"player": player, "team": team, "assists": assists})
-
-    scorers.sort(key=lambda item: (-item["goals"], item["player"]))
-    assist_candidates.sort(key=lambda item: (-item["assists"], item["player"]))
-    return scorers[:LEADER_LIMIT], assist_candidates[:LEADER_LIMIT]
+    rows = []
+    for team, stats in table.items():
+        rows.append(
+            {
+                "team": team,
+                "p": stats["p"],
+                "w": stats["w"],
+                "d": stats["d"],
+                "l": stats["l"],
+                "gd": stats["gf"] - stats["ga"],
+                "pts": stats["w"] * 3 + stats["d"],
+                "gf": stats["gf"],
+            }
+        )
+    rows.sort(key=lambda row: (-row["pts"], -row["gd"], -row["gf"], row["team"]))
+    for row in rows:
+        del row["gf"]
+    return rows[:STANDINGS_LIMIT]
 
 
-def build_snapshot(client: FootballDataClient) -> dict:
+def max_played(league: dict) -> int:
+    rows = league.get("standings", [])
+    return max((row.get("p", 0) for row in rows if isinstance(row, dict)), default=0)
+
+
+def build_snapshot(current: dict, moment: datetime) -> dict:
+    season = season_for(moment)
+    today = moment.date().isoformat()
+    current_by_id = {league["id"]: league for league in current["leagues"]}
     leagues = []
+    latest_dates = []
+
     for config in LEAGUES:
-        code = config["code"]
         print(f"Fetching {config['name']}...")
-        matches = client.get(f"/competitions/{code}/matches?status=FINISHED")
-        standings = client.get(f"/competitions/{code}/standings")
-        leaders = client.get(f"/competitions/{code}/scorers?limit={LEADER_LIMIT}")
-        scorers, assists = build_leaders(leaders)
+        payload = fetch_json(f"{SOURCE_ROOT}/{season}/{config['file']}")
+        completed = completed_matches(payload, config["id"], today)
+        standings = calculate_standings(completed)
+        previous = current_by_id[config["id"]]
+        if max_played({"standings": standings}) < max_played(previous):
+            raise SourceBehind(f"{config['id']}: public source is behind the published snapshot")
+        latest_dates.append(completed[-1]["date"])
         leagues.append(
             {
                 "id": config["id"],
                 "name": config["name"],
                 "country": config["country"],
-                "results": build_results(matches, config["id"]),
-                "standings": build_standings(standings, config["id"]),
-                "scorers": scorers,
-                "assists": assists,
+                "results": list(reversed(completed[-RECENT_RESULTS:])),
+                "standings": standings,
+                "scorers": previous["scorers"],
+                "assists": previous["assists"],
             }
         )
-    return {"leagues": leagues}
+
+    leaders_date = current.get("leadersUpdatedThrough", "2026-09-05")
+    newest_result = max(latest_dates)
+    return {
+        "updated": (
+            f"Results and calculated standings refreshed {moment.strftime('%b %-d, %Y at %H:%M UTC')} "
+            f"— latest source result {newest_result}; player leaders last verified {leaders_date}"
+        ),
+        "resultsUpdatedThrough": newest_result,
+        "leadersUpdatedThrough": leaders_date,
+        "source": "Open Football",
+        "sourceUrl": "https://github.com/openfootball/football.json",
+        "leagues": leagues,
+    }
 
 
-def validate_existing(payload: dict) -> None:
+def validate_snapshot(payload: dict) -> None:
     leagues = payload.get("leagues")
     if not isinstance(leagues, list) or len(leagues) != len(LEAGUES):
         raise UpdateError("Snapshot must contain exactly five leagues")
@@ -197,37 +201,40 @@ def validate_existing(payload: dict) -> None:
         for key in ("results", "standings", "scorers", "assists"):
             if not isinstance(league.get(key), list):
                 raise UpdateError(f"{league.get('id')}: {key} must be an array")
+        if not league["results"] or not league["standings"]:
+            raise UpdateError(f"{league['id']}: results and standings cannot be empty")
+        for row in league["standings"]:
+            if row["p"] != row["w"] + row["d"] + row["l"] or row["pts"] != row["w"] * 3 + row["d"]:
+                raise UpdateError(f"{league['id']}: inconsistent calculated standings")
+
+
+def comparable(payload: dict) -> dict:
+    return {key: value for key, value in payload.items() if key != "updated"}
 
 
 def main() -> int:
     try:
         current = json.loads(DATA_FILE.read_text(encoding="utf-8"))
-        validate_existing(current)
+        validate_snapshot(current)
         if "--validate-only" in sys.argv:
             print("Existing soccer data is valid.")
             return 0
 
-        token = os.environ.get("FOOTBALL_DATA_TOKEN", "").strip()
-        if not token:
-            raise UpdateError("FOOTBALL_DATA_TOKEN is not configured")
-
-        candidate = build_snapshot(FootballDataClient(token))
-        validate_existing(candidate)
-        if candidate["leagues"] == current["leagues"]:
+        candidate = build_snapshot(current, datetime.now(timezone.utc))
+        validate_snapshot(candidate)
+        if comparable(candidate) == comparable(current):
             print("No soccer data changes detected.")
             return 0
 
-        candidate["updated"] = (
-            "Automatically verified "
-            + datetime.now(timezone.utc).strftime("%b %-d, %Y at %H:%M UTC")
-            + " — completed matches only"
-        )
         temporary = DATA_FILE.with_suffix(".json.tmp")
         temporary.write_text(json.dumps(candidate, ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
         temporary.replace(DATA_FILE)
         print(f"Updated {DATA_FILE}")
         return 0
-    except (OSError, json.JSONDecodeError, UpdateError) as error:
+    except SourceBehind as error:
+        print(f"No update: {error}")
+        return 0
+    except (OSError, KeyError, TypeError, json.JSONDecodeError, UpdateError) as error:
         print(f"Soccer update failed safely: {error}", file=sys.stderr)
         return 1
 

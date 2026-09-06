@@ -56,7 +56,7 @@ function renderResults(league) {
     .join("");
 
   results.innerHTML = `
-    <h2>Recent verified results <span class="pill">${escapeHtml(league.country)}</span></h2>
+    <h2>Recent completed results <span class="pill">${escapeHtml(league.country)}</span></h2>
     <table class="results-table">
       <thead>
         <tr><th>Home</th><th>Score</th><th>Away</th><th>Scorers</th></tr>
@@ -85,7 +85,7 @@ function renderStandings(league) {
     .join("");
 
   standings.innerHTML = `
-    <h2>Standings snapshot <span class="pill">Top ${league.standings.length} shown</span></h2>
+    <h2>Calculated standings <span class="pill">Top ${league.standings.length} shown</span></h2>
     <table class="standings-table">
       <thead>
         <tr>
@@ -102,9 +102,10 @@ function renderStandings(league) {
 }
 
 function renderLeaders(element, title, items, valueKey) {
+  const leaderDate = data.leadersUpdatedThrough || "2026-09-05";
   if (!items.length) {
     element.innerHTML = `
-      <h2>${title} <span class="pill">Partial data</span></h2>
+      <h2>${title} <span class="pill">Snapshot ${escapeHtml(leaderDate)}</span></h2>
       <p class="empty">No sufficiently verified ${title.toLowerCase()} data is available for this snapshot.</p>
     `;
     return;
@@ -123,7 +124,7 @@ function renderLeaders(element, title, items, valueKey) {
     .join("");
 
   element.innerHTML = `
-    <h2>${title} <span class="pill">Partial list</span></h2>
+    <h2>${title} <span class="pill">Snapshot ${escapeHtml(leaderDate)}</span></h2>
     <table class="leaders-table">
       <thead>
         <tr><th>Player</th><th>Club</th><th>${valueKey === "goals" ? "Goals" : "Assists"}</th></tr>
