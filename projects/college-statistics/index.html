@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="College Statistics — explore universities, majors, earnings, costs, and admissions." />
   <title>College Statistics | HelloCodex</title>
-  <link rel="stylesheet" href="css/main.css?v=20260830-2" />
-  <link rel="stylesheet" href="css/components.css?v=20260830-2" />
+  <link rel="stylesheet" href="css/main.css?v=20260905-1" />
+  <link rel="stylesheet" href="css/components.css?v=20260905-1" />
 </head>
 <body>
   <header class="topbar"><a class="brand" href="../../">HelloCodex</a><span class="project-label">College Statistics</span></header>
@@ -16,10 +16,20 @@
       <div class="hero-badge" id="dataBadge">Loading data…</div>
     </section>
 
+    <section class="view-controls" aria-label="Browse mode">
+      <div class="view-toggle" role="group" aria-label="Browse by">
+        <button type="button" class="view-button active" id="viewUniversity" data-view="university" aria-pressed="true">By University</button>
+        <button type="button" class="view-button" id="viewMajor" data-view="major" aria-pressed="false">By Major</button>
+      </div>
+      <label class="sort-field"><span>Sort</span><select id="sortFilter"><option value="name">Name A–Z</option><option value="earnings1">1-year earnings: high to low</option><option value="earnings4">4-year earnings: high to low</option><option value="tuition">In-state tuition: low to high</option><option value="acceptance">Acceptance rate: low to high</option></select></label>
+    </section>
+
     <section class="filters" aria-label="Filters and search">
       <label class="search-field"><span>Search</span><input id="searchInput" type="search" placeholder="University, city, state, or major" autocomplete="off" /></label>
       <label><span>University</span><select id="universityFilter"><option value="all">All universities</option></select></label>
       <label><span>Major</span><select id="majorFilter"><option value="all">All majors</option></select></label>
+      <label><span>State</span><select id="stateFilter"><option value="all">All states</option></select></label>
+      <label><span>Institution type</span><select id="typeFilter"><option value="all">All types</option></select></label>
       <label><span>Max in-state tuition</span><select id="tuitionFilter"><option value="all">Any tuition</option><option value="30000">Up to $30k</option><option value="50000">Up to $50k</option><option value="70000">Up to $70k</option></select></label>
     </section>
 
@@ -28,14 +38,14 @@
     </section>
 
     <section class="results-section">
-      <div class="section-heading"><div><p class="eyebrow">Browse by university</p><h2>Top-100 coverage at a glance</h2></div><p id="resultCount" class="result-count"></p></div>
-      <div id="universityGroups" class="university-groups"></div>
+      <div class="section-heading"><div><p class="eyebrow" id="browseEyebrow">Browse by university</p><h2 id="browseTitle">100 universities at a glance</h2></div><p id="resultCount" class="result-count"></p></div>
+      <div id="browseGroups" class="browse-groups"></div>
       <div id="emptyState" class="empty-state" hidden>No records match these filters.</div>
     </section>
 
     <section class="data-note"><h2>About the data</h2><p>This coverage set contains 100 U.S. universities/institutions using public College Scorecard data and bachelor's programs. It is a practical coverage set, not a displayed ranking. Earnings are approximate indicators. Tuition shown is <strong>in-state tuition</strong> when available. Missing values are left blank rather than estimated.</p></section>
   </main>
   <footer>College Statistics · HelloCodex</footer>
-  <script type="module" src="js/app.js?v=20260830-3"></script>
+  <script type="module" src="js/app.js?v=20260905-1"></script>
 </body>
 </html>
