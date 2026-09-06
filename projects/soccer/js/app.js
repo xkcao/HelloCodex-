@@ -122,7 +122,6 @@ function renderLeaders(element, title, items, valueKey) {
     )
     .join("");
 
-  renderLeaders;
   element.innerHTML = `
     <h2>${title} <span class="pill">Partial list</span></h2>
     <table class="leaders-table">
