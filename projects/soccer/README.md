@@ -25,7 +25,7 @@ The project remains self-contained and framework-free. GitHub Pages serves the d
 
 ## Automatic updates
 
-The `Refresh soccer data` workflow runs daily at 14:17 UTC, which is 6:17 AM Pacific Standard Time or 7:17 AM Pacific Daylight Time. It can also be run manually from the repository's **Actions** tab.
+The `Refresh soccer data` workflow runs daily at 7:17 AM in the `America/Los_Angeles` timezone, so daylight saving time is handled automatically. It can also be run manually from the repository's **Actions** tab.
 
 The updater uses the football-data.org v4 API and its competition codes `PL`, `PD`, `SA`, `BL1` and `FL1`. It retrieves completed matches, total standings and leaders for all five leagues. Requests are deliberately spaced to remain below the free-plan rate limit.
 
