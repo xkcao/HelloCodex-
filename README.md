@@ -20,7 +20,7 @@ Each project keeps its own HTML, CSS, JavaScript, data, and documentation so it 
 
 ### Soccer Dashboard
 
-European soccer dashboard with results, standings, scorers, and assists.
+A lightweight European soccer dashboard with recent verified results and clearly labeled partial snapshots of standings, scorers, and assists.
 
 Path: `/projects/soccer/`
 
