@@ -2,7 +2,8 @@ name: Refresh soccer data
 
 on:
   schedule:
-    - cron: "17 14 * * *"
+    - cron: "17 7 * * *"
+      timezone: "America/Los_Angeles"
   workflow_dispatch:
 
 permissions:
