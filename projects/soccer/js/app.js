@@ -142,8 +142,7 @@ function renderLeague(league) {
   document.querySelectorAll(".league-tabs button").forEach((button) => {
     const active = button.dataset.id === league.id;
     button.classList.toggle("active", active);
-    button.setAttribute("aria-selected", String(active));
-    button.tabIndex = active ? 0 : -1;
+    button.setAttribute("aria-pressed", String(active));
   });
 
   history.replaceState(null, "", `#${league.id}`);
@@ -162,7 +161,9 @@ function validateData(payload) {
     ids.add(league.id);
 
     ["results", "standings", "scorers", "assists"].forEach((key) => {
-      if (!Array.isArray(league[key])) issues.push(`${league.id}: ${key} must be an array`);
+      if (!Array.isArray(league[key])) {
+        throw new Error(`${league.id}: ${key} must be an array`);
+      }
     });
 
     league.standings.forEach((team) => {
@@ -179,7 +180,7 @@ function validateData(payload) {
 }
 
 function selectFromHash() {
-  const id = decodeURIComponent(location.hash.slice(1));
+  const id = location.hash.slice(1);
   return data.leagues.find((league) => league.id === id) || data.leagues[0];
 }
 
@@ -196,7 +197,7 @@ fetch("data/soccer.json")
     tabs.innerHTML = payload.leagues
       .map(
         (league) =>
-          `<button type="button" role="tab" aria-controls="dashboard" aria-selected="false" tabindex="-1" data-id="${escapeHtml(league.id)}">${escapeHtml(league.name)}</button>`
+          `<button type="button" aria-pressed="false" data-id="${escapeHtml(league.id)}">${escapeHtml(league.name)}</button>`
       )
       .join("");
 
@@ -204,20 +205,6 @@ fetch("data/soccer.json")
       const button = event.target.closest("button");
       if (!button) return;
       const league = data.leagues.find((item) => item.id === button.dataset.id);
-      if (league) renderLeague(league);
-    });
-
-    tabs.addEventListener("keydown", (event) => {
-      if (!["ArrowLeft", "ArrowRight"].includes(event.key)) return;
-      event.preventDefault();
-
-      const buttons = [...tabs.querySelectorAll("button")];
-      const direction = event.key === "ArrowRight" ? 1 : -1;
-      const current = buttons.indexOf(document.activeElement);
-      const next = (current + direction + buttons.length) % buttons.length;
-
-      buttons[next].focus();
-      const league = data.leagues.find((item) => item.id === buttons[next].dataset.id);
       if (league) renderLeague(league);
     });
 
