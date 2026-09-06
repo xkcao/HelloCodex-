@@ -31,7 +31,9 @@ The updater downloads the current-season JSON files from the public-domain [Open
 
 Player-leader data is not available in this source, so the updater preserves the last manually verified scorer and assist snapshots and displays their date instead of pretending they were refreshed.
 
-The workflow has write access only to repository contents, using GitHub's automatically supplied workflow credential. If a download fails, a league is missing, a score is malformed, or the public source is behind the published snapshot, the updater leaves `data/soccer.json` unchanged. It fetches and validates the complete five-league candidate before writing. When data has not changed, it creates no commit.
+The workflow has write access only to repository contents, using GitHub's automatically supplied workflow credential. Each league advances independently: when one source file is behind, that league keeps its published snapshot while current leagues can still update. The updater compares the latest result date, completed-match count and games played before replacing a league.
+
+If a download fails, a league is missing or a score is malformed, the updater leaves the complete `data/soccer.json` file unchanged. It validates the combined five-league candidate before writing, and creates no commit when nothing changed.
 
 ## Data rules
 
@@ -57,12 +59,17 @@ Each league uses this structure:
 
 ```json
 {
-  "updated": "Verified date, time and coverage note",
+  "updated": "Refresh time and coverage note",
   "leagues": [
     {
       "id": "premier-league",
       "name": "Premier League",
       "country": "England",
+      "resultsUpdatedThrough": "2026-09-05",
+      "completedMatchCount": 30,
+      "leadersUpdatedThrough": "2026-09-05",
+      "source": "Open Football",
+      "sourceUrl": "https://github.com/openfootball/football.json",
       "results": [],
       "standings": [],
       "scorers": [],
@@ -72,4 +79,4 @@ Each league uses this structure:
 }
 ```
 
-A result contains `home`, `away`, `homeScore`, `awayScore` and a `scorers` array. A standings entry contains `team`, `p`, `w`, `d`, `l`, `gd` and `pts`.
+A result contains `date`, `time`, `home`, `away`, `homeScore`, `awayScore` and a `scorers` array. Older manually verified results may omit `date` and `time`; the interface labels them accordingly. A standings entry contains `team`, `p`, `w`, `d`, `l`, `gd` and `pts`.

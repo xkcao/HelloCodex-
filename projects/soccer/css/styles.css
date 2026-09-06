@@ -114,6 +114,12 @@ h1 {
   font-size: 1.1rem;
 }
 
+.snapshot-note {
+  margin: -8px 0 12px;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
 table {
   width: 100%;
   min-width: 520px;

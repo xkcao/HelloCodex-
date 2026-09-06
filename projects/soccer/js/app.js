@@ -41,13 +41,22 @@ function formatScorers(match) {
   return names;
 }
 
+function formatMatchDate(value) {
+  const date = new Date(`${value}T12:00:00Z`);
+  if (Number.isNaN(date.getTime())) return "Date unavailable";
+  return date.toLocaleDateString(undefined, { month: "short", day: "numeric" });
+}
+
 function renderResults(league) {
   const body = league.results
     .map(
       (match) => `
         <tr>
           <td>${escapeHtml(match.home)}</td>
-          <td><span class="score">${match.homeScore}–${match.awayScore}</span></td>
+          <td>
+            <span class="score">${match.homeScore}–${match.awayScore}</span>
+            ${match.date ? `<span class="data-note">${formatMatchDate(match.date)}</span>` : ""}
+          </td>
           <td>${escapeHtml(match.away)}</td>
           <td>${formatScorers(match)}</td>
         </tr>
@@ -57,6 +66,7 @@ function renderResults(league) {
 
   results.innerHTML = `
     <h2>Recent completed results <span class="pill">${escapeHtml(league.country)}</span></h2>
+    <p class="snapshot-note">Updated through ${escapeHtml(league.resultsUpdatedThrough)}</p>
     <table class="results-table">
       <thead>
         <tr><th>Home</th><th>Score</th><th>Away</th><th>Scorers</th></tr>
@@ -101,8 +111,7 @@ function renderStandings(league) {
   `;
 }
 
-function renderLeaders(element, title, items, valueKey) {
-  const leaderDate = data.leadersUpdatedThrough || "2026-09-05";
+function renderLeaders(element, title, items, valueKey, leaderDate) {
   if (!items.length) {
     element.innerHTML = `
       <h2>${title} <span class="pill">Snapshot ${escapeHtml(leaderDate)}</span></h2>
@@ -137,8 +146,8 @@ function renderLeaders(element, title, items, valueKey) {
 function renderLeague(league) {
   renderResults(league);
   renderStandings(league);
-  renderLeaders(scorers, "Leading scorers", league.scorers, "goals");
-  renderLeaders(assists, "Assist leaders", league.assists, "assists");
+  renderLeaders(scorers, "Leading scorers", league.scorers, "goals", league.leadersUpdatedThrough);
+  renderLeaders(assists, "Assist leaders", league.assists, "assists", league.leadersUpdatedThrough);
 
   document.querySelectorAll(".league-tabs button").forEach((button) => {
     const active = button.dataset.id === league.id;
@@ -164,6 +173,18 @@ function validateData(payload) {
     ["results", "standings", "scorers", "assists"].forEach((key) => {
       if (!Array.isArray(league[key])) {
         throw new Error(`${league.id}: ${key} must be an array`);
+      }
+    });
+
+    ["resultsUpdatedThrough", "leadersUpdatedThrough"].forEach((key) => {
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(league[key] || "")) {
+        throw new Error(`${league.id}: ${key} must be YYYY-MM-DD`);
+      }
+    });
+
+    league.results.forEach((match) => {
+      if (!match.home || !match.away || !Number.isInteger(match.homeScore) || !Number.isInteger(match.awayScore)) {
+        throw new Error(`${league.id}: malformed result`);
       }
     });
 
