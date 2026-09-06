@@ -6,12 +6,19 @@ A simple static GitHub Pages explorer for comparing universities and bachelor's 
 
 The live site covers a 100-institution U.S. coverage set.
 
-It shows:
+It supports two complementary ways to explore the same data:
 
-- university name, location, in-state tuition, and acceptance rate;
+- **By University** — browse universities and expand each one to see its bachelor's programs and earnings;
+- **By Major** — browse fields of study and expand each one to compare universities offering that major.
+
+The site shows:
+
+- university name, location, institution type, in-state tuition, and acceptance rate;
 - bachelor's programs by 4-digit CIP field of study;
 - 1-year and 4-year median earnings where College Scorecard publishes them;
-- a university-card summary called **Median across bachelor's programs**, calculated from that university's available 1-year program earnings.
+- a university-card summary called **Median across bachelor's programs**, calculated from that university's available 1-year program earnings;
+- sorting by name, earnings, tuition, or acceptance rate;
+- filters for university, major, state, institution type, and maximum in-state tuition.
 
 Missing values are shown as `—`; they are not estimated.
 
@@ -21,7 +28,7 @@ The 100-school set is an inclusion/coverage set, not a displayed ranking. The se
 
 - `index.html` — page structure
 - `css/` — styling
-- `js/` — loading, search/filtering, and rendering
+- `js/` — loading, search/filtering, sorting, grouping, and rendering
 - `data/` — live browser-ready JSON
 - `data/imported/` — compact dated selection, institution, and audit metadata
 - `config/` — small base seed list
@@ -57,8 +64,9 @@ The GitHub Action in `.github/workflows/college-scorecard-seed.yml` runs this pi
 - In-state tuition is shown when available.
 - Acceptance rate and tuition are institution-level values.
 - The university-card earnings number is derived from program-level data; it is not a separate official university-wide earnings metric.
+- In the major-first view, group summaries such as median earnings or median tuition are calculated across the currently matching universities.
 - Employment rates and rankings are not currently implemented because there is no simple, consistent source in the present pipeline.
-- The Top-100 coverage set should not be interpreted as an official ranking.
+- The 100-school coverage set should not be interpreted as an official ranking.
 
 ## Scale and staging
 
