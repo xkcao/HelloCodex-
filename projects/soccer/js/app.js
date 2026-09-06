@@ -157,7 +157,7 @@ function validateData(payload) {
   const ids = new Set();
 
   payload.leagues.forEach((league) => {
-    if (!league.id || ids.has(league.id)) issues.push("League IDs must be unique");
+    if (!league.id || ids.has(league.id)) throw new Error("League IDs must be unique");
     ids.add(league.id);
 
     ["results", "standings", "scorers", "assists"].forEach((key) => {
