@@ -13,6 +13,7 @@ The project should stay useful and simple. Expand data coverage first; add archi
 - Filters for university, major, state, institution type, and maximum in-state tuition
 - 1-year and 4-year program earnings
 - In-state tuition and acceptance rate
+- Data badge showing the Scorecard source and dataset update date
 - Automated selection, import, validation, and promotion through GitHub Actions
 - Compact repository staging: very large program raw files are validated during the workflow but not committed
 
@@ -26,7 +27,7 @@ Possible near-term work:
 
 - improve major naming/grouping where 4-digit CIP labels are awkward;
 - review missing earnings coverage and clarify labels where needed;
-- clarify data freshness/retrieval dates;
+- monitor whether the current filters remain comfortable rather than adding more controls;
 - monitor browser payload and load time;
 - improve the school inclusion methodology only if obvious institutions are missing.
 
