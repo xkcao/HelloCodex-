@@ -33,7 +33,7 @@ When updating `data/soccer.json`:
 6. Use an empty array for an unavailable section.
 7. Run a consistency review before publishing.
 
-The browser performs lightweight structural checks when the file loads. It checks that league IDs are unique, each section is an array, games played equal wins plus draws plus losses, and points equal three per win plus one per draw. Validation warnings appear in the browser console without hiding otherwise usable data.
+The browser performs lightweight checks when the file loads. Missing or duplicate league IDs and malformed section arrays stop rendering and show the data-unavailable state. Games-played or points inconsistencies produce console warnings without hiding otherwise usable data.
 
 ## Data shape
 
@@ -41,13 +41,18 @@ Each league uses this structure:
 
 ```json
 {
-  "id": "premier-league",
-  "name": "Premier League",
-  "country": "England",
-  "results": [],
-  "standings": [],
-  "scorers": [],
-  "assists": []
+  "updated": "Verified date, time and coverage note",
+  "leagues": [
+    {
+      "id": "premier-league",
+      "name": "Premier League",
+      "country": "England",
+      "results": [],
+      "standings": [],
+      "scorers": [],
+      "assists": []
+    }
+  ]
 }
 ```
 
