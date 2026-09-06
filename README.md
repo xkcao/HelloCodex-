@@ -8,19 +8,20 @@ HelloCodex is a GitHub Pages repository containing independent static web projec
 /
 ├── index.html
 ├── assets/
+├── .github/workflows/
 ├── projects/
 │   ├── soccer/
 │   └── college-statistics/
 └── README.md
 ```
 
-Each project keeps its own HTML, CSS, JavaScript, data, and documentation so it can evolve independently.
+Each project keeps its own HTML, CSS, JavaScript, data, scripts and documentation so it can evolve independently. Project-specific GitHub Actions live in `.github/workflows/` because GitHub requires workflows at the repository level.
 
 ## Projects
 
 ### Soccer Dashboard
 
-A lightweight European soccer dashboard with recent verified results and clearly labeled partial snapshots of standings, scorers, and assists.
+A lightweight European soccer dashboard with automatically refreshed completed results and partial snapshots of standings, scorers and assists. A daily GitHub Action updates the static data after validating all five leagues; see the project README for its one-time API-token setup.
 
 Path: `/projects/soccer/`
 
@@ -37,9 +38,10 @@ Path: `/projects/college-statistics/`
 ## Adding a project
 
 1. Create a folder under `projects/`.
-2. Keep project-specific code and data inside that folder.
+2. Keep project-specific code, data and scripts inside that folder.
 3. Add an `index.html` and a short `README.md`.
 4. Add a project card to the root `index.html`.
+5. Add a repository-level workflow only when scheduled automation is genuinely needed.
 
 Prefer simple, self-contained static projects. Introduce shared infrastructure only when multiple projects genuinely need it.
 
@@ -51,4 +53,4 @@ GitHub Pages serves the repository root as the site root:
 - `/projects/soccer/` → Soccer Dashboard
 - `/projects/college-statistics/` → College Statistics
 
-No backend server is required for the current projects.
+No continuously running backend server is required. Scheduled GitHub Actions may update static project data when appropriate.
