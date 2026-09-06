@@ -147,6 +147,13 @@ function render(records){
   updateViewLabels();
 }
 
+function formatUpdatedDate(value){
+  if(!value) return null;
+  const date=new Date(`${value}T00:00:00Z`);
+  if(Number.isNaN(date.getTime())) return null;
+  return new Intl.DateTimeFormat("en-US",{month:"short",day:"numeric",year:"numeric",timeZone:"UTC"}).format(date);
+}
+
 function refresh(){render(applyFilters(state.records,currentFilters()));}
 
 async function init(){
@@ -157,7 +164,8 @@ async function init(){
     populateFilters(state.records);
     ["searchInput","universityFilter","majorFilter","stateFilter","typeFilter","tuitionFilter","sortFilter"].forEach(id=>el(id).addEventListener(id==="searchInput"?"input":"change",refresh));
     document.querySelectorAll(".view-button").forEach(button=>button.addEventListener("click",()=>{state.view=button.dataset.view;refresh();}));
-    el("dataBadge").textContent=`${data.metadata.status} · ${data.metadata.current_year}`;
+    const updated=formatUpdatedDate(data.metadata.generated_at);
+    el("dataBadge").textContent=updated?`College Scorecard · Updated ${updated}`:"College Scorecard";
     refresh();
   }catch(error){
     console.error(error);
