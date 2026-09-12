@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import sys
+import time
 import urllib.error
 import urllib.request
 from collections import defaultdict
@@ -16,6 +17,8 @@ SOURCE_ROOT = "https://raw.githubusercontent.com/openfootball/football.json/mast
 DATA_FILE = Path(__file__).resolve().parents[1] / "data" / "soccer.json"
 RECENT_RESULTS = 10
 STANDINGS_LIMIT = 5
+DOWNLOAD_ATTEMPTS = 4
+RETRY_DELAYS_SECONDS = (2, 5, 10)
 
 LEAGUES = (
     {"id": "premier-league", "name": "Premier League", "country": "England", "file": "en.1.json"},
@@ -36,12 +39,35 @@ def season_for(moment: datetime) -> str:
 
 
 def fetch_json(url: str) -> dict:
-    request = urllib.request.Request(url, headers={"User-Agent": "HelloCodex-Soccer-Updater/2.0"})
-    try:
-        with urllib.request.urlopen(request, timeout=30) as response:
-            return json.load(response)
-    except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError, json.JSONDecodeError) as error:
-        raise UpdateError(f"Could not load {url}: {error}") from error
+    request = urllib.request.Request(
+        url,
+        headers={"Accept": "application/json", "User-Agent": "HelloCodex-Soccer-Updater/2.0"},
+    )
+    last_error: Exception | None = None
+
+    for attempt in range(1, DOWNLOAD_ATTEMPTS + 1):
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                return json.load(response)
+        except urllib.error.HTTPError as error:
+            if error.code not in (408, 429) and error.code < 500:
+                raise UpdateError(f"Could not load {url}: HTTP {error.code}") from error
+            last_error = error
+        except (urllib.error.URLError, TimeoutError, ConnectionError, json.JSONDecodeError) as error:
+            last_error = error
+
+        if attempt < DOWNLOAD_ATTEMPTS:
+            delay = RETRY_DELAYS_SECONDS[attempt - 1]
+            print(
+                f"Download attempt {attempt} of {DOWNLOAD_ATTEMPTS} failed; "
+                f"retrying in {delay} seconds...",
+                file=sys.stderr,
+            )
+            time.sleep(delay)
+
+    raise UpdateError(
+        f"Could not load {url} after {DOWNLOAD_ATTEMPTS} attempts: {last_error}"
+    ) from last_error
 
 
 def full_time_score(match: dict) -> tuple[int, int] | None:

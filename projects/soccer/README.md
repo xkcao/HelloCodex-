@@ -33,7 +33,7 @@ Player-leader data is not available in this source, so the updater preserves the
 
 The workflow has write access only to repository contents, using GitHub's automatically supplied workflow credential. Each league advances independently: when one source file is behind, that league keeps its published snapshot while current leagues can still update. The updater compares the latest result date, completed-match count and games played before replacing a league.
 
-If a download fails, a league is missing or a score is malformed, the updater leaves the complete `data/soccer.json` file unchanged. It validates the combined five-league candidate before writing, and creates no commit when nothing changed.
+Transient download failures are retried automatically with short delays. If all attempts fail, a league is missing or a score is malformed, the updater leaves the complete `data/soccer.json` file unchanged. It validates the combined five-league candidate before writing, and creates no commit when nothing changed.
 
 ## Data rules
 
